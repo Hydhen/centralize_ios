@@ -1,0 +1,87 @@
+
+/* Class = "UIButton"; normalTitle = "Log in"; ObjectID = "0qV-eK-Wuj"; */
+"0qV-eK-Wuj.normalTitle" = "Log in";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "5jZ-0Q-CZu"; */
+"5jZ-0Q-CZu.title" = "Profile";
+
+/* Class = "UILabel"; text = "Profile"; ObjectID = "8cR-13-sbh"; */
+"8cR-13-sbh.text" = "Profile";
+
+/* Class = "UILabel"; text = "Languages"; ObjectID = "AO4-8q-bDc"; */
+"AO4-8q-bDc.text" = "Languages";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "BFC-5L-1PZ"; */
+"BFC-5L-1PZ.text" = "Name";
+
+/* Class = "UITableViewSection"; headerTitle = "Help"; ObjectID = "Cgs-Zz-SK6"; */
+"Cgs-Zz-SK6.headerTitle" = "Help";
+
+/* Class = "UINavigationItem"; title = "Your profile"; ObjectID = "DZI-if-GCS"; */
+"DZI-if-GCS.title" = "Your profile";
+
+/* Class = "UINavigationItem"; title = "Sign in - Centralize"; ObjectID = "Duf-dj-qm3"; */
+"Duf-dj-qm3.title" = "Sign in - Centralize";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "EHP-O5-9nO"; */
+"EHP-O5-9nO.normalTitle" = "Save";
+
+/* Class = "UITextView"; text = "Biography"; ObjectID = "EVi-sI-yrg"; */
+"EVi-sI-yrg.text" = "Biography";
+
+/* Class = "UIBarButtonItem"; title = "Home"; ObjectID = "Eia-d5-ZUM"; */
+"Eia-d5-ZUM.title" = "Home";
+
+/* Class = "UINavigationItem"; title = "An error has occured"; ObjectID = "Ifd-7Z-F7h"; */
+"Ifd-7Z-F7h.title" = "An error has occured";
+
+/* Class = "UITableViewSection"; headerTitle = "Account"; ObjectID = "Ks2-Xw-EEu"; */
+"Ks2-Xw-EEu.headerTitle" = "Account";
+
+/* Class = "UITabBarItem"; title = "Edit my profile"; ObjectID = "Mak-Gc-CiN"; */
+"Mak-Gc-CiN.title" = "Edit my profile";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "NBz-BT-xBW"; */
+"NBz-BT-xBW.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Dashboards"; ObjectID = "Nol-BG-5rx"; */
+"Nol-BG-5rx.text" = "Dashboards";
+
+/* Class = "UINavigationItem"; title = "Languages"; ObjectID = "P1j-yg-QhI"; */
+"P1j-yg-QhI.title" = "Languages";
+
+/* Class = "UINavigationItem"; title = "Sign out - Centralize"; ObjectID = "PX6-ur-F0p"; */
+"PX6-ur-F0p.title" = "Sign out - Centralize";
+
+/* Class = "UILabel"; text = "Contact"; ObjectID = "RvB-WD-E6e"; */
+"RvB-WD-E6e.text" = "Contact";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "WXs-dY-VKH"; */
+"WXs-dY-VKH.placeholder" = "Username";
+
+/* Class = "UITableViewSection"; headerTitle = "Home"; ObjectID = "WiM-04-jtl"; */
+"WiM-04-jtl.headerTitle" = "Home";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "ZXe-nb-XgG"; */
+"ZXe-nb-XgG.text" = "Location";
+
+/* Class = "UINavigationItem"; title = "Centralize"; ObjectID = "haR-WN-q84"; */
+"haR-WN-q84.title" = "Centralize";
+
+/* Class = "UILabel"; text = "Assistance"; ObjectID = "iI5-h2-XBi"; */
+"iI5-h2-XBi.text" = "Assistance";
+
+/* Class = "UILabel"; text = "FAQ"; ObjectID = "j0v-07-T7i"; */
+"j0v-07-T7i.text" = "FAQ";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "kXR-QA-rQP"; */
+"kXR-QA-rQP.text" = "Password";
+
+/* Class = "UILabel"; text = "Sign out"; ObjectID = "l46-ti-qj5"; */
+"l46-ti-qj5.text" = "Sign out";
+
+/* Class = "UINavigationItem"; title = "Edit your profile"; ObjectID = "uEo-B4-Bix"; */
+"uEo-B4-Bix.title" = "Edit your profile";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ySI-jv-a5x"; */
+"ySI-jv-a5x.text" = "Label";
