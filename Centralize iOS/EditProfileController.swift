@@ -111,7 +111,7 @@ class EditProfileController: UIViewController, UITextFieldDelegate, UITextViewDe
         self.imageView.hidden = true
         if self.revealViewController() != nil {
             menuBtn.target = self.revealViewController()
-            menuBtn.action = "revealToggle:"
+            menuBtn.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         

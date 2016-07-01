@@ -76,7 +76,7 @@ class DashboardController: UITableViewController {
                 if nbDashboards > 0 {
                     let dashboards = jsonResult["results"]! as? NSArray
                     
-                    for var i = 0 ; i < dashboards?.count ; i++ {
+                    for i in 0...(nbDashboards! - 1) {
                         let dash = dashboards![i] as? NSDictionary
                         self.dashboardTitle.addObject((dash?.valueForKey("title"))!)
                         self.dashboardId.addObject((dash?.valueForKey("id"))!)
