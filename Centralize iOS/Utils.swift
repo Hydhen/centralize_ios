@@ -45,6 +45,27 @@ func APIGETSession(url_part: String) -> NSArray {
     return [NSURLSession(configuration: config), request]
 }
 
+func APIPOSTSession(url_part: String, data_string: String) -> NSArray {
+    let url = NSURL(string:APIConstants.url + url_part)
+    let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)
+    let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+    
+    request.HTTPMethod = "POST"
+    
+    let token_access:NSDictionary = NSUserDefaults.standardUserDefaults().objectForKey("token_access") as! NSDictionary
+    
+    let token = token_access.valueForKey("access_token")!
+    let authString = "Bearer \(token)"
+    config.HTTPAdditionalHeaders = ["Authorization": authString]
+    
+    let data = data_string.dataUsingEncoding(NSUTF8StringEncoding)
+    
+    request.HTTPBody = data
+    request.timeoutInterval = 30
+    request.HTTPShouldHandleCookies = false
+    return [NSURLSession(configuration: config), request]
+}
+
 func APIPATCHSession(url_part: String, data_string: String) -> NSArray {
     let url = NSURL(string: APIConstants.url + url_part)
     let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)
