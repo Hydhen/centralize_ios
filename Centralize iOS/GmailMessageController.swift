@@ -11,11 +11,46 @@ import UIKit
 class GmailMessageController: UIViewController {
 
     @IBOutlet weak var readBtn: UIBarButtonItem!
-    @IBAction func readMessage(sender: AnyObject) {
-    }
     @IBOutlet weak var menuBar: UINavigationItem!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var webView: UIWebView!
+    
+    @IBAction func readBtnAction(sender: AnyObject) {
+        self.disableUI()
+
+        let session = APIGETSession("/gmail/readmessage/\(current_dashboard)/\(current_gmail_message)/")
+        
+        let task = session[0].dataTaskWithRequest(session[1] as! NSURLRequest, completionHandler: {data, response, error -> Void in
+            do {
+                if data == nil {
+                    NSOperationQueue.mainQueue().addOperationWithBlock() {
+                        simpleAlert((t.valueForKey("CEN_NO_DATA_RECEIVED")! as? String)!, message: (t.valueForKey("CEN_NO_DATA_RECEIVED_DESC")! as? String)!)
+                        self.imageView.hidden = true
+                        self.enableUI()
+                    }
+                    return
+                }
+                let _:NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                
+                NSOperationQueue.mainQueue().addOperationWithBlock() {
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    
+                    let gmailThreadsController = storyBoard.instantiateViewControllerWithIdentifier("gmailService") as! GmailThreadsController
+                    
+                    self.presentViewController(gmailThreadsController, animated:true, completion:nil)
+                    
+                    self.enableUI()
+                }
+            }
+            catch {
+                NSOperationQueue.mainQueue().addOperationWithBlock() {
+                    simpleAlert((t.valueForKey("CEN_NOT_REACHABLE")! as? String)!, message: (t.valueForKey("CEN_NOT_REACHABLE_DESC")! as? String)!)
+                }
+                self.enableUI()
+            }
+        })
+        task.resume()
+    }
     
     func disableUI() {
         NSOperationQueue.mainQueue().addOperationWithBlock(){
@@ -35,7 +70,6 @@ class GmailMessageController: UIViewController {
         super.viewDidLoad()
         self.webView.hidden = true
         self.menuBar.title = t.valueForKey("READ_MESSAGE")! as? String
-        self.readBtn.enabled = false
         self.imageView.image = getImageLoader()
     }
     

@@ -12,7 +12,7 @@ var current_gmail_message = ""
 
 class GmailThreadMessagesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBAction func archiveThread(sender: AnyObject) {
+    @IBAction func archiveThread(sender: AnyObject) { 
         self.disableUI()
 
         let session = APIGETSession("/gmail/archivethread/\(current_dashboard)/\(current_gmail_thread)/")
@@ -50,6 +50,7 @@ class GmailThreadMessagesController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var menuBar: UINavigationItem!
     @IBOutlet weak var tableView: UITableView!
+
     var gmail_threads_messages:NSMutableArray = []
     
     func disableUI() {
@@ -65,18 +66,7 @@ class GmailThreadMessagesController: UIViewController, UITableViewDelegate, UITa
             }
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.tableView.hidden = true
-        self.menuBar.title = t.valueForKey("MESSAGES")! as? String
-        self.imageView.image = getImageLoader()
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        self.loadThreads()
-    }
-    
+
     func loadThreads() {
         self.disableUI()
         
@@ -112,7 +102,16 @@ class GmailThreadMessagesController: UIViewController, UITableViewDelegate, UITa
         })
         task.resume()
     }
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.hidden = true
+        self.menuBar.title = t.valueForKey("MESSAGES")! as? String
+        self.imageView.image = getImageLoader()
+    }
+    override func viewDidAppear(animated: Bool) {
+        self.loadThreads()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -121,14 +120,12 @@ class GmailThreadMessagesController: UIViewController, UITableViewDelegate, UITa
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.gmail_threads_messages.count
     }
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let thread = (self.gmail_threads_messages[indexPath.row] as? NSDictionary)!
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         cell.textLabel?.text = (thread.valueForKey("snippet")! as? String)!
         return cell
     }
-    
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         let thread = (self.gmail_threads_messages[indexPath.row] as? NSDictionary)!
         current_gmail_message = (thread.valueForKey("id")! as? String)!
@@ -139,7 +136,6 @@ class GmailThreadMessagesController: UIViewController, UITableViewDelegate, UITa
         }
         return indexPath
     }
-    
 
     /*
     // MARK: - Navigation

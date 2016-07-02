@@ -182,6 +182,7 @@ class GmailSearchController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadMore.title = t.valueForKey("SEARCH_LOAD_MORE")! as? String
         self.loadMore.enabled = false
         self.tableView.hidden = true
         self.menuBar.title = t.valueForKey("THREADS")! as? String

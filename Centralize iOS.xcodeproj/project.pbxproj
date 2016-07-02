@@ -65,6 +65,7 @@
 		8FE1DFF21CB4CD9F00475FF1 /* OAuthCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1DFF11CB4CD9F00475FF1 /* OAuthCtrl.swift */; };
 		8FE1E0011CB5123700475FF1 /* I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1E0001CB5123700475FF1 /* I18n.swift */; };
 		D13671951D26BEC80032EDBD /* GmailSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13671941D26BEC80032EDBD /* GmailSearchController.swift */; };
+		D13671971D282FDC0032EDBD /* GmailReplyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13671961D282FDC0032EDBD /* GmailReplyController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,7 @@
 		8FE1DFF41CB4E0C600475FF1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8FE1E0001CB5123700475FF1 /* I18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = I18n.swift; sourceTree = "<group>"; };
 		D13671941D26BEC80032EDBD /* GmailSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GmailSearchController.swift; sourceTree = "<group>"; };
+		D13671961D282FDC0032EDBD /* GmailReplyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GmailReplyController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 				8FC2C56F1CC122A1007C8211 /* GmailMessageController.swift */,
 				8F38897A1CEBA1800098E133 /* Utils.swift */,
 				D13671941D26BEC80032EDBD /* GmailSearchController.swift */,
+				D13671961D282FDC0032EDBD /* GmailReplyController.swift */,
 			);
 			path = "Centralize iOS";
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D13671971D282FDC0032EDBD /* GmailReplyController.swift in Sources */,
 				8FC2C5641CC0FEC9007C8211 /* GmailThreadsController.swift in Sources */,
 				8FE1DFB21CA52ADD00475FF1 /* SWRevealViewController.m in Sources */,
 				8FE1DFDE1CA68CF600475FF1 /* LanguagesController.swift in Sources */,
