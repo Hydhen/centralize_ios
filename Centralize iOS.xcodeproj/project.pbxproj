@@ -64,6 +64,7 @@
 		8FE1DFF01CB3C59D00475FF1 /* ViewProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1DFEF1CB3C59D00475FF1 /* ViewProfileController.swift */; };
 		8FE1DFF21CB4CD9F00475FF1 /* OAuthCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1DFF11CB4CD9F00475FF1 /* OAuthCtrl.swift */; };
 		8FE1E0011CB5123700475FF1 /* I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1E0001CB5123700475FF1 /* I18n.swift */; };
+		D13671951D26BEC80032EDBD /* GmailSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13671941D26BEC80032EDBD /* GmailSearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,7 @@
 		8FE1DFF31CB4E0C600475FF1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		8FE1DFF41CB4E0C600475FF1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8FE1E0001CB5123700475FF1 /* I18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = I18n.swift; sourceTree = "<group>"; };
+		D13671941D26BEC80032EDBD /* GmailSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GmailSearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 				8FC2C5631CC0FEC8007C8211 /* GmailThreadsController.swift */,
 				8FC2C56F1CC122A1007C8211 /* GmailMessageController.swift */,
 				8F38897A1CEBA1800098E133 /* Utils.swift */,
+				D13671941D26BEC80032EDBD /* GmailSearchController.swift */,
 			);
 			path = "Centralize iOS";
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				8F9D6B2F1C7463F70024E75F /* Centralize_iOS.xcdatamodeld in Sources */,
 				8FC2C5621CBEA3A6007C8211 /* ServiceController.swift in Sources */,
 				8FE1DFDC1CA6664200475FF1 /* SignoutController.swift in Sources */,
+				D13671951D26BEC80032EDBD /* GmailSearchController.swift in Sources */,
 				8FE1DFD61CA6585E00475FF1 /* DBAlertController.swift in Sources */,
 				8F9D6B291C7463F70024E75F /* ViewController.swift in Sources */,
 				8FC2C5701CC122A1007C8211 /* GmailMessageController.swift in Sources */,

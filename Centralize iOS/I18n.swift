@@ -90,7 +90,11 @@ class I18n {
             "THREADS": "Threads",
             "NO_THREADS": "No threads unread",
             "MESSAGES": "Messages",
-            "READ_MESSAGE": "Read message"
+            "READ_MESSAGE": "Read message",
+            "SEARCH_EMPTY": "Search field is empty",
+            "SEARCH_EMPTY_DESC": "Search cannot be empty, please enter keywords",
+            "SEARCH_KEYWORD": "Enter any keyword in the search bar",
+            "SEARCH_NOT_FOUND": "No result found"
         ]
     }
     
@@ -153,7 +157,11 @@ class I18n {
             "THREADS": "Fils de discussion",
             "NO_THREADS": "Aucun fil de discussion non-lu trouvé",
             "MESSAGES": "Messages",
-            "READ_MESSAGE": "Lecture d'un message"
+            "READ_MESSAGE": "Lecture d'un message",
+            "SEARCH_EMPTY": "Champ de recherche vide",
+            "SEARCH_EMPTY_DESC": "Le champ de recherche est vide, veuillez saisir des mots clés",
+            "SEARCH_KEYWORD": "Entrer vos mots clés dans la barre de recherche",
+            "SEARCH_NOT_FOUND": "Aucun résultat trouvé"
         ]
     }
 }

@@ -14,7 +14,9 @@ class GmailThreadsController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var noMsgLbl: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    
+    @IBOutlet weak var menuBar: UINavigationItem!
+    @IBOutlet weak var tableView: UITableView!
+
     @IBAction func openMenu(sender: AnyObject) {
         NSOperationQueue.mainQueue().addOperationWithBlock(){
             let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
@@ -23,10 +25,14 @@ class GmailThreadsController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    @IBOutlet weak var menuBar: UINavigationItem!
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+    @IBAction func searchBtnAction(sender: AnyObject) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let gmailSearchController = storyBoard.instantiateViewControllerWithIdentifier("gmailSearch") as! GmailSearchController
+        
+        self.presentViewController(gmailSearchController, animated:true, completion:nil)
+    }
+
     var gmail_threads:NSMutableArray = []
     
     func disableUI() {
