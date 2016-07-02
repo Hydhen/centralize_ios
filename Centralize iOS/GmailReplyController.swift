@@ -44,12 +44,8 @@ class GmailReplyController: UIViewController {
                         return
                     }
                     
-                    let jsonResult:NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                    let _:NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                     
-                    print(jsonResult)
-                    
-                    print("Seems to be ok")
-
                     self.enableUI()
                     
                     NSOperationQueue.mainQueue().addOperationWithBlock() {
