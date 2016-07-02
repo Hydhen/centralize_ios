@@ -1186,11 +1186,6 @@
                                     <constraint firstAttribute="height" constant="128" id="PCz-Zg-4ol"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFA-wB-fwa">
-                                <rect key="frame" x="0.0" y="64" width="556" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YMg-O1-rTf">
                                 <rect key="frame" x="0.0" y="94" width="600" height="506"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1209,16 +1204,6 @@
                                     <outlet property="delegate" destination="HjV-BB-EZL" id="1zy-wE-auK"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL8-jq-tYK" userLabel="searchButton">
-                                <rect key="frame" x="564" y="68" width="16" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" image="search-12-16.png">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="searchBtn:" destination="HjV-BB-EZL" eventType="touchUpInside" id="yt8-7s-KG7"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAa-HX-DWB">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <constraints>
@@ -1232,9 +1217,29 @@
                                                 <segue destination="LSh-3q-SmP" kind="show" id="IFn-Fx-eNm"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Load More" id="uhD-6v-qRy">
+                                            <connections>
+                                                <action selector="loadMoreBtn:" destination="HjV-BB-EZL" id="MGQ-GS-wXC"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL8-jq-tYK" userLabel="searchButton">
+                                <rect key="frame" x="564" y="68" width="16" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="search-12-16.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchBtn:" destination="HjV-BB-EZL" eventType="touchUpInside" id="yt8-7s-KG7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFA-wB-fwa">
+                                <rect key="frame" x="0.0" y="64" width="556" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1259,6 +1264,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="e9D-jK-dtV" id="NMh-hn-UrF"/>
+                        <outlet property="loadMore" destination="uhD-6v-qRy" id="tqA-qA-osf"/>
                         <outlet property="menuBar" destination="lgv-Wf-2mu" id="wWc-36-g6O"/>
                         <outlet property="searchField" destination="bFA-wB-fwa" id="kJL-D6-o60"/>
                         <outlet property="tableView" destination="YMg-O1-rTf" id="x8e-yf-O4K"/>

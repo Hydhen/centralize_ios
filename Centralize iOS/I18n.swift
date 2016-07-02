@@ -94,7 +94,9 @@ class I18n {
             "SEARCH_EMPTY": "Search field is empty",
             "SEARCH_EMPTY_DESC": "Search cannot be empty, please enter keywords",
             "SEARCH_KEYWORD": "Enter any keyword in the search bar",
-            "SEARCH_NOT_FOUND": "No result found"
+            "SEARCH_NOT_FOUND": "No result found",
+            "SEARCH_NO_MORE": "No more results",
+            "SEARCH_NO_MORE_DESC": "No more results has been found for this keywords",
         ]
     }
     
@@ -161,7 +163,9 @@ class I18n {
             "SEARCH_EMPTY": "Champ de recherche vide",
             "SEARCH_EMPTY_DESC": "Le champ de recherche est vide, veuillez saisir des mots clés",
             "SEARCH_KEYWORD": "Entrer vos mots clés dans la barre de recherche",
-            "SEARCH_NOT_FOUND": "Aucun résultat trouvé"
+            "SEARCH_NOT_FOUND": "Aucun résultat trouvé",
+            "SEARCH_NO_MORE": "Plus de résultat",
+            "SEARCH_NO_MORE_DESC": "Aucun résultat supplémentaire n'as été trouvé avec ces mots-clés",
         ]
     }
 }
