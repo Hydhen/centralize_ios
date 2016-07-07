@@ -29,7 +29,7 @@ class GmailReplyController: UIViewController {
             var reply_content = "reply_content="
             reply_content += reply
             
-            let url: String = "/gmail/replythread/\(current_dashboard)/\(current_gmail_thread)/"
+            let url: String = "/gmail/replythread/\(current_service)/\(current_gmail_thread)/"
             
             let session = APIPOSTSession(url, data_string: reply_content)
             

@@ -36,7 +36,22 @@ func APIGETSession(url_part: String) -> NSArray {
     
     let token_access:NSDictionary = NSUserDefaults.standardUserDefaults().objectForKey("token_access") as! NSDictionary
     
+    //------------------------------------------------------//
+    //------------------------------------------------------//
+    //  UNIQUEMENT TANT QUE LA MIGRATION N'EST PAS FINIE    //
+    //------------------------------------------------------//
+    //------------------------------------------------------//
+
     let token = token_access.valueForKey("access_token")!
+//    let token = token_access.valueForKey("refresh_token")!
+    
+    //------------------------------------------------------//
+    //------------------------------------------------------//
+    //  FIN DE L'HORREUR                                    //
+    //------------------------------------------------------//
+    //------------------------------------------------------//
+
+    
     let authString = "Bearer \(token)"
     config.HTTPAdditionalHeaders = ["Authorization" : authString]
     

@@ -18,7 +18,7 @@ class GmailMessageController: UIViewController {
     @IBAction func readBtnAction(sender: AnyObject) {
         self.disableUI()
 
-        let session = APIGETSession("/gmail/readmessage/\(current_dashboard)/\(current_gmail_message)/")
+        let session = APIGETSession("/gmail/readmessage/\(current_service)/\(current_gmail_message)/")
         
         let task = session[0].dataTaskWithRequest(session[1] as! NSURLRequest, completionHandler: {data, response, error -> Void in
             do {
@@ -80,7 +80,7 @@ class GmailMessageController: UIViewController {
     func loadThreads() {
         self.disableUI()
         
-        let session = APIGETSession("/gmail/getmessagecontent/\(current_dashboard)/\(current_gmail_message)/")
+        let session = APIGETSession("/gmail/getmessagecontent/\(current_service)/\(current_gmail_message)/")
         
         let task = session[0].dataTaskWithRequest(session[1] as! NSURLRequest, completionHandler: {data, response, error -> Void in
             do {

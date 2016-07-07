@@ -31,7 +31,7 @@ class GmailSearchController: UIViewController, UITableViewDelegate, UITableViewD
             self.threadLabel.hidden = true
             self.tableView.hidden = true
             self.imageView.hidden = false
-            var url: String = "/gmail/getthreads/\(current_dashboard)/?search="
+            var url: String = "/gmail/getthreads/\(current_service)/?search="
 
             let allowed = NSMutableCharacterSet.alphanumericCharacterSet()
             var search = searchField.text!
@@ -99,7 +99,7 @@ class GmailSearchController: UIViewController, UITableViewDelegate, UITableViewD
             self.threadLabel.hidden = true
             self.tableView.hidden = true
             self.imageView.hidden = false
-            var url: String = "/gmail/getthreads/\(current_dashboard)/?search="
+            var url: String = "/gmail/getthreads/\(current_service)/?search="
             
             let allowed = NSMutableCharacterSet.alphanumericCharacterSet()
             var search = searchField.text!
@@ -108,8 +108,6 @@ class GmailSearchController: UIViewController, UITableViewDelegate, UITableViewD
             url += search
             url += "&next="
             url += nextPageToken!
-            
-            print(url)
             
             let session = APIGETSession(url)
             
@@ -135,7 +133,6 @@ class GmailSearchController: UIViewController, UITableViewDelegate, UITableViewD
                             self.searchThreads.addObject(thread)
                         }
 
-                        print (self.searchThreads)
                         self.nextPageToken = jsonResult.valueForKey("nextPageToken") as? String
                         NSOperationQueue.mainQueue().addOperationWithBlock() {
                             self.tableView.reloadData()

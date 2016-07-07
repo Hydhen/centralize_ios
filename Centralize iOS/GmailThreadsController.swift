@@ -62,7 +62,7 @@ class GmailThreadsController: UIViewController, UITableViewDelegate, UITableView
     
     func loadThreads() {
         self.disableUI()
-        let session = APIGETSession("/gmail/getthreads/\(current_dashboard)/")
+        let session = APIGETSession("/gmail/getthreads/\(current_service)/")
         
         let task = session[0].dataTaskWithRequest(session[1] as! NSURLRequest, completionHandler: {data, response, error -> Void in
             do {

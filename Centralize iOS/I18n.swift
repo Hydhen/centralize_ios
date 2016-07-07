@@ -8,6 +8,8 @@
 
 import UIKit
 
+var currentLanguage = ""
+
 class I18n {
     var current_language: String = "en"
     init () {
@@ -28,6 +30,7 @@ class I18n {
             "en": { self.locale_en() }(),
             "fr": { self.locale_fr() }()
         ]
+        currentLanguage = self.current_language
         return available_languages[self.current_language]! as! NSDictionary
     }
     
@@ -98,6 +101,18 @@ class I18n {
             "SEARCH_NOT_FOUND": "No result found",
             "SEARCH_NO_MORE": "No more results",
             "SEARCH_NO_MORE_DESC": "No more results has been found for this keywords",
+            //----------------------//
+            //  GOOGLE CALENDAR     //
+            //----------------------//
+            "CALENDAR_LIST_TITLE": "Calendars",
+            "CALENDAR_NO_CALENDARS": "No calendars found",
+            "CALENDAR_LIST_EVENT_TITLE": "Events",
+            "CALENDAR_LIST_EVENT_NO_EVENT": "No event found",
+            "CALENDAR_EVENT_UNNAMED": "(Unnamed event)",
+            "CALENDAR_TIME_ALLDAY": "All day",
+            "CALENDAR_DETAILS_DESCRIPTION": "Description",
+            "CALENDAR_DETAILS_NO_DESCRIPTION": "(This event has no description)",
+            "CALENDAR_DETAILS_NO_LOCATION": "(This event has no location)",
         ]
     }
     
@@ -168,6 +183,18 @@ class I18n {
             "SEARCH_NOT_FOUND": "Aucun résultat trouvé",
             "SEARCH_NO_MORE": "Plus de résultat",
             "SEARCH_NO_MORE_DESC": "Aucun résultat supplémentaire n'as été trouvé avec ces mots-clés",
+            //----------------------//
+            //  GOOGLE CALENDAR     //
+            //----------------------//
+            "CALENDAR_LIST_TITLE": "Calendriers",
+            "CALENDAR_NO_CALENDARS": "Aucun calendriers trouvés",
+            "CALENDAR_LIST_EVENT_TITLE": "Évènements",
+            "CALENDAR_LIST_EVENT_NO_EVENT": "Aucun élément trouvé",
+            "CALENDAR_EVENT_UNNAMED": "(Évènement anonyme)",
+            "CALENDAR_TIME_ALLDAY": "Toute la journée",
+            "CALENDAR_DETAILS_DESCRIPTION": "Description",
+            "CALENDAR_DETAILS_NO_DESCRIPTION": "(Cet évènement n'a pas de description)",
+            "CALENDAR_DETAILS_NO_LOCATION": "(Cet évènement n'a pas de localisation)",
         ]
     }
 }

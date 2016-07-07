@@ -39,6 +39,22 @@ class HomeController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         self.disableUI()
+        
+        //----------------------------------------------//
+        //      DEBUG CES LIGNES DOIVENT DISPARAITRES   //
+        //----------------------------------------------//
+        
+        let username: String = "hydhen"
+        let token: NSDictionary = ["access_token": "Muu2uDTe867weXxqFPObInySkKsKrD"]
+        
+        NSUserDefaults.standardUserDefaults().setObject(username, forKey: "username")
+        NSUserDefaults.standardUserDefaults().setObject(token, forKey: "token_access")
+        
+        //----------------------------------------------//
+        //      FIN DU DEBUG                            //
+        //----------------------------------------------//
+
+        
         let hasUsername = NSUserDefaults.standardUserDefaults().objectForKey("username")
         
         if hasUsername == nil {

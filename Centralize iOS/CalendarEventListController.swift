@@ -1,57 +1,25 @@
 //
-//  GmailThreadMessagesController.swift
+//  CalendarEventListController.swift
 //  Centralize iOS
 //
-//  Created by Max Prudhomme on 15/04/2016.
+//  Created by Loïc Juillet on 04/07/2016.
 //  Copyright © 2016 Centralize. All rights reserved.
 //
 
 import UIKit
 
-var current_gmail_message = ""
+var current_event: NSDictionary = [:]
 
-class GmailThreadMessagesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CalendarEventListController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBAction func archiveThread(sender: AnyObject) { 
-        self.disableUI()
-
-        let session = APIGETSession("/gmail/archivethread/\(current_service)/\(current_gmail_thread)/")
-        
-        let task = session[0].dataTaskWithRequest(session[1] as! NSURLRequest, completionHandler: {data, response, error -> Void in
-            do {
-                if data == nil {
-                    NSOperationQueue.mainQueue().addOperationWithBlock() {
-                        simpleAlert((t.valueForKey("CEN_NO_DATA_RECEIVED")! as? String)!, message: (t.valueForKey("CEN_NO_DATA_RECEIVED_DESC")! as? String)!)
-                        self.imageView.hidden = true
-                        self.enableUI()
-                    }
-                    return
-                }
-                let _ = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
-                
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                
-                let gmailThreadsController = storyBoard.instantiateViewControllerWithIdentifier("gmailService") as! GmailThreadsController
-                
-                self.presentViewController(gmailThreadsController, animated:true, completion:nil)
-                
-                self.enableUI()
-            }
-            catch {
-                NSOperationQueue.mainQueue().addOperationWithBlock() {
-                    simpleAlert((t.valueForKey("CEN_NOT_REACHABLE")! as? String)!, message: (t.valueForKey("CEN_NOT_REACHABLE_DESC")! as? String)!)
-                }
-                self.enableUI()
-            }
-        })
-        task.resume()
-    }
-
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var menuBar: UINavigationItem!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var noEventLbl: UILabel!
+    @IBOutlet weak var navigationBar: UINavigationItem!
 
-    var gmail_threads_messages:NSMutableArray = []
+    let RFC3339DateFormatter = NSDateFormatter()
+    let humanReadableDateFormatter = NSDateFormatter()
+    var eventList: NSMutableArray = []
     
     func disableUI() {
         NSOperationQueue.mainQueue().addOperationWithBlock(){
@@ -66,11 +34,10 @@ class GmailThreadMessagesController: UIViewController, UITableViewDelegate, UITa
             }
         }
     }
-
-    func loadThreads() {
+    
+    func loadEventList() {
         self.disableUI()
-        
-        let session = APIGETSession("/gmail/getthreadmessages/\(current_service)/\(current_gmail_thread)/")
+        let session = APIGETSession("/googlecalendar/getevents/\(current_service)/calendar/\(current_calendar)/")
         
         let task = session[0].dataTaskWithRequest(session[1] as! NSURLRequest, completionHandler: {data, response, error -> Void in
             do {
@@ -82,13 +49,20 @@ class GmailThreadMessagesController: UIViewController, UITableViewDelegate, UITa
                     }
                     return
                 }
+                
                 let jsonResult:NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                 
-                self.gmail_threads_messages = (jsonResult.valueForKey("messages")! as? NSMutableArray)!
+                self.eventList = (jsonResult.valueForKey("items")! as? NSMutableArray)!
+                
+                let nbEvents = self.eventList.count
                 
                 NSOperationQueue.mainQueue().addOperationWithBlock() {
-                    self.tableView.reloadData()
-                    self.tableView.hidden = false
+                    if nbEvents == 0 {
+                        self.noEventLbl.hidden = false
+                    } else {
+                        self.tableView.reloadData()
+                        self.tableView.hidden = false
+                    }
                     self.imageView.hidden = true
                     self.enableUI()
                 }
@@ -102,36 +76,68 @@ class GmailThreadMessagesController: UIViewController, UITableViewDelegate, UITa
         })
         task.resume()
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.hidden = true
-        self.menuBar.title = t.valueForKey("MESSAGES")! as? String
+        self.humanReadableDateFormatter.dateStyle = .MediumStyle
+        self.humanReadableDateFormatter.timeStyle = .NoStyle
+        if currentLanguage == "en" {
+            RFC3339DateFormatter.locale = NSLocale(localeIdentifier: "en_US")
+            humanReadableDateFormatter.locale = NSLocale(localeIdentifier: "en_US")
+        } else {
+            RFC3339DateFormatter.locale = NSLocale(localeIdentifier: "fr_FR")
+            humanReadableDateFormatter.locale = NSLocale(localeIdentifier: "fr_FR")
+        }
+        RFC3339DateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        RFC3339DateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
         self.imageView.image = getImageLoader()
+        self.navigationBar.title = t.valueForKey("CALENDAR_LIST_EVENT_TITLE")! as? String
+        self.noEventLbl.text = t.valueForKey("CALENDAR_LIST_EVENT_NO_EVENT")! as? String
+        self.noEventLbl.hidden = true
+        self.tableView.hidden = true
     }
     override func viewDidAppear(animated: Bool) {
-        self.loadThreads()
+        self.loadEventList()
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.gmail_threads_messages.count
+        return self.eventList.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let thread = (self.gmail_threads_messages[indexPath.row] as? NSDictionary)!
-        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = (thread.valueForKey("snippet")! as? String)!
+        let event = (self.eventList[indexPath.row] as? NSDictionary)!
+        let text = event.valueForKey("summary") as? String
+        let start = event.valueForKey("start")!.valueForKey("dateTime") as? String
+        var humanReadableDate = ""
+        
+        if start == nil {
+            humanReadableDate = (t.valueForKey("CALENDAR_TIME_ALLDAY")! as? String)!
+        } else {
+            let date = RFC3339DateFormatter.dateFromString(start!)
+            humanReadableDate = humanReadableDateFormatter.stringFromDate(date!)
+        }
+
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("EventListCell", forIndexPath: indexPath) as! EventListCell
+        if text == nil {
+            cell.eventName.text = t.valueForKey("CALENDAR_EVENT_UNNAMED")! as? String
+            cell.eventDate.text = ""
+        } else {
+            cell.eventName.text = event.valueForKey("summary") as? String
+            cell.eventDate.text = humanReadableDate
+        }
+        
         return cell
     }
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        let thread = (self.gmail_threads_messages[indexPath.row] as? NSDictionary)!
-        current_gmail_message = (thread.valueForKey("id")! as? String)!
+        let event = (self.eventList[indexPath.row] as? NSDictionary)!
+        current_event = event
         NSOperationQueue.mainQueue().addOperationWithBlock(){
             let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-            let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("gmailMessage")
+            let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("calendarEventDetails")
             self.presentViewController(nextController, animated: true, completion: nil)
         }
         return indexPath

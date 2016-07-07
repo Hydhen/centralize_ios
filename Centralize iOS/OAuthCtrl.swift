@@ -13,8 +13,8 @@ import UIKit
 public struct APIConstants {
 //    static let site_url = "https://centralize-dev.develfactory.net";
 //    static let url = "https://centralize-dev.develfactory.net/api";
-    static let site_url = "https://centralizeproject.com";
-    static let url = "https://centralizeproject.com/api";
+    static let site_url = "https://www.centralizeproject.com";
+    static let url = "https://www.centralizeproject.com/api";
 }
 
 
@@ -27,7 +27,7 @@ class OAuthCtrl {
         let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)
         
         let token_access:NSDictionary = NSUserDefaults.standardUserDefaults().objectForKey("token_access") as! NSDictionary
-        let token = token_access.valueForKey("refresh_token")! as! String
+        let token = token_access.valueForKey("access_token")! as! String
         
         request.HTTPMethod = "POST"
         let stringPost = "grant_type=refresh_token"
@@ -57,7 +57,7 @@ class OAuthCtrl {
                         if jsonResult["error"]! as! String == "invalid_grant" {
                             call(success: false, title: (t.valueForKey("ACCOUNT_UNKNOWN")! as? String)!, message: (t.valueForKey("ACCOUNT_UNKNOWN_DESC")! as? String)!, data: jsonResult)
                         } else {
-                            call(success: false, title: (t.valueForKey("CONNECTION_ERROR")! as? String)!, message: (t.valueForKey("CONNECTION_ERROR")! as? String)!, data: jsonResult)
+                            call(success: false, title: (t.valueForKey("CONNECTION_ERROR")! as? String)!, message: (t.valueForKey("CONNECTION_ERROR_DESC")! as? String)!, data: jsonResult)
                         }
                     }
                 } else {
