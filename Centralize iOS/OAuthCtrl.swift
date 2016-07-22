@@ -11,10 +11,10 @@ import UIKit
 
 //  URLs API
 public struct APIConstants {
-//    static let site_url = "https://centralize-dev.develfactory.net";
-//    static let url = "https://centralize-dev.develfactory.net/api";
-    static let site_url = "https://www.centralizeproject.com";
-    static let url = "https://www.centralizeproject.com/api";
+//    static let site_url = "https://www.centralizeproject.com";
+//    static let url = "https://www.centralizeproject.com/api";
+    static let site_url = "http://52.59.2.75:8000/"
+    static let url = "http://52.59.2.75:5000/api"
 }
 
 
@@ -35,6 +35,8 @@ class OAuthCtrl {
             + "&client_secret=" + self.client_secret
             + "&refresh_token=" + token
         
+        print("OAUTH STRINGPOST: \(stringPost)")
+        
         let data = stringPost.dataUsingEncoding(NSUTF8StringEncoding)
         
         request.timeoutInterval = 30
@@ -51,8 +53,9 @@ class OAuthCtrl {
                 }
                 let jsonResult:NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                 
-                let hasError = jsonResult["error"] != nil
-                if hasError {
+                print("JSON OAUTH:\(jsonResult)")
+                
+                if jsonResult["error"] != nil {
                     NSOperationQueue.mainQueue().addOperationWithBlock() {
                         if jsonResult["error"]! as! String == "invalid_grant" {
                             call(success: false, title: (t.valueForKey("ACCOUNT_UNKNOWN")! as? String)!, message: (t.valueForKey("ACCOUNT_UNKNOWN_DESC")! as? String)!, data: jsonResult)

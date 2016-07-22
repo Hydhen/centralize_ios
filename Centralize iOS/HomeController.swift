@@ -44,16 +44,20 @@ class HomeController: UIViewController {
         //      DEBUG CES LIGNES DOIVENT DISPARAITRES   //
         //----------------------------------------------//
         
-        let username: String = "hydhen"
-        let token: NSDictionary = ["access_token": "Muu2uDTe867weXxqFPObInySkKsKrD"]
-        
-        NSUserDefaults.standardUserDefaults().setObject(username, forKey: "username")
-        NSUserDefaults.standardUserDefaults().setObject(token, forKey: "token_access")
+//        let username: String = "hydhen"
+//        let token: NSDictionary = ["access_token": "Muu2uDTe867weXxqFPObInySkKsKrD"]
+//        
+//        NSUserDefaults.standardUserDefaults().setObject(username, forKey: "username")
+//        NSUserDefaults.standardUserDefaults().setObject(token, forKey: "token_access")
         
         //----------------------------------------------//
         //      FIN DU DEBUG                            //
         //----------------------------------------------//
 
+//        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "username")
+//        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "token_access")
+
+        // REMOVED TO TRY CONNEXION
         
         let hasUsername = NSUserDefaults.standardUserDefaults().objectForKey("username")
         
@@ -65,17 +69,17 @@ class HomeController: UIViewController {
                 self.presentViewController(nextController, animated: true, completion: nil)
             }
         } else {
-            let o = OAuthCtrl()
-            o.refresh_token { (success, title, message, data) -> Void in
+//            let o = OAuthCtrl()
+//            o.refresh_token { (success, title, message, data) -> Void in
                 NSOperationQueue.mainQueue().addOperationWithBlock() {
-                    if (!success) {
-                        simpleAlert(title, message: message)
-                    }
+//                    if (!success) {
+//                        simpleAlert(title, message: message)
+//                    }
                     self.enableUI()
                     self.imageView.hidden = true
                     self.loadMenu()
                 }
-            }
+//            }
         }
     }
     

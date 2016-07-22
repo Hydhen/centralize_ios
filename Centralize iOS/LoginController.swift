@@ -81,6 +81,8 @@ class LoginController: UIViewController, UITextFieldDelegate {
             + "&client_id=" + o.client_id
             + "&client_secret=" + o.client_secret
         
+        print(stringPost)
+        
         let data = stringPost.dataUsingEncoding(NSUTF8StringEncoding)
         request.timeoutInterval = 30
         request.HTTPBody = data
@@ -97,8 +99,10 @@ class LoginController: UIViewController, UITextFieldDelegate {
                 }
                 let jsonResult:NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                 
-                let hasError = jsonResult["error"] != nil
-                if hasError {
+                print(jsonResult)
+                print(jsonResult["error"])
+
+                if jsonResult["error"] != nil {
                     NSOperationQueue.mainQueue().addOperationWithBlock() {
                         if jsonResult["error"]! as! String == "invalid_grant" {
                             simpleAlert((t.valueForKey("ACCOUNT_UNKNOWN")! as? String)!, message: (t.valueForKey("ACCOUNT_UNKNOWN_DESC")! as? String)!)

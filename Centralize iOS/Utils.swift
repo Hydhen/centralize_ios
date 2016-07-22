@@ -36,22 +36,25 @@ func APIGETSession(url_part: String) -> NSArray {
     
     let token_access:NSDictionary = NSUserDefaults.standardUserDefaults().objectForKey("token_access") as! NSDictionary
     
-    //------------------------------------------------------//
-    //------------------------------------------------------//
-    //  UNIQUEMENT TANT QUE LA MIGRATION N'EST PAS FINIE    //
-    //------------------------------------------------------//
-    //------------------------------------------------------//
-
     let token = token_access.valueForKey("access_token")!
-//    let token = token_access.valueForKey("refresh_token")!
+    let authString = "Bearer \(token)"
+    config.HTTPAdditionalHeaders = ["Authorization" : authString]
     
-    //------------------------------------------------------//
-    //------------------------------------------------------//
-    //  FIN DE L'HORREUR                                    //
-    //------------------------------------------------------//
-    //------------------------------------------------------//
+    request.timeoutInterval = 30
+    request.HTTPShouldHandleCookies = false
+    return [NSURLSession(configuration: config), request]
+}
 
+func APIDELETESession(url_part: String) -> NSArray {
+    let url = NSURL(string: APIConstants.url + url_part)
+    let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)
+    let config = NSURLSessionConfiguration.defaultSessionConfiguration()
     
+    request.HTTPMethod = "DELETE"
+    
+    let token_access:NSDictionary = NSUserDefaults.standardUserDefaults().objectForKey("token_access") as! NSDictionary
+    
+    let token = token_access.valueForKey("access_token")!
     let authString = "Bearer \(token)"
     config.HTTPAdditionalHeaders = ["Authorization" : authString]
     
@@ -93,6 +96,8 @@ func APIPATCHSession(url_part: String, data_string: String) -> NSArray {
     let token = token_access.valueForKey("access_token")!
     let authString = "Bearer \(token)"
     config.HTTPAdditionalHeaders = ["Authorization" : authString, "Content-Type":"application/x-www-form-urlencoded"]
+    
+    print(config.HTTPAdditionalHeaders)
     
     let data = data_string.dataUsingEncoding(NSUTF8StringEncoding)
     

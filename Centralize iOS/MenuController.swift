@@ -10,8 +10,6 @@ import UIKit
 
 class MenuController: UITableViewController {
 
-    
-    
     @IBOutlet weak var dashboardLink: UILabel!
     @IBOutlet weak var profileLink: UILabel!
     @IBOutlet weak var languagesLink: UILabel!

@@ -65,7 +65,79 @@ class CalendarEventDetailsController: UIViewController {
             self.location.text = location
         }
     }
-    
+
+    func disableUI() {
+        NSOperationQueue.mainQueue().addOperationWithBlock(){
+            self.view.endEditing(true)
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+        }
+    }
+    func enableUI() {
+        NSOperationQueue.mainQueue().addOperationWithBlock(){
+            if UIApplication.sharedApplication().isIgnoringInteractionEvents() {
+                UIApplication.sharedApplication().endIgnoringInteractionEvents()
+            }
+        }
+    }
+
+    func deleteEvent() {
+        self.disableUI()
+        
+        let session = APIDELETESession("/googlecalendar/deleteevent/\(current_service)/calendar/\(current_calendar)/event/\(current_event["id"]!)/")
+        
+        let task = session[0].dataTaskWithRequest(session[1] as! NSURLRequest, completionHandler: {data, response, error -> Void in
+            do {
+                if data == nil {
+                    NSOperationQueue.mainQueue().addOperationWithBlock() {
+                        simpleAlert((t.valueForKey("CEN_NO_DATA_RECEIVED")! as? String)!, message: (t.valueForKey("CEN_NO_DATA_RECEIVED_DESC")! as? String)!)
+                        //                        self.imageView.hidden = true
+                        self.enableUI()
+                    }
+                    return
+                }
+                
+                print(data)
+                print(response)
+                print(error)
+                
+                let jsonResult:NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                
+                print("RESULT: \(jsonResult)")
+                self.enableUI()
+                NSOperationQueue.mainQueue().addOperationWithBlock() {
+                    current_event = [:]
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    let calendarEventListController = storyBoard.instantiateViewControllerWithIdentifier("calendarEventList") as! CalendarEventListController
+                    self.presentViewController(calendarEventListController, animated:true, completion:nil)
+                }
+            }
+            catch {
+                NSOperationQueue.mainQueue().addOperationWithBlock() {
+                    simpleAlert((t.valueForKey("CEN_NOT_REACHABLE")! as? String)!, message: (t.valueForKey("CEN_NOT_REACHABLE_DESC")! as? String)!)
+                }
+                self.enableUI()
+            }
+        })
+        task.resume()
+    }
+    @IBAction func deleteBtnAction(sender: AnyObject) {
+        let alert = UIAlertController(title: t.valueForKey("CALENDAR_EVENT_DELETE")! as? String, message: t.valueForKey("CALENDAR_EVENT_DELETE_DESC")! as? String, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: t.valueForKey("OK")! as? String, style: .Default, handler: { action in
+            switch action.style{
+            case .Default:
+                self.deleteEvent()
+
+            case .Cancel:
+                print("Action canceled")
+                
+            case .Destructive:
+                print("destructive")
+            }
+        }))
+        alert.addAction(UIAlertAction(title: t.valueForKey("CANCEL")! as? String, style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -93,7 +165,6 @@ class CalendarEventDetailsController: UIViewController {
         self.setDescription()
         self.setLocation()
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

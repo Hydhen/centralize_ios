@@ -12,7 +12,6 @@
 		8F8458181C772EEE00946AE1 /* warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F8458171C772EEE00946AE1 /* warning.png */; };
 		8F9D6B271C7463F70024E75F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D6B261C7463F70024E75F /* AppDelegate.swift */; };
 		8F9D6B291C7463F70024E75F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D6B281C7463F70024E75F /* ViewController.swift */; };
-		8F9D6B2C1C7463F70024E75F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D6B2A1C7463F70024E75F /* Main.storyboard */; };
 		8F9D6B2F1C7463F70024E75F /* Centralize_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F9D6B2D1C7463F70024E75F /* Centralize_iOS.xcdatamodeld */; };
 		8F9D6B311C7463F70024E75F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D6B301C7463F70024E75F /* Assets.xcassets */; };
 		8F9D6B341C7463F70024E75F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9D6B321C7463F70024E75F /* LaunchScreen.storyboard */; };
@@ -64,8 +63,14 @@
 		8FE1DFF01CB3C59D00475FF1 /* ViewProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1DFEF1CB3C59D00475FF1 /* ViewProfileController.swift */; };
 		8FE1DFF21CB4CD9F00475FF1 /* OAuthCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1DFF11CB4CD9F00475FF1 /* OAuthCtrl.swift */; };
 		8FE1E0011CB5123700475FF1 /* I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1E0001CB5123700475FF1 /* I18n.swift */; };
+		D102831C1D3CCF1D006DA5E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D102831A1D3CCF1D006DA5E7 /* Main.storyboard */; };
 		D13671951D26BEC80032EDBD /* GmailSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13671941D26BEC80032EDBD /* GmailSearchController.swift */; };
 		D13671971D282FDC0032EDBD /* GmailReplyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13671961D282FDC0032EDBD /* GmailReplyController.swift */; };
+		D189E30E1D2EFB74005A06FA /* CalendarEventUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189E30D1D2EFB74005A06FA /* CalendarEventUpdateController.swift */; };
+		D189E3101D2FC80C005A06FA /* CalendarEventCreateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189E30F1D2FC80C005A06FA /* CalendarEventCreateController.swift */; };
+		D189E3121D3007A4005A06FA /* CalendarEventSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189E3111D3007A4005A06FA /* CalendarEventSearchController.swift */; };
+		D1CA0B541D410B1400BE194B /* FAQController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA0B531D410B1400BE194B /* FAQController.swift */; };
+		D1CA0B561D411C9B00BE194B /* CustomFAQCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA0B551D411C9B00BE194B /* CustomFAQCell.swift */; };
 		D1CD4CAA1D2AE74900F60ED4 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD4CA91D2AE74900F60ED4 /* CalendarController.swift */; };
 		D1CD4CAC1D2AEBD500F60ED4 /* CalendarEventListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD4CAB1D2AEBD500F60ED4 /* CalendarEventListController.swift */; };
 		D1CD4CAE1D2AECC800F60ED4 /* CalendarEventDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD4CAD1D2AECC800F60ED4 /* CalendarEventDetailsController.swift */; };
@@ -96,7 +101,6 @@
 		8F9D6B231C7463F70024E75F /* Centralize iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Centralize iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9D6B261C7463F70024E75F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F9D6B281C7463F70024E75F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8F9D6B2B1C7463F70024E75F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F9D6B2E1C7463F70024E75F /* Centralize_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Centralize_iOS.xcdatamodel; sourceTree = "<group>"; };
 		8F9D6B301C7463F70024E75F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F9D6B331C7463F70024E75F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -154,11 +158,16 @@
 		8FE1DFED1CA6A7FE00475FF1 /* search-12-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-12-16.png"; sourceTree = "<group>"; };
 		8FE1DFEF1CB3C59D00475FF1 /* ViewProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProfileController.swift; sourceTree = "<group>"; };
 		8FE1DFF11CB4CD9F00475FF1 /* OAuthCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthCtrl.swift; sourceTree = "<group>"; };
-		8FE1DFF31CB4E0C600475FF1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		8FE1DFF41CB4E0C600475FF1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8FE1E0001CB5123700475FF1 /* I18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = I18n.swift; sourceTree = "<group>"; };
+		D102831B1D3CCF1D006DA5E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D13671941D26BEC80032EDBD /* GmailSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GmailSearchController.swift; sourceTree = "<group>"; };
 		D13671961D282FDC0032EDBD /* GmailReplyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GmailReplyController.swift; sourceTree = "<group>"; };
+		D189E30D1D2EFB74005A06FA /* CalendarEventUpdateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEventUpdateController.swift; sourceTree = "<group>"; };
+		D189E30F1D2FC80C005A06FA /* CalendarEventCreateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEventCreateController.swift; sourceTree = "<group>"; };
+		D189E3111D3007A4005A06FA /* CalendarEventSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEventSearchController.swift; sourceTree = "<group>"; };
+		D1CA0B531D410B1400BE194B /* FAQController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQController.swift; sourceTree = "<group>"; };
+		D1CA0B551D411C9B00BE194B /* CustomFAQCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFAQCell.swift; sourceTree = "<group>"; };
 		D1CD4CA91D2AE74900F60ED4 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		D1CD4CAB1D2AEBD500F60ED4 /* CalendarEventListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEventListController.swift; sourceTree = "<group>"; };
 		D1CD4CAD1D2AECC800F60ED4 /* CalendarEventDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEventDetailsController.swift; sourceTree = "<group>"; };
@@ -217,9 +226,9 @@
 				8F9D6B571C7464B60024E75F /* img */,
 				8F9D6B261C7463F70024E75F /* AppDelegate.swift */,
 				8F9D6B281C7463F70024E75F /* ViewController.swift */,
-				8F9D6B2A1C7463F70024E75F /* Main.storyboard */,
 				8FE1DFDD1CA68CF600475FF1 /* LanguagesController.swift */,
 				8FE1DFB31CA5323300475FF1 /* OutViewController.swift */,
+				D102831A1D3CCF1D006DA5E7 /* Main.storyboard */,
 				8F9D6B301C7463F70024E75F /* Assets.xcassets */,
 				8F9D6B321C7463F70024E75F /* LaunchScreen.storyboard */,
 				8F9D6B351C7463F70024E75F /* Info.plist */,
@@ -243,6 +252,7 @@
 				8F38897A1CEBA1800098E133 /* Utils.swift */,
 				D13671941D26BEC80032EDBD /* GmailSearchController.swift */,
 				D13671961D282FDC0032EDBD /* GmailReplyController.swift */,
+				D1CA0B521D410AEC00BE194B /* Centralize */,
 				D1CD4CA81D2AE71F00F60ED4 /* Calendar */,
 			);
 			path = "Centralize iOS";
@@ -328,6 +338,15 @@
 			name = icons;
 			sourceTree = "<group>";
 		};
+		D1CA0B521D410AEC00BE194B /* Centralize */ = {
+			isa = PBXGroup;
+			children = (
+				D1CA0B531D410B1400BE194B /* FAQController.swift */,
+				D1CA0B551D411C9B00BE194B /* CustomFAQCell.swift */,
+			);
+			name = Centralize;
+			sourceTree = "<group>";
+		};
 		D1CD4CA81D2AE71F00F60ED4 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +354,9 @@
 				D1CD4CA91D2AE74900F60ED4 /* CalendarController.swift */,
 				D1CD4CAB1D2AEBD500F60ED4 /* CalendarEventListController.swift */,
 				D1CD4CAD1D2AECC800F60ED4 /* CalendarEventDetailsController.swift */,
+				D189E30D1D2EFB74005A06FA /* CalendarEventUpdateController.swift */,
+				D189E30F1D2FC80C005A06FA /* CalendarEventCreateController.swift */,
+				D189E3111D3007A4005A06FA /* CalendarEventSearchController.swift */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -454,6 +476,7 @@
 				8F9D6B741C7473B00024E75F /* loader-11.png in Resources */,
 				8FE1DFD11CA555D900475FF1 /* sinchronize-16.png in Resources */,
 				8F9D6B711C7473B00024E75F /* loader-8.png in Resources */,
+				D102831C1D3CCF1D006DA5E7 /* Main.storyboard in Resources */,
 				8F9D6B701C7473B00024E75F /* loader-7.png in Resources */,
 				8FE1DFEB1CA6A31100475FF1 /* user-16.png in Resources */,
 				8FC2C56A1CC1160F007C8211 /* arrow-96-16.png in Resources */,
@@ -474,7 +497,6 @@
 				8FE1DFCF1CA555D900475FF1 /* plus-5-16.png in Resources */,
 				8FE1DFD21CA555D900475FF1 /* x-mark-4-16.png in Resources */,
 				8FE1DFCE1CA555D900475FF1 /* menu-4-16.png in Resources */,
-				8F9D6B2C1C7463F70024E75F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,12 +524,15 @@
 				D13671971D282FDC0032EDBD /* GmailReplyController.swift in Sources */,
 				8FC2C5641CC0FEC9007C8211 /* GmailThreadsController.swift in Sources */,
 				8FE1DFB21CA52ADD00475FF1 /* SWRevealViewController.m in Sources */,
+				D1CA0B561D411C9B00BE194B /* CustomFAQCell.swift in Sources */,
 				8FE1DFDE1CA68CF600475FF1 /* LanguagesController.swift in Sources */,
 				8FC2C56E1CC11783007C8211 /* GmailThreadMessagesController.swift in Sources */,
 				8FE1DFF21CB4CD9F00475FF1 /* OAuthCtrl.swift in Sources */,
 				8FE1DFB41CA5323300475FF1 /* OutViewController.swift in Sources */,
 				8FC2C5601CBCE486007C8211 /* DashboardController.swift in Sources */,
+				D1CA0B541D410B1400BE194B /* FAQController.swift in Sources */,
 				8F9D6B2F1C7463F70024E75F /* Centralize_iOS.xcdatamodeld in Sources */,
+				D189E3101D2FC80C005A06FA /* CalendarEventCreateController.swift in Sources */,
 				8FC2C5621CBEA3A6007C8211 /* ServiceController.swift in Sources */,
 				8FE1DFDC1CA6664200475FF1 /* SignoutController.swift in Sources */,
 				D13671951D26BEC80032EDBD /* GmailSearchController.swift in Sources */,
@@ -518,12 +543,14 @@
 				8FC2C55C1CB67830007C8211 /* MenuController.swift in Sources */,
 				8FE1DFF01CB3C59D00475FF1 /* ViewProfileController.swift in Sources */,
 				D1CD4CAC1D2AEBD500F60ED4 /* CalendarEventListController.swift in Sources */,
+				D189E3121D3007A4005A06FA /* CalendarEventSearchController.swift in Sources */,
 				8F38897B1CEBA1800098E133 /* Utils.swift in Sources */,
 				8FE1DFAD1CA435DD00475FF1 /* HomeController.swift in Sources */,
 				8F8458161C7720F100946AE1 /* ErrorController.swift in Sources */,
 				8F9D6B271C7463F70024E75F /* AppDelegate.swift in Sources */,
 				D1CD4CAA1D2AE74900F60ED4 /* CalendarController.swift in Sources */,
 				8FE1DFAB1CA4013A00475FF1 /* LoginController.swift in Sources */,
+				D189E30E1D2EFB74005A06FA /* CalendarEventUpdateController.swift in Sources */,
 				D1ED7B401D2D985900FFAB95 /* EventListCell.swift in Sources */,
 				8FC2C55E1CB7D197007C8211 /* EditProfileController.swift in Sources */,
 				8FE1DFE41CA696FC00475FF1 /* ProfileController.swift in Sources */,
@@ -563,15 +590,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8F9D6B2A1C7463F70024E75F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8F9D6B2B1C7463F70024E75F /* Base */,
-				8FE1DFF31CB4E0C600475FF1 /* fr */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8F9D6B321C7463F70024E75F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -579,6 +597,14 @@
 				8FE1DFF41CB4E0C600475FF1 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D102831A1D3CCF1D006DA5E7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D102831B1D3CCF1D006DA5E7 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
