@@ -111,6 +111,8 @@ class I18n {
             "CALENDAR_SUMMARY_EMPTY_DESC": "Summary cannot be empty",
             "CALENDAR_LIST_EVENT_TITLE": "Events",
             "CALENDAR_LIST_EVENT_NO_EVENT": "No event found",
+            "CALENDAR_LIST_REMINDER_TITLE": "Events",
+            "CALENDAR_LIST_REMINDER_NO_REMINDER": "No event found",
             "CALENDAR_EVENT_DELETE": "Deleting event",
             "CALENDAR_EVENT_DELETE_DESC": "You're about to delete this event, are you sure?",
             "CALENDAR_EVENT_UNNAMED": "(Unnamed event)",

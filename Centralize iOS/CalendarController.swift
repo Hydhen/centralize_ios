@@ -58,6 +58,8 @@ class CalendarController: UIViewController {
                 
                 let jsonResult:NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                 
+                print (jsonResult)
+                
                 self.calendarsList = (jsonResult.valueForKey("items")! as? NSMutableArray)!
                 
                 let nbCalendars = self.calendarsList.count
