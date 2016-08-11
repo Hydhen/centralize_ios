@@ -13,14 +13,14 @@ import UIKit
 public struct APIConstants {
 //    static let site_url = "https://www.centralizeproject.com";
 //    static let url = "https://www.centralizeproject.com/api";
-    static let site_url = "http://52.59.2.75:8000/"
-    static let url = "http://52.59.2.75:5000/api"
+    static let site_url = "https://dev.centralizeproject.com/"
+    static let url = "https://dev.api.centralizeproject.com"
 }
 
 
 class OAuthCtrl {
-    var client_id = "5ykcWfdhN5yy9tjqctACqoTkUL3i50WKS6kmWYfO"
-    var client_secret = "cSNc3LmtWDYN8tG7RwoUXGkbi6ycD4eBdlde0Rn7UZBOg103GDVCwYQ8O5tFkLWEuQ7FlH0CzKBvA9u3gJyNc9XKm9YKH5SZ9F0KUqJ6He1tungG6vPRXn9EMPnPK0sC"
+    var client_id = "PWkVY8GgolJN9nDPTyI3qYNZU0if"
+    var client_secret = "962Sp5m5u8OMDzq6dMAFtEnzCUUIB9wfSNrvlqTl9NKoy1wTyvu4E9xqhgEOGc5zGa0tqw7OjLQVfiCjHEXS0sZgBTkJ6ITgqEZ3"
     
     func refresh_token(call: (success:Bool, title: String, message: String, data:NSDictionary) -> Void) {
         let url = NSURL(string: APIConstants.url + "/o/token/")

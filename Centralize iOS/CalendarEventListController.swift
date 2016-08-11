@@ -140,7 +140,7 @@ class CalendarEventListController: UIViewController, UITableViewDataSource, UITa
 
         let cell = self.tableView.dequeueReusableCellWithIdentifier("EventListCell", forIndexPath: indexPath) as! EventListCell
         if text == nil {
-            cell.eventName.text = t.valueForKey("CALENDAR_EVENT_UNNAMED")! as? String
+            cell.eventName.text = valueForKey("CALENDAR_EVENT_UNNAMED")! as? String
             cell.eventDate.text = t.valueForKey("CALENDAR_TIME_ALLDAY")! as? String
         } else {
             cell.eventName.text = event.valueForKey("summary") as? String

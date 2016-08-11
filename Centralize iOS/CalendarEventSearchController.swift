@@ -43,9 +43,6 @@ class CalendarEventSearchController: UIViewController, UITableViewDataSource, UI
 
         let compareResult = self.startDateTimePicker.date.compare(self.endDateTimePicker.date)
 
-        print ("self.startDateTimePicker.date: \(self.startDateTimePicker.date)")
-        print ("self.endDateTimePicker.date: \(self.endDateTimePicker.date)")
-
         if compareResult == NSComparisonResult.OrderedDescending {
             NSOperationQueue.mainQueue().addOperationWithBlock() {
                 simpleAlert((t.valueForKey("CALENDAR_EVENT_START_LATER_THAN_END")! as? String)!, message: (t.valueForKey("CALENDAR_EVENT_START_LATER_THAN_END_DESC")! as? String)!)
@@ -62,11 +59,6 @@ class CalendarEventSearchController: UIViewController, UITableViewDataSource, UI
             let timeMaxDate = self.endDateTimePicker.date
             var timeMaxString = RFC3339DateFormatter.stringFromDate(timeMaxDate)
             timeMaxString = timeMaxString.stringByAddingPercentEncodingWithAllowedCharacters(allowed)!
-
-            print("timeMinString: \(timeMinString)")
-            print("timeMaxString: \(timeMaxString)")
-            
-            print("url: /api/googlecalendar/getevents/\(current_service)/calendar/\(current_calendar)/?timeMin=\(timeMinString)&timeMax=\(timeMaxString)")
             
             let session = APIGETSession("/googlecalendar/getevents/\(current_service)/calendar/\(current_calendar)/?timeMin=\(timeMinString)&timeMax=\(timeMaxString)")
             
@@ -82,8 +74,6 @@ class CalendarEventSearchController: UIViewController, UITableViewDataSource, UI
                     }
                     
                     let jsonResult:NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                    
-                    print(jsonResult)
                     
                     self.eventList = (jsonResult.valueForKey("items")! as? NSMutableArray)!
                     
@@ -154,22 +144,18 @@ class CalendarEventSearchController: UIViewController, UITableViewDataSource, UI
             let date = self.RFC3339DateFormatter.dateFromString(start!)
             humanReadableDate = self.humanReadableDateFormatter.stringFromDate(date!)
         }
-        print (humanReadableDate)
         
         let cell = self.tableView.dequeueReusableCellWithIdentifier("EventListCell", forIndexPath: indexPath) as! EventListCell
-        print (cell)
+
         if text == nil {
             cell.eventName.text = t.valueForKey("CALENDAR_EVENT_UNNAMED")! as? String
+            print (cell.eventName.text)
             cell.eventDate.text = t.valueForKey("CALENDAR_TIME_ALLDAY")! as? String
+            print (cell.eventDate.text)
         } else {
-            print(text)
-            print(cell.eventName)
-//            cell.eventName.text = "Toto"
-//            print(text)
-////            print(humanReadableDate)
-//            cell.eventDate.text = humanReadableDate
-        }
-        
+            cell.eventName.text = event.valueForKey("summary") as? String
+            cell.eventDate.text = humanReadableDate
+        }        
         return cell
     }
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {

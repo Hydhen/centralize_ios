@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5KM-qV-LgK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5KM-qV-LgK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1182,8 +1182,8 @@
                                             <constraint firstItem="0Gv-nK-HiD" firstAttribute="leading" secondItem="amG-T2-eQg" secondAttribute="leading" constant="8" id="hZU-9r-iza"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="eventDate" destination="aSm-yo-gzl" id="eX2-DV-YS3"/>
-                                            <outlet property="eventName" destination="0Gv-nK-HiD" id="t10-e1-DA9"/>
+                                            <outlet property="eventDate" destination="0Gv-nK-HiD" id="Sf7-39-19S"/>
+                                            <outlet property="eventName" destination="aSm-yo-gzl" id="c0f-Ug-ZZJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1586,6 +1586,10 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="RwO-dD-jXj" secondAttribute="trailing" id="dWO-Td-WkP"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventDate" destination="RwO-dD-jXj" id="IH1-CT-GqG"/>
+                                            <outlet property="eventName" destination="6wm-7E-eWO" id="a5Y-eM-76J"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
