@@ -145,12 +145,12 @@ class CalendarEventDetailsController: UIViewController {
         self.descriptionLabel.text = t.valueForKey("CALENDAR_DETAILS_DESCRIPTION")! as? String
         self.humanReadableDateFormatter.dateStyle = .MediumStyle
         self.humanReadableDateFormatter.timeStyle = .NoStyle
-        if currentLanguage == "en" {
-            self.RFC3339DateFormatter.locale = NSLocale(localeIdentifier: "en_US")
-            self.humanReadableDateFormatter.locale = NSLocale(localeIdentifier: "en_US")
-        } else {
+        if currentLanguage == "fr" {
             self.RFC3339DateFormatter.locale = NSLocale(localeIdentifier: "fr_FR")
             self.humanReadableDateFormatter.locale = NSLocale(localeIdentifier: "fr_FR")
+        } else {
+            self.RFC3339DateFormatter.locale = NSLocale(localeIdentifier: "en_US")
+            self.humanReadableDateFormatter.locale = NSLocale(localeIdentifier: "en_US")
         }
         self.RFC3339DateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         self.RFC3339DateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)

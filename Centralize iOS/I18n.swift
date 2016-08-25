@@ -40,6 +40,7 @@ class I18n {
             "CENTRALIZE": "Centralize",
             "USERNAME": "Username",
             "PASSWORD": "Password",
+            "BACK": "Back",
             // Menu
             "HOME": "Home",
             "ACCOUNT": "Account",
@@ -124,6 +125,31 @@ class I18n {
             "CALENDAR_DETAILS_DESCRIPTION": "Description",
             "CALENDAR_DETAILS_NO_DESCRIPTION": "(This event has no description)",
             "CALENDAR_DETAILS_NO_LOCATION": "(This event has no location)",
+            //----------------------//
+            //  GOOGLE DRIVE        //
+            //----------------------//
+            "DRIVE": "Drive",
+            "DRIVE_NO_FILE": "No file found",
+            "DRIVE_ROOT": "Root",
+            "DRIVE_BACK": "Back",
+            "DRIVE_DETAILS": "Details",
+            "DRIVE_SIZE": "Size of file",
+            "DRIVE_CREATION": "Created on",
+            "DRIVE_MODIFICATION": "Last modified on",
+            "DRIVE_OPEN": "Open",
+            "DRIVE_DOWNLOAD": "Download",
+            "DRIVE_SHARE": "Share",
+            "DRIVE_SIZE_NULL": "Unknown",
+            "DRIVE_DATE_UNKNOWN": "Unknwon date",
+            "DRIVE_DOWNLOAD": "Download",
+            "DRIVE_OPEN_IN_BROWSER": "Open",
+            "DRIVE_SHARE_RECEIVER": "Email",
+            "DRIVE_SHARE_NOTIFICATION": "Send notification?",
+            "DRIVE_RIGHT_READER": "Reader",
+            "DRIVE_RIGHT_WRITER": "Writer",
+            "DRIVE_RIGHT_COMMENTER": "Commenter",
+            "DRIVE_WRONG_EMAIL_TITLE": "Invalid email",
+            "DRIVE_WRONG_EMAIL_MESSAGE": "You entered an invalid email, please try again",
         ]
     }
     
@@ -133,6 +159,7 @@ class I18n {
             "CENTRALIZE": "Centralize",
             "USERNAME": "Identifiants",
             "PASSWORD": "Mot de passe",
+            "BACK": "Retour",
             // Menu
             "HOME": "Accueil",
             "ACCOUNT": "Compte",
@@ -215,6 +242,31 @@ class I18n {
             "CALENDAR_DETAILS_DESCRIPTION": "Description",
             "CALENDAR_DETAILS_NO_DESCRIPTION": "(Cet évènement n'a pas de description)",
             "CALENDAR_DETAILS_NO_LOCATION": "(Cet évènement n'a pas de localisation)",
+            //----------------------//
+            //  GOOGLE DRIVE        //
+            //----------------------//
+            "DRIVE": "Drive",
+            "DRIVE_NO_FILE": "Aucun fichier trouvé",
+            "DRIVE_ROOT": "Racine",
+            "DRIVE_BACK": "Retour",
+            "DRIVE_DETAILS": "Détails",
+            "DRIVE_SIZE": "Taille du fichier",
+            "DRIVE_CREATION": "Créé le",
+            "DRIVE_MODIFICATION": "Dernière modification le",
+            "DRIVE_OPEN": "Ouvrir",
+            "DRIVE_DOWNLOAD": "Télécharger",
+            "DRIVE_SHARE": "Partager",
+            "DRIVE_SIZE_NULL": "Inconnue",
+            "DRIVE_DATE_UNKNOWN": "Date inconnue",
+            "DRIVE_DOWNLOAD": "Télécharger",
+            "DRIVE_OPEN_IN_BROWSER": "Ouvrir",
+            "DRIVE_SHARE_RECEIVER": "Email",
+            "DRIVE_SHARE_NOTIFICATION": "Notifier par email ?",
+            "DRIVE_RIGHT_READER": "Lecture",
+            "DRIVE_RIGHT_WRITER": "Ecriture",
+            "DRIVE_RIGHT_COMMENTER": "Commenter",
+            "DRIVE_WRONG_EMAIL_TITLE": "Email invalide",
+            "DRIVE_WRONG_EMAIL_MESSAGE": "Vous avez rentré une adresse email invalide, veuillez réessayer",
         ]
     }
 }
