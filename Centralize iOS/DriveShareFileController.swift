@@ -87,7 +87,6 @@ class DriveShareFileController: UIViewController, UIPickerViewDelegate, UIPicker
         self.navigationBar.title = t.valueForKey("DRIVE_SHARE")! as? String
         self.receivers.placeholder = t.valueForKey("DRIVE_SHARE_RECEIVER")! as? String
         self.notificationLabel.text = t.valueForKey("DRIVE_SHARE_NOTIFICATION")! as? String
-        self.backButton.title = t.valueForKey("BACK")! as? String
         self.shareButton.title = t.valueForKey("DRIVE_SHARE")! as? String
 
         self.permissionPicker.delegate = self

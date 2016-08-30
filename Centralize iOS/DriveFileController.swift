@@ -108,7 +108,6 @@ class DriveFileController: UIViewController {
         self.fileSizeLabel.text = t.valueForKey("DRIVE_SIZE")! as? String
         self.fileCreationDateLabel.text = t.valueForKey("DRIVE_CREATION")! as? String
         self.fileModificationLabel.text = t.valueForKey("DRIVE_MODIFICATION")! as? String
-        self.backButton.title = t.valueForKey("BACK")! as? String
         self.openButton.title = t.valueForKey("DRIVE_OPEN_IN_BROWSER")! as? String
         self.shareButton.title = t.valueForKey("DRIVE_SHARE")! as? String
         self.downloadButton.title = t.valueForKey("DRIVE_DOWNLOAD")! as? String

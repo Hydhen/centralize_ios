@@ -9,7 +9,7 @@
 import UIKit
 
 class CalendarEventCreateController: UIViewController {
-
+    
     @IBOutlet weak var summary: UITextField!
     @IBOutlet weak var allDayLabel: UILabel!
     @IBOutlet weak var allDaySwitch: UISwitch!
@@ -19,7 +19,7 @@ class CalendarEventCreateController: UIViewController {
     @IBOutlet weak var endDateTimePicker: UIDatePicker!
     @IBOutlet weak var descriptionLabel: UITextField!
     @IBOutlet weak var location: UITextField!
-
+    
     @IBAction func allDaySwitchAction(sender: AnyObject) {
         if self.allDaySwitch.on {
             self.startDateTimePicker.datePickerMode = UIDatePickerMode.Date
@@ -35,6 +35,9 @@ class CalendarEventCreateController: UIViewController {
         
         let session = APIPOSTSession("/googlecalendar/addevent/\(current_service)/calendar/\(current_calendar)/", data_string: stringPatch)
         
+        print ("/googlecalendar/addevent/\(current_service)/calender/\(current_calendar)/")
+        print (stringPatch)
+        
         let task = session[0].dataTaskWithRequest(session[1] as! NSURLRequest, completionHandler: {data, response, error -> Void in
             do {
                 if data == nil {
@@ -45,7 +48,7 @@ class CalendarEventCreateController: UIViewController {
                     }
                     return
                 }
-
+                
                 print(data)
                 print(response)
                 print(error)
@@ -150,11 +153,11 @@ class CalendarEventCreateController: UIViewController {
     func setDateTimePicker() {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-
+        
         let today = NSDate()
         var startString: String? = dateFormatter.stringFromDate(today)
         var endString: String? = dateFormatter.stringFromDate(today)
-
+        
         if startString == nil {
             startString = current_event["start"]!["date"] as? String
             endString = current_event["end"]!["date"] as? String
@@ -202,15 +205,15 @@ class CalendarEventCreateController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

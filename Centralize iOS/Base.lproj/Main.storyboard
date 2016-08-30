@@ -27,7 +27,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ZSQ-Z2-B4T" firstAttribute="centerX" secondItem="no0-EA-4oO" secondAttribute="centerX" id="Dlg-bJ-CsT"/>
                             <constraint firstItem="ZSQ-Z2-B4T" firstAttribute="centerY" secondItem="no0-EA-4oO" secondAttribute="centerY" id="fq0-zT-DfY"/>
@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="158-h5-jbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2035" y="-1698"/>
+            <point key="canvasLocation" x="2412" y="-1698"/>
         </scene>
         <!--Menu Controller-->
         <scene sceneID="k6Z-O7-LWF">
@@ -411,7 +411,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gs7-pf-OS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2035" y="-901"/>
+            <point key="canvasLocation" x="2412" y="-901"/>
         </scene>
         <!--Edit my profile-->
         <scene sceneID="gFy-zZ-oXL">
@@ -425,24 +425,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJE-gk-dqJ">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="U3H-vM-XCV"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Edit your profile" id="uEo-B4-Bix">
-                                        <barButtonItem key="leftBarButtonItem" image="menu-4-16.png" id="OYx-yb-wHE">
-                                            <color key="tintColor" red="0.69411764710000001" green="0.054901960780000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="U3H-vM-XCV"/>
-                                    </mask>
-                                </variation>
-                            </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HL-ge-COG">
                                 <rect key="frame" x="0.0" y="59" width="600" height="576"/>
                                 <subviews>
@@ -578,6 +560,28 @@
                                     <constraint firstItem="zEQ-FO-wsk" firstAttribute="centerX" secondItem="M5M-0o-aMX" secondAttribute="centerX" id="yEP-eG-tzI"/>
                                 </constraints>
                             </scrollView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJE-gk-dqJ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="U3H-vM-XCV"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Edit your profile" id="uEo-B4-Bix">
+                                        <barButtonItem key="leftBarButtonItem" image="menu-4-16.png" id="OYx-yb-wHE">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="U3H-vM-XCV"/>
+                                    </mask>
+                                </variation>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -614,7 +618,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITl-d5-Dqe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="740"/>
+            <point key="canvasLocation" x="1584" y="740"/>
         </scene>
         <!--Profile-->
         <scene sceneID="loq-00-ow6">
@@ -633,13 +637,17 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="pF6-96-AtB"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Your profile" id="DZI-if-GCS">
                                         <barButtonItem key="leftBarButtonItem" image="menu-4-16.png" id="IPn-pn-N1K">
-                                            <color key="tintColor" red="0.69411764710000001" green="0.054901960780000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="search-12-16.png" id="1ZS-BO-Ytr">
-                                            <color key="tintColor" red="0.69411764710000001" green="0.054901960780000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <barButtonItem key="rightBarButtonItem" image="search-16.png" id="1ZS-BO-Ytr">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -709,7 +717,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQq-JG-bT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2035" y="-117"/>
+            <point key="canvasLocation" x="2412" y="-117"/>
         </scene>
         <!--Profile Controller-->
         <scene sceneID="acT-9s-Rcm">
@@ -727,7 +735,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pnj-8W-Yrf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="-117"/>
+            <point key="canvasLocation" x="1434" y="-117"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="zne-Pk-2o0">
@@ -746,6 +754,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="C2a-Xx-NDF"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Sign in - Centralize" id="Duf-dj-qm3"/>
                                 </items>
@@ -785,7 +797,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0qV-eK-Wuj" firstAttribute="centerX" secondItem="yZr-Yf-b6k" secondAttribute="centerX" id="3CR-lN-l51"/>
                             <constraint firstItem="NBz-BT-xBW" firstAttribute="trailing" secondItem="yZr-Yf-b6k" secondAttribute="trailingMargin" id="5F4-tL-6K9"/>
@@ -812,7 +824,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1cZ-FH-gNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-372" y="-1698"/>
+            <point key="canvasLocation" x="-876" y="-1698"/>
         </scene>
         <!--Dashboards-->
         <scene sceneID="KfM-xQ-7TE">
@@ -854,7 +866,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUY-fQ-Uxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="690"/>
+            <point key="canvasLocation" x="474" y="690"/>
         </scene>
         <!--Service Controller-->
         <scene sceneID="Gtu-dc-84V">
@@ -880,6 +892,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="3V5-Sq-UoY"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Services" id="8JB-Hw-UOx"/>
                                 </items>
@@ -903,7 +919,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bl3-5G-CYy" firstAttribute="leading" secondItem="le5-lF-Ntr" secondAttribute="leadingMargin" constant="-20" id="4Qm-uI-f0B"/>
                             <constraint firstItem="VB8-Hz-sKR" firstAttribute="centerX" secondItem="le5-lF-Ntr" secondAttribute="centerX" id="5Rt-00-UNo"/>
@@ -924,7 +940,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqI-QB-c0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="1544"/>
+            <point key="canvasLocation" x="474" y="1562"/>
         </scene>
         <!--Gmail Threads Controller-->
         <scene sceneID="zQ3-E7-30Z">
@@ -977,16 +993,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="i61-l0-tZE"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Threads" id="f7t-pL-xe2">
-                                        <barButtonItem key="leftBarButtonItem" image="house-16.png" id="YEO-A6-CeE">
-                                            <color key="tintColor" red="0.69803921568627447" green="0.054901960784313725" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                        <barButtonItem key="leftBarButtonItem" image="home-16.png" id="YEO-A6-CeE">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="openMenu:" destination="LSh-3q-SmP" id="UO1-pB-vuO"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="search-12-16.png" id="w2c-qp-Eb2">
-                                            <color key="tintColor" red="0.69803921568627447" green="0.054901960784313725" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                        <barButtonItem key="rightBarButtonItem" image="search-16.png" id="w2c-qp-Eb2">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="searchBtnAction:" destination="LSh-3q-SmP" id="lce-7d-eZy"/>
                                             </connections>
@@ -995,7 +1015,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="qlj-za-HG1" firstAttribute="centerX" secondItem="eRf-kg-erm" secondAttribute="centerX" id="8c7-Ev-LEv"/>
                             <constraint firstItem="LLc-4h-sGh" firstAttribute="leading" secondItem="eRf-kg-erm" secondAttribute="leadingMargin" constant="-20" id="BBT-TY-Gqb"/>
@@ -1020,7 +1040,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXx-BH-RSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="2338"/>
+            <point key="canvasLocation" x="474" y="2338"/>
         </scene>
         <!--Calendar Controller-->
         <scene sceneID="PZT-tK-qkh">
@@ -1036,9 +1056,14 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dj-0Y-UfW">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="6JC-gu-Df8">
-                                        <barButtonItem key="leftBarButtonItem" title="Home" id="Vnw-QZ-WSC">
+                                        <barButtonItem key="leftBarButtonItem" image="home-16.png" id="Vnw-QZ-WSC">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="homeButtonPressed:" destination="b3d-pH-uKq" id="Jzf-i0-Bd9"/>
                                             </connections>
@@ -1081,7 +1106,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aj9-Ql-WtJ" firstAttribute="top" secondItem="5dj-0Y-UfW" secondAttribute="bottom" id="35i-7K-r3X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5dj-0Y-UfW" secondAttribute="trailing" constant="-20" id="3Vd-h3-rJu"/>
@@ -1105,7 +1130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZK-Ll-IYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="3355"/>
+            <point key="canvasLocation" x="474" y="3355"/>
         </scene>
         <!--Calendar Event List Controller-->
         <scene sceneID="jA7-O4-TNj">
@@ -1121,25 +1146,33 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejl-sf-cje">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="WoI-yu-prs">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="OI2-42-oFi">
+                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="OI2-42-oFi">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="b3d-pH-uKq" kind="show" id="wz1-sk-tVF"/>
                                             </connections>
                                         </barButtonItem>
                                         <rightBarButtonItems>
-                                            <barButtonItem title="Search" id="Sx3-SW-igA">
+                                            <barButtonItem image="search-16.png" id="Sx3-SW-igA">
+                                                <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <segue destination="ncR-pa-632" kind="show" id="uwu-3w-ody"/>
                                                 </connections>
                                             </barButtonItem>
-                                            <barButtonItem title="Create" id="hc3-af-Nzp">
+                                            <barButtonItem image="add-16.png" id="hc3-af-Nzp">
+                                                <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <segue destination="nh6-a8-oKP" kind="show" id="ccT-a6-1xh"/>
                                                 </connections>
                                             </barButtonItem>
-                                            <barButtonItem title="Reminders" id="mVu-OQ-Ra5">
+                                            <barButtonItem image="alarm-16.png" id="mVu-OQ-Ra5">
+                                                <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <segue destination="9pH-gE-9BY" kind="show" id="xp3-6D-h3W"/>
                                                 </connections>
@@ -1214,7 +1247,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6wJ-hB-PeK" firstAttribute="centerY" secondItem="Ob4-o1-1aH" secondAttribute="centerY" id="2Sg-3e-ZHB"/>
                             <constraint firstItem="ejl-sf-cje" firstAttribute="leading" secondItem="Ob4-o1-1aH" secondAttribute="leadingMargin" constant="-20" id="8BE-db-Lww"/>
@@ -1238,7 +1271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="98L-WR-ylI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183" y="3355"/>
+            <point key="canvasLocation" x="1434" y="3355"/>
         </scene>
         <!--Calendar Reminder List Controller-->
         <scene sceneID="A2U-mq-TKS">
@@ -1265,18 +1298,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7e-kk-Sfw">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="Bpr-f9-UV7">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="lD1-1D-QAl">
-                                            <connections>
-                                                <segue destination="R1n-0W-jIm" kind="show" id="57x-P0-RxU"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u3D-w8-kM9">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1326,8 +1347,25 @@
                                     <outlet property="delegate" destination="9pH-gE-9BY" id="10Q-RH-OGq"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7e-kk-Sfw">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="Bpr-f9-UV7">
+                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="lD1-1D-QAl">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="R1n-0W-jIm" kind="show" id="57x-P0-RxU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Y7e-kk-Sfw" secondAttribute="trailing" constant="-20" id="4gR-24-GkS"/>
                             <constraint firstItem="Y7e-kk-Sfw" firstAttribute="top" secondItem="ygm-wA-7Vt" secondAttribute="bottom" id="6wf-IV-yho"/>
@@ -1351,7 +1389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XG6-b2-Lrn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="4175"/>
+            <point key="canvasLocation" x="474" y="4255"/>
         </scene>
         <!--Drive Controller-->
         <scene sceneID="jWl-Ce-jLb">
@@ -1443,9 +1481,14 @@
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6b-7U-Baz">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="IIE-M6-Egx">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" id="fdP-CD-VGr">
+                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="fdP-CD-VGr">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="homeButtonPressed:" destination="hIx-x0-Az8" id="zBv-kG-Qq1"/>
                                             </connections>
@@ -1454,7 +1497,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ak9-5D-dLV" firstAttribute="centerX" secondItem="YbH-HV-aqc" secondAttribute="centerX" id="4eE-5S-o2q"/>
                             <constraint firstItem="htX-4A-KGd" firstAttribute="top" secondItem="iQr-0T-7ot" secondAttribute="bottom" constant="8" id="5NI-PQ-Fp1"/>
@@ -1485,11 +1528,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2Y-AL-IRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="5211"/>
+            <point key="canvasLocation" x="474" y="5211"/>
         </scene>
         <!--Drive File Controller-->
         <scene sceneID="yu0-jf-OK5">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5tY-dd-YoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="driveFile" id="pU5-Cv-jcn" customClass="DriveFileController" customModule="Centralize_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tXn-7P-1o8"/>
@@ -1508,7 +1552,8 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="ggy-E3-P5h">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" id="PUT-TI-SGk">
+                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="PUT-TI-SGk">
+                                            <color key="tintColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="hIx-x0-Az8" kind="show" id="skU-Px-1EE"/>
                                             </connections>
@@ -1710,9 +1755,8 @@
                         <outlet property="shareButton" destination="0g3-Lx-btu" id="Wqa-X2-4Bz"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5tY-dd-YoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="5211"/>
+            <point key="canvasLocation" x="1434" y="5211"/>
         </scene>
         <!--Drive Share File Controller-->
         <scene sceneID="DDw-bn-l3a">
@@ -1725,18 +1769,6 @@
                     <view key="view" contentMode="scaleToFill" id="86D-8A-gHb">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dH5-am-wfG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="Vcm-zZ-hNC">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" id="aez-OO-1Cm">
-                                            <connections>
-                                                <segue destination="pU5-Cv-jcn" kind="show" id="0Cl-U1-ahc"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUZ-xv-6Sf">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1779,8 +1811,25 @@
                                     </mask>
                                 </variation>
                             </toolbar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dH5-am-wfG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="Vcm-zZ-hNC">
+                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="aez-OO-1Cm">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="pU5-Cv-jcn" kind="show" id="0Cl-U1-ahc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hUZ-xv-6Sf" firstAttribute="centerX" secondItem="86D-8A-gHb" secondAttribute="centerX" id="2VV-2E-f6g"/>
                             <constraint firstItem="vy1-uy-P9X" firstAttribute="top" secondItem="v8E-aM-JwR" secondAttribute="bottom" constant="8.5" id="2zc-uk-MkR"/>
@@ -1812,12 +1861,12 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="dH5-am-wfG"/>
                                 <exclude reference="hUZ-xv-6Sf"/>
                                 <exclude reference="v8E-aM-JwR"/>
                                 <exclude reference="QqC-hU-j6A"/>
                                 <exclude reference="vy1-uy-P9X"/>
                                 <exclude reference="SkY-15-uP5"/>
+                                <exclude reference="dH5-am-wfG"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="57J-xI-Iby"/>
@@ -1845,12 +1894,12 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="dH5-am-wfG"/>
                                 <include reference="hUZ-xv-6Sf"/>
                                 <include reference="v8E-aM-JwR"/>
                                 <include reference="QqC-hU-j6A"/>
                                 <include reference="vy1-uy-P9X"/>
                                 <include reference="SkY-15-uP5"/>
+                                <include reference="dH5-am-wfG"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="57J-xI-Iby"/>
@@ -1889,7 +1938,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbe-t2-2y5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034" y="5211"/>
+            <point key="canvasLocation" x="2412" y="5211"/>
         </scene>
         <!--Calendar Event Create Controller-->
         <scene sceneID="sb1-QP-8fg">
@@ -1905,14 +1954,20 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AiL-hx-IEu">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.69803921570000005" green="0.054901960780000002" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="ZlI-fa-jYT">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="WFc-wW-ztP">
+                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="WFc-wW-ztP">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="R1n-0W-jIm" kind="show" id="J0c-nH-x6d"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Create" id="2mi-Bp-3Lo">
+                                        <barButtonItem key="rightBarButtonItem" image="add-16.png" id="2mi-Bp-3Lo">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="createButtonAction:" destination="nh6-a8-oKP" id="hcO-Gn-xYO"/>
                                             </connections>
@@ -1984,7 +2039,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="xqO-eK-5xy" secondAttribute="leading" id="13N-ec-bme"/>
                             <constraint firstAttribute="leadingMargin" secondItem="RUH-Wf-wVe" secondAttribute="leading" id="5bv-hV-dRq"/>
@@ -2027,7 +2082,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pF4-8T-nod" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183" y="4175"/>
+            <point key="canvasLocation" x="1434" y="4255"/>
         </scene>
         <!--Calendar Event Details Controller-->
         <scene sceneID="ZFf-KY-Hlm">
@@ -2043,20 +2098,27 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0j-x6-9oc">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="kMj-4G-Hbs">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Say-V9-4UI">
+                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="Say-V9-4UI">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="R1n-0W-jIm" kind="show" id="6uB-k6-2Tt"/>
                                             </connections>
                                         </barButtonItem>
                                         <rightBarButtonItems>
-                                            <barButtonItem title="Update" id="qe7-xz-7qe">
+                                            <barButtonItem image="edit-16.png" id="qe7-xz-7qe">
+                                                <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <segue destination="pDP-Ue-2WT" kind="show" id="JkN-yi-DV3"/>
                                                 </connections>
                                             </barButtonItem>
-                                            <barButtonItem title="Delete" id="WmU-AJ-1uk">
+                                            <barButtonItem image="delete-16.png" id="WmU-AJ-1uk">
+                                                <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="deleteBtnAction:" destination="OSr-q3-I3D" id="WSl-5K-5Ik"/>
                                                 </connections>
@@ -2104,7 +2166,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dHK-U5-1xO" firstAttribute="top" secondItem="x5m-mv-Ijc" secondAttribute="bottom" constant="8" id="2je-sQ-J82"/>
                             <constraint firstItem="x5m-mv-Ijc" firstAttribute="top" secondItem="sGT-o7-EfR" secondAttribute="bottom" constant="8" id="7EZ-jo-IS7"/>
@@ -2130,7 +2192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pH1-0a-jJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1947" y="3355"/>
+            <point key="canvasLocation" x="2412" y="3355"/>
         </scene>
         <!--Calendar Event Search Controller-->
         <scene sceneID="NeZ-lE-e0f">
@@ -2146,14 +2208,20 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n5-5Y-kgk">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="1gU-YN-bCb">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="aKL-Nh-MmP">
+                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="aKL-Nh-MmP">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="R1n-0W-jIm" kind="show" id="PWN-J1-32n"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Search" id="hqM-V6-wz6">
+                                        <barButtonItem key="rightBarButtonItem" image="search-16.png" id="hqM-V6-wz6">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="searchBtnAction:" destination="ncR-pa-632" id="Lf6-Js-GKD"/>
                                             </connections>
@@ -2254,7 +2322,7 @@
                                 </date>
                             </datePicker>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="Ozn-aF-Fk4" secondAttribute="leading" id="0fT-mj-aCS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="v2A-4S-cu9" secondAttribute="leading" id="3U0-Cf-nIE"/>
@@ -2292,7 +2360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jay-7D-HFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1947" y="4175"/>
+            <point key="canvasLocation" x="2412" y="4255"/>
         </scene>
         <!--Calendar Event Update Controller-->
         <scene sceneID="Mpf-x6-zjx">
@@ -2306,23 +2374,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2u-rC-XDZ">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="7AY-0P-uyh">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="La4-Mp-apB">
-                                            <connections>
-                                                <segue destination="OSr-q3-I3D" kind="show" id="H5w-KK-C7Q"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Update" id="G0x-si-yVK">
-                                            <connections>
-                                                <action selector="updateButtonAction:" destination="pDP-Ue-2WT" id="cke-at-kXP"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Summary" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejY-pn-I4q">
                                 <rect key="frame" x="20" y="84" width="160" height="30"/>
                                 <constraints>
@@ -2386,6 +2437,29 @@
                                     <!--2016-07-07 17:19:53 +0000-->
                                 </date>
                             </datePicker>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2u-rC-XDZ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="7AY-0P-uyh">
+                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="La4-Mp-apB">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="OSr-q3-I3D" kind="show" id="H5w-KK-C7Q"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="edit-16.png" id="G0x-si-yVK">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="updateButtonAction:" destination="pDP-Ue-2WT" id="cke-at-kXP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -2430,7 +2504,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mx-78-a45" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2723" y="3355"/>
+            <point key="canvasLocation" x="3376.5" y="3355"/>
         </scene>
         <!--Gmail Thread Messages Controller-->
         <scene sceneID="Jyw-FN-5Ge">
@@ -2449,16 +2523,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="1iZ-XZ-Q2k"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Messages" id="edu-ld-CXl">
-                                        <barButtonItem key="leftBarButtonItem" image="arrow-96-16.png" id="NPf-Nz-knK">
-                                            <color key="tintColor" red="0.69411764710000001" green="0.054901960780000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="NPf-Nz-knK">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="LSh-3q-SmP" kind="show" id="BLB-8X-r88"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="trash-2-16.png" id="8Vf-2D-uOq">
-                                            <color key="tintColor" red="0.69411764710000001" green="0.054901960780000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <barButtonItem key="rightBarButtonItem" image="delete-16.png" id="8Vf-2D-uOq">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="archiveThread:" destination="yvC-eQ-9yx" id="buv-aO-46W"/>
                                             </connections>
@@ -2492,7 +2570,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yUP-CS-cmt" firstAttribute="top" secondItem="892-8c-EsB" secondAttribute="bottom" id="4u8-gX-0Er"/>
                             <constraint firstItem="892-8c-EsB" firstAttribute="top" secondItem="6eF-bo-PMT" secondAttribute="bottom" id="7Bb-Qu-Qie"/>
@@ -2513,7 +2591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zc3-eq-81s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183" y="2338"/>
+            <point key="canvasLocation" x="1434" y="2338"/>
         </scene>
         <!--Gmail Search Controller-->
         <scene sceneID="FZF-we-YkP">
@@ -2566,15 +2644,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="loK-df-BoB"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Searches" id="lgv-Wf-2mu">
-                                        <barButtonItem key="leftBarButtonItem" image="arrow-96-16.png" id="sy4-4b-CYC">
-                                            <color key="tintColor" red="0.69803921570000005" green="0.054901960780000002" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="sy4-4b-CYC">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="LSh-3q-SmP" kind="show" id="IFn-Fx-eNm"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Load More" id="uhD-6v-qRy">
+                                        <barButtonItem key="rightBarButtonItem" image="add-16.png" id="uhD-6v-qRy">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="loadMoreBtn:" destination="HjV-BB-EZL" id="MGQ-GS-wXC"/>
                                             </connections>
@@ -2598,7 +2681,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="V5V-Yl-N69" firstAttribute="centerY" secondItem="7Lo-3y-gAw" secondAttribute="centerY" id="7d0-hj-G8W"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LL8-jq-tYK" secondAttribute="trailing" id="Pur-nm-V0B"/>
@@ -2660,22 +2743,27 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="TTp-oa-IMX"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.69803921570000005" green="0.054901960780000002" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Read message" id="4nd-sD-pIW">
-                                        <barButtonItem key="leftBarButtonItem" image="arrow-96-16.png" id="DHh-35-4Wr">
-                                            <color key="tintColor" red="0.69411764710000001" green="0.054901960780000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="DHh-35-4Wr">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="yvC-eQ-9yx" kind="show" id="MqY-6n-gIb"/>
                                             </connections>
                                         </barButtonItem>
                                         <rightBarButtonItems>
-                                            <barButtonItem title="Reply" id="AFI-sy-iZD">
+                                            <barButtonItem image="reply-16.png" id="AFI-sy-iZD">
+                                                <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <segue destination="d7o-GO-X8Z" kind="show" id="TsO-Y8-vJr"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem image="read-message-16.png" id="Sre-5T-0zV">
-                                                <color key="tintColor" red="0.69411764710000001" green="0.054901960780000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="readBtnAction:" destination="PZI-V0-wQg" id="ehr-ot-T0J"/>
                                                 </connections>
@@ -2685,7 +2773,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Yky-To-0cr" firstAttribute="top" secondItem="E5v-9s-FtC" secondAttribute="bottom" id="8Ht-5E-2Sd"/>
                             <constraint firstItem="E5v-9s-FtC" firstAttribute="leading" secondItem="Ao4-T4-Wux" secondAttribute="leadingMargin" constant="-20" id="DaY-0b-Qqu"/>
@@ -2707,7 +2795,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nH-Q9-mLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1947" y="2338"/>
+            <point key="canvasLocation" x="2412" y="2338"/>
         </scene>
         <!--Gmail Reply Controller-->
         <scene sceneID="lK8-Ws-aRL">
@@ -2726,14 +2814,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="NiK-vb-FfJ"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.69803921570000005" green="0.054901960780000002" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Reply" id="sWT-ZS-fK7">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="3JC-zP-zZt">
+                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="3JC-zP-zZt">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="PZI-V0-wQg" kind="show" id="clp-wN-wb4"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Send" id="juQ-pe-UDy">
+                                        <barButtonItem key="rightBarButtonItem" image="reply-16.png" id="juQ-pe-UDy">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="sendBtnAction:" destination="d7o-GO-X8Z" id="WIy-dj-c2A"/>
                                             </connections>
@@ -2775,7 +2869,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxo-8f-uLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2723" y="2338"/>
+            <point key="canvasLocation" x="3376.5" y="2338"/>
         </scene>
         <!--Controller-->
         <scene sceneID="bcs-ys-rVQ">
@@ -2791,9 +2885,14 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZk-Tv-aT3">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.69411764710000001" green="0.054901960780000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="jmc-ql-FkN">
-                                        <barButtonItem key="leftBarButtonItem" title="Home" id="MUO-w0-cYc">
+                                        <barButtonItem key="leftBarButtonItem" image="home-16.png" id="MUO-w0-cYc">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="homeBtnAction:" destination="Xvh-Hb-zCf" id="2lH-5J-7WF"/>
                                             </connections>
@@ -2857,7 +2956,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="2aM-TC-nuL" secondAttribute="trailing" constant="-20" id="9MW-YI-aC3"/>
                             <constraint firstItem="KZk-Tv-aT3" firstAttribute="leading" secondItem="hgC-uY-xBx" secondAttribute="leadingMargin" constant="-20" id="JDj-TO-ALh"/>
@@ -2896,6 +2995,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="fwp-U2-Y6P"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Sign out - Centralize" id="PX6-ur-F0p"/>
                                 </items>
@@ -2908,7 +3011,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="KVl-EG-tSi" firstAttribute="top" secondItem="xcY-JT-yu4" secondAttribute="bottom" constant="20" id="37g-gJ-NfK"/>
                             <constraint firstItem="KVl-EG-tSi" firstAttribute="centerX" secondItem="NYb-gg-IfY" secondAttribute="centerX" id="57J-zR-FIq"/>
@@ -3005,7 +3108,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWD-tO-B68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="-1698"/>
+            <point key="canvasLocation" x="1434" y="-1698"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DhS-mx-Gxe">
@@ -3023,7 +3126,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zst-JA-9q1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="-901"/>
+            <point key="canvasLocation" x="1434" y="-901"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mx6-6J-9vz">
@@ -3041,24 +3144,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BwF-Wd-uuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="-117"/>
+            <point key="canvasLocation" x="474" y="-117"/>
         </scene>
     </scenes>
     <resources>
         <image name="Centralize.png" width="633" height="352"/>
-        <image name="arrow-96-16.png" width="16" height="16"/>
+        <image name="add-16.png" width="16" height="16"/>
+        <image name="alarm-16.png" width="16" height="16"/>
+        <image name="back-16.png" width="16" height="16"/>
+        <image name="delete-16.png" width="16" height="16"/>
+        <image name="edit-16.png" width="16" height="16"/>
         <image name="edit-user-24.png" width="24" height="24"/>
-        <image name="house-16.png" width="16" height="16"/>
+        <image name="home-16.png" width="16" height="16"/>
         <image name="menu-4-16.png" width="16" height="16"/>
         <image name="power-32.png" width="32" height="32"/>
         <image name="read-message-16.png" width="16" height="16"/>
+        <image name="reply-16.png" width="16" height="16"/>
         <image name="search-12-16.png" width="16" height="16"/>
-        <image name="trash-2-16.png" width="16" height="16"/>
+        <image name="search-16.png" width="16" height="16"/>
         <image name="user-24.png" width="24" height="24"/>
         <image name="warning.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PWN-J1-32n"/>
-        <segue reference="IFn-Fx-eNm"/>
+        <segue reference="BLB-8X-r88"/>
     </inferredMetricsTieBreakers>
 </document>

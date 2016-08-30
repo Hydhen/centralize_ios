@@ -124,7 +124,6 @@ class DriveController: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.noFileLabel.hidden = true
         self.imageView.image = getImageLoader()
         self.imageView.hidden = true
-        self.backButton.title = t.valueForKey("BACK")! as? String
     }
     override func viewDidAppear(animated: Bool) {
         self.fetchFiles()
