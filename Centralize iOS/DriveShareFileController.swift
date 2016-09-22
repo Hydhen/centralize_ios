@@ -8,27 +8,27 @@
 
 import UIKit
 
-class DriveShareFileController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+class DriveShareFileController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITabBarDelegate {
+    
     @IBOutlet weak var navigationBar: UINavigationItem!
-
+    
     @IBOutlet weak var receivers: UITextField!
     @IBOutlet weak var notificationLabel: UILabel!
     @IBOutlet weak var notificationSwitch: UISwitch!
     @IBOutlet weak var permissionPicker: UIPickerView!
-
+    
     @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var shareTab: UITabBarItem!
     
     var permissions: NSArray = [
         (t.valueForKey("DRIVE_RIGHT_READER")! as? String)!,
         (t.valueForKey("DRIVE_RIGHT_WRITER")! as? String)!,
-    ]
+        ]
     
     let permissionsAPI: NSArray = ["reader", "writer"]
     
     var permissionChoosen: Int = 0
-
+    
     func isValidEmail(testStr:String) -> Bool {
         // print("validate calendar: \(testStr)")
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
@@ -37,7 +37,7 @@ class DriveShareFileController: UIViewController, UIPickerViewDelegate, UIPicker
         return emailTest.evaluateWithObject(testStr)
     }
     
-    @IBAction func shareButtonPressed(sender: AnyObject) {
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
         print ("Partage à \(receivers.text) avec les droits \(permissions[permissionChoosen]) notification \(notificationSwitch.on)")
         
         if isValidEmail(receivers.text!) == true {
@@ -47,7 +47,7 @@ class DriveShareFileController: UIViewController, UIPickerViewDelegate, UIPicker
             var stringPost: String = "send_email=\((notificationSwitch.on ? "1" : "0"))"
             let allowed = NSMutableCharacterSet.alphanumericCharacterSet()
             allowed.addCharactersInString("-")
-
+            
             stringPost = stringPost.stringByAddingPercentEncodingWithAllowedCharacters(allowed)!
             let session = APIPOSTSession("/drive/addpermission/\(current_service)/file/\(id!)/" + "?email=\(self.receivers.text!)" + "&role=\(permissionsAPI[permissionChoosen])", data_string: stringPost)
             
@@ -74,25 +74,25 @@ class DriveShareFileController: UIViewController, UIPickerViewDelegate, UIPicker
                 }
             })
             task.resume()
-
+            
         } else {
             NSOperationQueue.mainQueue().addOperationWithBlock() {
                 simpleAlert((t.valueForKey("DRIVE_WRONG_EMAIL_TITLE")! as? String)!, message: (t.valueForKey("DRIVE_WRONG_EMAIL_MESSAGE")! as? String)!)
             }
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBar.title = t.valueForKey("DRIVE_SHARE")! as? String
         self.receivers.placeholder = t.valueForKey("DRIVE_SHARE_RECEIVER")! as? String
         self.notificationLabel.text = t.valueForKey("DRIVE_SHARE_NOTIFICATION")! as? String
-        self.shareButton.title = t.valueForKey("DRIVE_SHARE")! as? String
-
+        self.shareTab.title = t.valueForKey("DRIVE_SHARE")! as? String
+        
         self.permissionPicker.delegate = self
         self.permissionPicker.dataSource = self
     }
-
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }

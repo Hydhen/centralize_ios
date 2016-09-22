@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5KM-qV-LgK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5KM-qV-LgK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
@@ -77,7 +78,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Centralize" id="haR-WN-q84">
-                        <barButtonItem key="leftBarButtonItem" image="menu-4-16.png" id="EUy-Wg-BR2">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="EUy-Wg-BR2">
                             <color key="tintColor" red="0.69411764705882351" green="0.054901960784313725" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -93,7 +94,7 @@
         <!--Menu Controller-->
         <scene sceneID="k6Z-O7-LWF">
             <objects>
-                <tableViewController id="JCP-R5-ePg" customClass="MenuController" customModule="Centralize_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="menuController" id="JCP-R5-ePg" customClass="MenuController" customModule="Centralize_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hg7-9A-Hcv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,7 +302,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="power-32.png" translatesAutoresizingMaskIntoConstraints="NO" id="4iL-vK-HEC">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logout" translatesAutoresizingMaskIntoConstraints="NO" id="4iL-vK-HEC">
                                                     <rect key="frame" x="8" y="6" width="32" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="32" id="4lF-KE-TPv"/>
@@ -398,7 +399,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Languages" id="P1j-yg-QhI">
-                        <barButtonItem key="leftBarButtonItem" image="menu-4-16.png" id="vIv-Ru-gze">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="vIv-Ru-gze">
                             <color key="tintColor" red="0.69411764710000001" green="0.054901960780000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -571,7 +572,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Edit your profile" id="uEo-B4-Bix">
-                                        <barButtonItem key="leftBarButtonItem" image="menu-4-16.png" id="OYx-yb-wHE">
+                                        <barButtonItem key="leftBarButtonItem" image="Menu" id="OYx-yb-wHE">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
@@ -594,7 +595,7 @@
                             <constraint firstItem="CJE-gk-dqJ" firstAttribute="leading" secondItem="frH-Q7-ain" secondAttribute="leading" id="hPg-ba-8Ay"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Edit my profile" image="edit-user-24.png" id="Mak-Gc-CiN"/>
+                    <tabBarItem key="tabBarItem" title="Edit my profile" image="User Edit" id="Mak-Gc-CiN"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="700"/>
                     <connections>
@@ -643,10 +644,10 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Your profile" id="DZI-if-GCS">
-                                        <barButtonItem key="leftBarButtonItem" image="menu-4-16.png" id="IPn-pn-N1K">
+                                        <barButtonItem key="leftBarButtonItem" image="Menu" id="IPn-pn-N1K">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="search-16.png" id="1ZS-BO-Ytr">
+                                        <barButtonItem key="rightBarButtonItem" image="Search" id="1ZS-BO-Ytr">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
@@ -703,7 +704,7 @@
                             <constraint firstItem="BFC-5L-1PZ" firstAttribute="leading" secondItem="YG2-7w-R3d" secondAttribute="leadingMargin" id="mBs-RY-pV7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="user-24.png" id="5jZ-0Q-CZu"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="User" id="5jZ-0Q-CZu"/>
                     <connections>
                         <outlet property="bioLbl" destination="EVi-sI-yrg" id="TKR-LO-bHo"/>
                         <outlet property="imageView" destination="Uru-LN-WBm" id="MKy-xI-C0g"/>
@@ -829,7 +830,7 @@
         <!--Dashboards-->
         <scene sceneID="KfM-xQ-7TE">
             <objects>
-                <tableViewController id="A93-Bm-ACD" customClass="DashboardController" customModule="Centralize_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="dashboardListController" id="A93-Bm-ACD" customClass="DashboardController" customModule="Centralize_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kpY-Yr-eE3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -854,7 +855,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Dashboards" id="3pc-1C-8ef">
-                        <barButtonItem key="leftBarButtonItem" image="menu-4-16.png" id="N33-Hb-req">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="N33-Hb-req">
                             <color key="tintColor" red="0.69411764710000001" green="0.054901960780000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -897,7 +898,14 @@
                                     <color key="textColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Services" id="8JB-Hw-UOx"/>
+                                    <navigationItem title="Title" id="dom-j1-Rg3">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="Yje-iQ-tVU">
+                                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="6C1-yR-QuF" id="k0s-Bs-m0M"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bl3-5G-CYy">
@@ -934,13 +942,346 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="VB8-Hz-sKR" id="1q9-tl-0WO"/>
-                        <outlet property="menuBar" destination="8JB-Hw-UOx" id="2wS-7U-Nyt"/>
+                        <outlet property="menuBar" destination="dom-j1-Rg3" id="W5I-MC-VG0"/>
                         <outlet property="tableView" destination="bl3-5G-CYy" id="9Ug-2c-lMK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqI-QB-c0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="1562"/>
+            <point key="canvasLocation" x="936" y="3166"/>
+        </scene>
+        <!--Twitter Controller-->
+        <scene sceneID="T0y-TU-7vN">
+            <objects>
+                <viewController storyboardIdentifier="twitterService" id="jAy-GO-rUA" customClass="TwitterController" customModule="Centralize_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vTx-aR-3uI"/>
+                        <viewControllerLayoutGuide type="bottom" id="kOA-nj-xrb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jqf-q0-vAR">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zO3-bL-xIw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="eW4-Zp-GG2">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="bh8-ya-kCb">
+                                            <connections>
+                                                <segue destination="6C1-yR-QuF" kind="showDetail" id="zHR-1O-o8Z"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8YU-vu-bbK">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TweetListCell" rowHeight="101" id="QbC-DZ-1y3" customClass="TweetListCell" customModule="Centralize_iOS" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QbC-DZ-1y3" id="fyO-1S-EtF">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rF4-xZ-gVt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="21r-uJ-IIN"/>
+                                                        <constraint firstAttribute="height" constant="44" id="vUh-Wq-eAS"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="21r-uJ-IIN"/>
+                                                            <exclude reference="vUh-Wq-eAS"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="21r-uJ-IIN"/>
+                                                            <include reference="vUh-Wq-eAS"/>
+                                                        </mask>
+                                                    </variation>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LUn-gD-BWK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LUn-gD-BWK" firstAttribute="leading" secondItem="rF4-xZ-gVt" secondAttribute="trailing" constant="14" id="EDK-W8-8Un"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="LUn-gD-BWK" secondAttribute="bottom" constant="2" id="FwN-ey-xUB"/>
+                                                <constraint firstAttribute="topMargin" secondItem="LUn-gD-BWK" secondAttribute="top" id="OUl-Ez-1yo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="LUn-gD-BWK" secondAttribute="trailing" id="Twp-X4-c2n"/>
+                                                <constraint firstItem="rF4-xZ-gVt" firstAttribute="top" secondItem="fyO-1S-EtF" secondAttribute="topMargin" constant="8" id="jPF-Wk-Dmy"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="rF4-xZ-gVt" secondAttribute="leading" id="kJ1-Pk-Yiw"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="rF4-xZ-gVt"/>
+                                                    <exclude reference="LUn-gD-BWK"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="jPF-Wk-Dmy"/>
+                                                    <exclude reference="kJ1-Pk-Yiw"/>
+                                                    <exclude reference="EDK-W8-8Un"/>
+                                                    <exclude reference="FwN-ey-xUB"/>
+                                                    <exclude reference="OUl-Ez-1yo"/>
+                                                    <exclude reference="Twp-X4-c2n"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="rF4-xZ-gVt"/>
+                                                    <include reference="LUn-gD-BWK"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="jPF-Wk-Dmy"/>
+                                                    <include reference="kJ1-Pk-Yiw"/>
+                                                    <include reference="EDK-W8-8Un"/>
+                                                    <include reference="FwN-ey-xUB"/>
+                                                    <include reference="OUl-Ez-1yo"/>
+                                                    <include reference="Twp-X4-c2n"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tweet" destination="LUn-gD-BWK" id="crC-d8-QwP"/>
+                                            <outlet property="userImg" destination="rF4-xZ-gVt" id="3qp-4w-m8A"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jAy-GO-rUA" id="nMg-7f-Xwg"/>
+                                    <outlet property="delegate" destination="jAy-GO-rUA" id="zH0-u5-mBN"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCL-Kw-Od6">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="q76-TL-LKD">
+                                        <variation key="widthClass=compact" constant="128"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="44" id="yTp-aZ-3zH">
+                                        <variation key="widthClass=compact" constant="128"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="q76-TL-LKD"/>
+                                        <exclude reference="yTp-aZ-3zH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="q76-TL-LKD"/>
+                                        <include reference="yTp-aZ-3zH"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmC-9b-WGS">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZf-id-fs5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="New tweet" image="Edit" id="vqg-qt-yBz"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="jAy-GO-rUA" id="Lom-vt-U4i"/>
+                                </connections>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="8YU-vu-bbK" secondAttribute="trailing" constant="-20" id="84L-Wh-JCL"/>
+                            <constraint firstItem="mZf-id-fs5" firstAttribute="leading" secondItem="Jqf-q0-vAR" secondAttribute="leadingMargin" constant="-20" id="8qx-AB-Tny"/>
+                            <constraint firstItem="mZf-id-fs5" firstAttribute="top" secondItem="8YU-vu-bbK" secondAttribute="bottom" id="CMn-6c-Hkg"/>
+                            <constraint firstItem="zO3-bL-xIw" firstAttribute="top" secondItem="vTx-aR-3uI" secondAttribute="bottom" id="EFG-G2-8GR"/>
+                            <constraint firstItem="8YU-vu-bbK" firstAttribute="top" secondItem="zO3-bL-xIw" secondAttribute="bottom" id="ERV-ss-irm"/>
+                            <constraint firstItem="gmC-9b-WGS" firstAttribute="centerY" secondItem="Jqf-q0-vAR" secondAttribute="centerY" id="Fk6-si-JF6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zO3-bL-xIw" secondAttribute="trailing" constant="-20" id="O5g-AF-12A"/>
+                            <constraint firstItem="8YU-vu-bbK" firstAttribute="leading" secondItem="Jqf-q0-vAR" secondAttribute="leadingMargin" constant="-20" id="RGM-8w-H5b"/>
+                            <constraint firstItem="PCL-Kw-Od6" firstAttribute="centerX" secondItem="Jqf-q0-vAR" secondAttribute="centerX" id="T7t-QS-hDx"/>
+                            <constraint firstItem="zO3-bL-xIw" firstAttribute="leading" secondItem="Jqf-q0-vAR" secondAttribute="leadingMargin" constant="-20" id="gAq-0B-6Py"/>
+                            <constraint firstItem="PCL-Kw-Od6" firstAttribute="centerY" secondItem="Jqf-q0-vAR" secondAttribute="centerY" id="hNQ-Az-y6a"/>
+                            <constraint firstItem="kOA-nj-xrb" firstAttribute="top" secondItem="mZf-id-fs5" secondAttribute="bottom" id="hcy-St-0vD"/>
+                            <constraint firstItem="gmC-9b-WGS" firstAttribute="centerX" secondItem="Jqf-q0-vAR" secondAttribute="centerX" id="nSs-R2-lqv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mZf-id-fs5" secondAttribute="trailing" constant="-20" id="oij-13-TOs"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="zO3-bL-xIw"/>
+                                <exclude reference="8YU-vu-bbK"/>
+                                <exclude reference="PCL-Kw-Od6"/>
+                                <exclude reference="gmC-9b-WGS"/>
+                                <exclude reference="mZf-id-fs5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="EFG-G2-8GR"/>
+                                <exclude reference="O5g-AF-12A"/>
+                                <exclude reference="gAq-0B-6Py"/>
+                                <exclude reference="84L-Wh-JCL"/>
+                                <exclude reference="ERV-ss-irm"/>
+                                <exclude reference="RGM-8w-H5b"/>
+                                <exclude reference="T7t-QS-hDx"/>
+                                <exclude reference="hNQ-Az-y6a"/>
+                                <exclude reference="Fk6-si-JF6"/>
+                                <exclude reference="nSs-R2-lqv"/>
+                                <exclude reference="8qx-AB-Tny"/>
+                                <exclude reference="CMn-6c-Hkg"/>
+                                <exclude reference="oij-13-TOs"/>
+                                <exclude reference="hcy-St-0vD"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="zO3-bL-xIw"/>
+                                <include reference="8YU-vu-bbK"/>
+                                <include reference="PCL-Kw-Od6"/>
+                                <include reference="gmC-9b-WGS"/>
+                                <include reference="mZf-id-fs5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="EFG-G2-8GR"/>
+                                <include reference="O5g-AF-12A"/>
+                                <include reference="gAq-0B-6Py"/>
+                                <include reference="84L-Wh-JCL"/>
+                                <include reference="ERV-ss-irm"/>
+                                <include reference="RGM-8w-H5b"/>
+                                <include reference="T7t-QS-hDx"/>
+                                <include reference="hNQ-Az-y6a"/>
+                                <include reference="Fk6-si-JF6"/>
+                                <include reference="nSs-R2-lqv"/>
+                                <include reference="8qx-AB-Tny"/>
+                                <include reference="CMn-6c-Hkg"/>
+                                <include reference="oij-13-TOs"/>
+                                <include reference="hcy-St-0vD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="gmC-9b-WGS" id="spc-ZX-dEK"/>
+                        <outlet property="imageView" destination="PCL-Kw-Od6" id="9Qx-oQ-c8d"/>
+                        <outlet property="navigationBar" destination="eW4-Zp-GG2" id="m08-8R-afT"/>
+                        <outlet property="newTweetTab" destination="vqg-qt-yBz" id="VbO-or-Vm0"/>
+                        <outlet property="tabBar" destination="mZf-id-fs5" id="lQX-YY-cz3"/>
+                        <outlet property="tableView" destination="8YU-vu-bbK" id="uAu-Jw-T0t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vA2-qT-5Tu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2560.5" y="3166"/>
+        </scene>
+        <!--Twitter New Tweet Controller-->
+        <scene sceneID="WsC-MK-zjs">
+            <objects>
+                <viewController storyboardIdentifier="twitterNewTweetController" id="XSZ-ob-jrI" customClass="TwitterNewTweetController" customModule="Centralize_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IKd-gp-Xat"/>
+                        <viewControllerLayoutGuide type="bottom" id="dEO-mz-Dsr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A82-qu-cnH">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFu-VU-u57">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="ZxW-13-eCo">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="kcP-fU-QWW">
+                                            <connections>
+                                                <segue destination="jAy-GO-rUA" kind="showDetail" id="Rvy-ld-iHp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="400" height="44"/>
+                                </variation>
+                            </navigationBar>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6D3-QW-VJW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Validate" image="Checkmark" id="iCf-hx-YRb"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="XSZ-ob-jrI" id="A0O-CH-15Z"/>
+                                </connections>
+                            </tabBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vc0-62-IXM">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IH-bA-g1T">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2IH-bA-g1T" firstAttribute="top" secondItem="Vc0-62-IXM" secondAttribute="bottom" constant="8" id="1pX-Vl-jvh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Vc0-62-IXM" secondAttribute="leading" id="9AW-hw-Y4H"/>
+                            <constraint firstItem="6D3-QW-VJW" firstAttribute="leading" secondItem="A82-qu-cnH" secondAttribute="leadingMargin" constant="-20" id="Lgr-Be-iXE"/>
+                            <constraint firstItem="2IH-bA-g1T" firstAttribute="trailing" secondItem="Vc0-62-IXM" secondAttribute="trailing" id="OZa-WU-5Lw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6D3-QW-VJW" secondAttribute="trailing" constant="-20" id="UlA-FW-uQo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vc0-62-IXM" secondAttribute="trailing" id="imY-xh-55Y"/>
+                            <constraint firstItem="Vc0-62-IXM" firstAttribute="top" secondItem="IKd-gp-Xat" secondAttribute="bottom" constant="64" id="ms2-NO-WHo"/>
+                            <constraint firstItem="dEO-mz-Dsr" firstAttribute="top" secondItem="6D3-QW-VJW" secondAttribute="bottom" id="tEk-km-jrJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="TFu-VU-u57"/>
+                                <exclude reference="6D3-QW-VJW"/>
+                                <exclude reference="Vc0-62-IXM"/>
+                                <exclude reference="2IH-bA-g1T"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9AW-hw-Y4H"/>
+                                <exclude reference="imY-xh-55Y"/>
+                                <exclude reference="ms2-NO-WHo"/>
+                                <exclude reference="1pX-Vl-jvh"/>
+                                <exclude reference="OZa-WU-5Lw"/>
+                                <exclude reference="Lgr-Be-iXE"/>
+                                <exclude reference="UlA-FW-uQo"/>
+                                <exclude reference="tEk-km-jrJ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="TFu-VU-u57"/>
+                                <include reference="6D3-QW-VJW"/>
+                                <include reference="Vc0-62-IXM"/>
+                                <include reference="2IH-bA-g1T"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9AW-hw-Y4H"/>
+                                <include reference="imY-xh-55Y"/>
+                                <include reference="ms2-NO-WHo"/>
+                                <include reference="1pX-Vl-jvh"/>
+                                <include reference="OZa-WU-5Lw"/>
+                                <include reference="Lgr-Be-iXE"/>
+                                <include reference="UlA-FW-uQo"/>
+                                <include reference="tEk-km-jrJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="2IH-bA-g1T" id="EOQ-4S-Iui"/>
+                        <outlet property="tweetField" destination="Vc0-62-IXM" id="yZC-pz-kzq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="90M-6Y-0zL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3640.5" y="3166"/>
         </scene>
         <!--Gmail Threads Controller-->
         <scene sceneID="zQ3-E7-30Z">
@@ -999,13 +1340,13 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Threads" id="f7t-pL-xe2">
-                                        <barButtonItem key="leftBarButtonItem" image="home-16.png" id="YEO-A6-CeE">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="YEO-A6-CeE">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <action selector="openMenu:" destination="LSh-3q-SmP" id="UO1-pB-vuO"/>
+                                                <segue destination="6C1-yR-QuF" kind="showDetail" action="showViewController:sender:" id="1pa-a2-R6j"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="search-16.png" id="w2c-qp-Eb2">
+                                        <barButtonItem key="rightBarButtonItem" image="Search" id="w2c-qp-Eb2">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="searchBtnAction:" destination="LSh-3q-SmP" id="lce-7d-eZy"/>
@@ -1040,7 +1381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXx-BH-RSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="2338"/>
+            <point key="canvasLocation" x="-468" y="1918"/>
         </scene>
         <!--Calendar Controller-->
         <scene sceneID="PZT-tK-qkh">
@@ -1062,10 +1403,10 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="6JC-gu-Df8">
-                                        <barButtonItem key="leftBarButtonItem" image="home-16.png" id="Vnw-QZ-WSC">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="Vnw-QZ-WSC">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <action selector="homeButtonPressed:" destination="b3d-pH-uKq" id="Jzf-i0-Bd9"/>
+                                                <segue destination="6C1-yR-QuF" kind="showDetail" action="showViewController:sender:" id="cnJ-KZ-wbO"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1130,7 +1471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZK-Ll-IYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="3355"/>
+            <point key="canvasLocation" x="-468" y="3159"/>
         </scene>
         <!--Calendar Event List Controller-->
         <scene sceneID="jA7-O4-TNj">
@@ -1152,26 +1493,26 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="WoI-yu-prs">
-                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="OI2-42-oFi">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="OI2-42-oFi">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="b3d-pH-uKq" kind="show" id="wz1-sk-tVF"/>
                                             </connections>
                                         </barButtonItem>
                                         <rightBarButtonItems>
-                                            <barButtonItem image="search-16.png" id="Sx3-SW-igA">
+                                            <barButtonItem image="Search" id="Sx3-SW-igA">
                                                 <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <segue destination="ncR-pa-632" kind="show" id="uwu-3w-ody"/>
                                                 </connections>
                                             </barButtonItem>
-                                            <barButtonItem image="add-16.png" id="hc3-af-Nzp">
+                                            <barButtonItem image="Plus" id="hc3-af-Nzp">
                                                 <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <segue destination="nh6-a8-oKP" kind="show" id="ccT-a6-1xh"/>
                                                 </connections>
                                             </barButtonItem>
-                                            <barButtonItem image="alarm-16.png" id="mVu-OQ-Ra5">
+                                            <barButtonItem image="Reminder" id="mVu-OQ-Ra5">
                                                 <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <segue destination="9pH-gE-9BY" kind="show" id="xp3-6D-h3W"/>
@@ -1271,7 +1612,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="98L-WR-ylI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434" y="3355"/>
+            <point key="canvasLocation" x="-1470" y="3527"/>
         </scene>
         <!--Calendar Reminder List Controller-->
         <scene sceneID="A2U-mq-TKS">
@@ -1327,14 +1668,35 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <exclude reference="bkd-dV-qoh"/>
+                                                        </mask>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="dd4-Ok-3et" firstAttribute="baseline" secondItem="qqS-1i-OsF" secondAttribute="baseline" id="CxF-gi-v0M"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="dd4-Ok-3et" secondAttribute="trailing" id="Kct-58-dEh"/>
+                                                <constraint firstItem="dd4-Ok-3et" firstAttribute="trailing" secondItem="kZY-Mp-9z4" secondAttribute="trailingMargin" id="a5k-CA-Omz"/>
                                                 <constraint firstItem="qqS-1i-OsF" firstAttribute="centerY" secondItem="kZY-Mp-9z4" secondAttribute="centerY" id="lFs-CO-GT2"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="qqS-1i-OsF" secondAttribute="leading" id="mGG-p8-22J"/>
                                                 <constraint firstItem="dd4-Ok-3et" firstAttribute="centerY" secondItem="kZY-Mp-9z4" secondAttribute="centerY" id="uZ5-sz-G9F"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="CxF-gi-v0M"/>
+                                                    <exclude reference="a5k-CA-Omz"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="CxF-gi-v0M"/>
+                                                    <exclude reference="Kct-58-dEh"/>
+                                                    <include reference="a5k-CA-Omz"/>
+                                                    <exclude reference="uZ5-sz-G9F"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="eventDate" destination="dd4-Ok-3et" id="WrA-7V-dbS"/>
@@ -1355,7 +1717,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="Bpr-f9-UV7">
-                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="lD1-1D-QAl">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="lD1-1D-QAl">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="R1n-0W-jIm" kind="show" id="57x-P0-RxU"/>
@@ -1389,7 +1751,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XG6-b2-Lrn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="4255"/>
+            <point key="canvasLocation" x="-3811.5" y="3791"/>
         </scene>
         <!--Drive Controller-->
         <scene sceneID="jWl-Ce-jLb">
@@ -1487,10 +1849,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="IIE-M6-Egx">
-                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="fdP-CD-VGr">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="fdP-CD-VGr">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="homeButtonPressed:" destination="hIx-x0-Az8" id="zBv-kG-Qq1"/>
+                                                <segue destination="6C1-yR-QuF" kind="showDetail" action="showViewController:sender:" id="Ues-lk-Mui"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1528,12 +1891,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2Y-AL-IRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474" y="5211"/>
+            <point key="canvasLocation" x="-528" y="5383"/>
         </scene>
         <!--Drive File Controller-->
         <scene sceneID="yu0-jf-OK5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5tY-dd-YoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="driveFile" id="pU5-Cv-jcn" customClass="DriveFileController" customModule="Centralize_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tXn-7P-1o8"/>
@@ -1552,7 +1914,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="ggy-E3-P5h">
-                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="PUT-TI-SGk">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="PUT-TI-SGk">
                                             <color key="tintColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="hIx-x0-Az8" kind="show" id="skU-Px-1EE"/>
@@ -1641,59 +2003,36 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqL-Tv-kW2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="LiI-WL-cmd"/>
-                                </constraints>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5N-cq-E0g">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <barButtonItem title="Item" id="wWY-wg-gBd">
-                                        <connections>
-                                            <action selector="openButtonPressed:" destination="pU5-Cv-jcn" id="cqk-h3-fv0"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="j8S-41-AJX"/>
-                                    <barButtonItem title="Item" id="0g3-Lx-btu">
-                                        <connections>
-                                            <segue destination="3Mj-qr-AMu" kind="show" id="TFJ-XK-1EI"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XgU-mo-KEv"/>
-                                    <barButtonItem title="Item" id="Lg5-Px-SdO">
-                                        <connections>
-                                            <action selector="downloadButtonPressed:" destination="pU5-Cv-jcn" id="V05-9G-ibh"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <tabBarItem title="Download" image="Download" id="FFX-mu-0Gf"/>
+                                    <tabBarItem tag="1" title="Open" image="Open" id="F2s-k9-9SU"/>
+                                    <tabBarItem tag="2" title="Share" image="Share" id="iVD-ss-eiD"/>
                                 </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="LiI-WL-cmd"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="LiI-WL-cmd"/>
-                                    </mask>
-                                </variation>
-                            </toolbar>
+                                <color key="selectedImageTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="pU5-Cv-jcn" id="9pe-2X-kWd"/>
+                                </connections>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="mIW-d3-kLJ" firstAttribute="top" secondItem="bUU-Xi-FU0" secondAttribute="bottom" constant="22" id="1in-Yo-3ea"/>
                             <constraint firstAttribute="leadingMargin" secondItem="OuL-M7-bRi" secondAttribute="leading" id="2sR-dt-N4e"/>
+                            <constraint firstItem="O5N-cq-E0g" firstAttribute="leading" secondItem="WvJ-oF-MrY" secondAttribute="leadingMargin" constant="-20" id="4wQ-vd-i1x"/>
                             <constraint firstItem="CMn-wc-PRx" firstAttribute="top" secondItem="CLN-6s-Pzn" secondAttribute="bottom" constant="41" id="6gO-Tz-JqI"/>
-                            <constraint firstItem="yqL-Tv-kW2" firstAttribute="leading" secondItem="WvJ-oF-MrY" secondAttribute="leadingMargin" constant="-20" id="8yW-k3-e1Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O5N-cq-E0g" secondAttribute="trailing" constant="-20" id="80R-Hi-xjH"/>
                             <constraint firstItem="bUU-Xi-FU0" firstAttribute="top" secondItem="OuL-M7-bRi" secondAttribute="bottom" constant="8" id="A5r-U6-Tto"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OuL-M7-bRi" secondAttribute="trailing" constant="63" id="Ai0-VD-Fcy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iSC-Ab-dhE" secondAttribute="trailing" id="CQ6-VC-KtY"/>
                             <constraint firstItem="0Ls-Na-jxG" firstAttribute="top" secondItem="QGf-SR-5CF" secondAttribute="bottom" constant="22" id="HbP-YD-LTi"/>
                             <constraint firstItem="OuL-M7-bRi" firstAttribute="top" secondItem="9ch-BC-PK9" secondAttribute="bottom" constant="14" id="Hew-hF-A6S"/>
                             <constraint firstItem="AGe-BG-1aF" firstAttribute="top" secondItem="ccL-xf-gcu" secondAttribute="bottom" constant="42" id="HsO-tJ-zx7"/>
-                            <constraint firstItem="yqL-Tv-kW2" firstAttribute="centerX" secondItem="WvJ-oF-MrY" secondAttribute="centerX" id="JGA-2c-GRn"/>
-                            <constraint firstItem="ZX8-zb-l3I" firstAttribute="top" secondItem="yqL-Tv-kW2" secondAttribute="bottom" id="JWd-43-KYy"/>
                             <constraint firstItem="9ch-BC-PK9" firstAttribute="leading" secondItem="WvJ-oF-MrY" secondAttribute="leadingMargin" constant="-20" id="OOh-ew-fKj"/>
                             <constraint firstItem="iSC-Ab-dhE" firstAttribute="top" secondItem="AGe-BG-1aF" secondAttribute="bottom" constant="8" id="Qx3-CI-bL5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yqL-Tv-kW2" secondAttribute="trailing" constant="-20" id="RiN-qj-jpI"/>
+                            <constraint firstItem="ZX8-zb-l3I" firstAttribute="top" secondItem="O5N-cq-E0g" secondAttribute="bottom" id="UfO-up-vXD"/>
                             <constraint firstAttribute="leadingMargin" secondItem="0Ls-Na-jxG" secondAttribute="leading" id="Wkk-6J-Yiq"/>
                             <constraint firstItem="9ch-BC-PK9" firstAttribute="top" secondItem="tXn-7P-1o8" secondAttribute="bottom" id="Zpr-uk-9dI"/>
                             <constraint firstAttribute="leadingMargin" secondItem="QGf-SR-5CF" secondAttribute="leading" id="b9P-bH-qSk"/>
@@ -1714,24 +2053,22 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="yqL-Tv-kW2"/>
+                                <exclude reference="O5N-cq-E0g"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8yW-k3-e1Q"/>
-                                <exclude reference="JGA-2c-GRn"/>
-                                <exclude reference="RiN-qj-jpI"/>
-                                <exclude reference="JWd-43-KYy"/>
+                                <exclude reference="4wQ-vd-i1x"/>
+                                <exclude reference="80R-Hi-xjH"/>
+                                <exclude reference="UfO-up-vXD"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="yqL-Tv-kW2"/>
+                                <include reference="O5N-cq-E0g"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8yW-k3-e1Q"/>
-                                <include reference="JGA-2c-GRn"/>
-                                <include reference="RiN-qj-jpI"/>
-                                <include reference="JWd-43-KYy"/>
+                                <include reference="4wQ-vd-i1x"/>
+                                <include reference="80R-Hi-xjH"/>
+                                <include reference="UfO-up-vXD"/>
                             </mask>
                         </variation>
                     </view>
@@ -1739,7 +2076,7 @@
                         <outlet property="backButton" destination="PUT-TI-SGk" id="BJA-w9-uMu"/>
                         <outlet property="commentAccessImageView" destination="mIW-d3-kLJ" id="C3d-E4-SCM"/>
                         <outlet property="copyAccessImageView" destination="9Wf-rt-I5v" id="jyd-A9-Bkh"/>
-                        <outlet property="downloadButton" destination="Lg5-Px-SdO" id="3y7-f1-EZt"/>
+                        <outlet property="downloadTab" destination="FFX-mu-0Gf" id="qUK-Jq-6Rq"/>
                         <outlet property="editAccessImageView" destination="QGf-SR-5CF" id="R3o-Pv-Ujt"/>
                         <outlet property="fileCreationDate" destination="ccL-xf-gcu" id="ohB-3H-662"/>
                         <outlet property="fileCreationDateLabel" destination="CMn-wc-PRx" id="Orf-df-kH9"/>
@@ -1749,24 +2086,27 @@
                         <outlet property="fileSize" destination="CLN-6s-Pzn" id="rwE-go-4gy"/>
                         <outlet property="fileSizeLabel" destination="zzu-b7-umk" id="cmG-Y3-PAa"/>
                         <outlet property="navigationBar" destination="ggy-E3-P5h" id="eqP-QF-iX0"/>
-                        <outlet property="openButton" destination="wWY-wg-gBd" id="RGC-2t-bQe"/>
+                        <outlet property="openTab" destination="F2s-k9-9SU" id="I3Z-5U-xfL"/>
                         <outlet property="readAccessImageView" destination="bUU-Xi-FU0" id="BHF-ZD-Z3g"/>
                         <outlet property="shareAccessImageView" destination="0Ls-Na-jxG" id="erN-zP-uCR"/>
-                        <outlet property="shareButton" destination="0g3-Lx-btu" id="Wqa-X2-4Bz"/>
+                        <outlet property="shareTab" destination="iVD-ss-eiD" id="U9g-aE-C5i"/>
+                        <outlet property="tabBar" destination="O5N-cq-E0g" id="Bht-fq-OjJ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5tY-dd-YoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434" y="5211"/>
+            <point key="canvasLocation" x="-1356" y="5383"/>
         </scene>
         <!--Drive Share File Controller-->
         <scene sceneID="DDw-bn-l3a">
             <objects>
-                <viewController id="3Mj-qr-AMu" customClass="DriveShareFileController" customModule="Centralize_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="driveShareFileController" id="3Mj-qr-AMu" customClass="DriveShareFileController" customModule="Centralize_iOS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9SH-GR-iAh"/>
                         <viewControllerLayoutGuide type="bottom" id="EYD-EG-bKh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="86D-8A-gHb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUZ-xv-6Sf">
@@ -1786,31 +2126,6 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vy1-uy-P9X">
                                 <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
                             </pickerView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SkY-15-uP5">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="a7Y-FP-Yhv"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Bfg-3U-Lnl"/>
-                                    <barButtonItem title="Item" id="lgB-wQ-5cT">
-                                        <connections>
-                                            <action selector="shareButtonPressed:" destination="3Mj-qr-AMu" id="f1A-3c-d96"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9Qu-2n-wyT"/>
-                                </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="a7Y-FP-Yhv"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="a7Y-FP-Yhv"/>
-                                    </mask>
-                                </variation>
-                            </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dH5-am-wfG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <color key="barTintColor" red="0.76862745099999996" green="0.023529411760000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
@@ -1819,7 +2134,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="Vcm-zZ-hNC">
-                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="aez-OO-1Cm">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="aez-OO-1Cm">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="pU5-Cv-jcn" kind="show" id="0Cl-U1-ahc"/>
@@ -1828,19 +2143,29 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Not-kj-rVJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Validate" image="Checkmark" id="xUp-a4-jeN"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="3Mj-qr-AMu" id="now-Wf-wuB"/>
+                                </connections>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hUZ-xv-6Sf" firstAttribute="centerX" secondItem="86D-8A-gHb" secondAttribute="centerX" id="2VV-2E-f6g"/>
                             <constraint firstItem="vy1-uy-P9X" firstAttribute="top" secondItem="v8E-aM-JwR" secondAttribute="bottom" constant="8.5" id="2zc-uk-MkR"/>
                             <constraint firstItem="dH5-am-wfG" firstAttribute="top" secondItem="9SH-GR-iAh" secondAttribute="bottom" id="57J-xI-Iby"/>
+                            <constraint firstItem="Not-kj-rVJ" firstAttribute="leading" secondItem="86D-8A-gHb" secondAttribute="leadingMargin" constant="-20" id="5W6-k3-dao"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Not-kj-rVJ" secondAttribute="trailing" constant="-20" id="6Sl-rh-Uf8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QqC-hU-j6A" secondAttribute="trailing" id="D9f-xo-OkS"/>
-                            <constraint firstItem="SkY-15-uP5" firstAttribute="centerX" secondItem="86D-8A-gHb" secondAttribute="centerX" id="DNK-kx-rzc"/>
                             <constraint firstItem="hUZ-xv-6Sf" firstAttribute="top" secondItem="dH5-am-wfG" secondAttribute="bottom" constant="20" id="EHB-9q-hbG"/>
                             <constraint firstItem="dH5-am-wfG" firstAttribute="leading" secondItem="86D-8A-gHb" secondAttribute="leadingMargin" constant="-20" id="LD7-9A-p8u"/>
                             <constraint firstItem="dH5-am-wfG" firstAttribute="centerX" secondItem="86D-8A-gHb" secondAttribute="centerX" id="VVU-pP-VZq"/>
                             <constraint firstItem="vy1-uy-P9X" firstAttribute="centerX" secondItem="86D-8A-gHb" secondAttribute="centerX" id="Wsp-TZ-f4c"/>
-                            <constraint firstItem="SkY-15-uP5" firstAttribute="leading" secondItem="86D-8A-gHb" secondAttribute="leadingMargin" constant="-20" id="Xcv-aw-hgP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vy1-uy-P9X" secondAttribute="trailing" constant="-20" id="ZzR-pR-Y5Z">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -1848,15 +2173,12 @@
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstAttribute="leadingMargin" secondItem="v8E-aM-JwR" secondAttribute="leading" id="ama-Tk-Lh0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SkY-15-uP5" secondAttribute="trailing" constant="-20" id="mte-yZ-Bpi"/>
+                            <constraint firstItem="EYD-EG-bKh" firstAttribute="top" secondItem="Not-kj-rVJ" secondAttribute="bottom" id="dIg-aL-LdB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dH5-am-wfG" secondAttribute="trailing" constant="-20" id="nKZ-sl-Qia"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hUZ-xv-6Sf" secondAttribute="trailing" id="nLF-B9-G3e"/>
                             <constraint firstItem="v8E-aM-JwR" firstAttribute="top" secondItem="dH5-am-wfG" secondAttribute="bottom" constant="75" id="ok9-Dt-7sf"/>
                             <constraint firstItem="QqC-hU-j6A" firstAttribute="top" secondItem="dH5-am-wfG" secondAttribute="bottom" constant="70" id="pr1-hc-XEv"/>
                             <constraint firstItem="QqC-hU-j6A" firstAttribute="centerX" secondItem="v8E-aM-JwR" secondAttribute="centerX" id="sod-cJ-cPf"/>
-                            <constraint firstItem="EYD-EG-bKh" firstAttribute="top" secondItem="SkY-15-uP5" secondAttribute="bottom" constant="-6" id="tdL-5d-4Bj">
-                                <variation key="widthClass=compact" constant="0.0"/>
-                            </constraint>
                             <constraint firstAttribute="leadingMargin" secondItem="hUZ-xv-6Sf" secondAttribute="leading" id="zE1-WK-CL6"/>
                         </constraints>
                         <variation key="default">
@@ -1865,31 +2187,30 @@
                                 <exclude reference="v8E-aM-JwR"/>
                                 <exclude reference="QqC-hU-j6A"/>
                                 <exclude reference="vy1-uy-P9X"/>
-                                <exclude reference="SkY-15-uP5"/>
                                 <exclude reference="dH5-am-wfG"/>
+                                <exclude reference="Not-kj-rVJ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="57J-xI-Iby"/>
-                                <exclude reference="LD7-9A-p8u"/>
-                                <exclude reference="VVU-pP-VZq"/>
-                                <exclude reference="nKZ-sl-Qia"/>
-                                <exclude reference="2VV-2E-f6g"/>
-                                <exclude reference="EHB-9q-hbG"/>
-                                <exclude reference="nLF-B9-G3e"/>
-                                <exclude reference="zE1-WK-CL6"/>
-                                <exclude reference="ama-Tk-Lh0"/>
-                                <exclude reference="ok9-Dt-7sf"/>
+                                <exclude reference="dIg-aL-LdB"/>
                                 <exclude reference="2zc-uk-MkR"/>
                                 <exclude reference="Wsp-TZ-f4c"/>
                                 <exclude reference="ZzR-pR-Y5Z"/>
                                 <exclude reference="aG9-Z9-cLN"/>
+                                <exclude reference="2VV-2E-f6g"/>
+                                <exclude reference="EHB-9q-hbG"/>
+                                <exclude reference="nLF-B9-G3e"/>
+                                <exclude reference="zE1-WK-CL6"/>
                                 <exclude reference="D9f-xo-OkS"/>
                                 <exclude reference="pr1-hc-XEv"/>
                                 <exclude reference="sod-cJ-cPf"/>
-                                <exclude reference="DNK-kx-rzc"/>
-                                <exclude reference="Xcv-aw-hgP"/>
-                                <exclude reference="mte-yZ-Bpi"/>
-                                <exclude reference="tdL-5d-4Bj"/>
+                                <exclude reference="ama-Tk-Lh0"/>
+                                <exclude reference="ok9-Dt-7sf"/>
+                                <exclude reference="57J-xI-Iby"/>
+                                <exclude reference="LD7-9A-p8u"/>
+                                <exclude reference="VVU-pP-VZq"/>
+                                <exclude reference="nKZ-sl-Qia"/>
+                                <exclude reference="5W6-k3-dao"/>
+                                <exclude reference="6Sl-rh-Uf8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1898,31 +2219,30 @@
                                 <include reference="v8E-aM-JwR"/>
                                 <include reference="QqC-hU-j6A"/>
                                 <include reference="vy1-uy-P9X"/>
-                                <include reference="SkY-15-uP5"/>
                                 <include reference="dH5-am-wfG"/>
+                                <include reference="Not-kj-rVJ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="57J-xI-Iby"/>
-                                <include reference="LD7-9A-p8u"/>
-                                <include reference="VVU-pP-VZq"/>
-                                <include reference="nKZ-sl-Qia"/>
-                                <include reference="2VV-2E-f6g"/>
-                                <include reference="EHB-9q-hbG"/>
-                                <include reference="nLF-B9-G3e"/>
-                                <include reference="zE1-WK-CL6"/>
-                                <include reference="ama-Tk-Lh0"/>
-                                <include reference="ok9-Dt-7sf"/>
+                                <include reference="dIg-aL-LdB"/>
                                 <include reference="2zc-uk-MkR"/>
                                 <include reference="Wsp-TZ-f4c"/>
                                 <include reference="ZzR-pR-Y5Z"/>
                                 <include reference="aG9-Z9-cLN"/>
+                                <include reference="2VV-2E-f6g"/>
+                                <include reference="EHB-9q-hbG"/>
+                                <include reference="nLF-B9-G3e"/>
+                                <include reference="zE1-WK-CL6"/>
                                 <include reference="D9f-xo-OkS"/>
                                 <include reference="pr1-hc-XEv"/>
                                 <include reference="sod-cJ-cPf"/>
-                                <include reference="DNK-kx-rzc"/>
-                                <include reference="Xcv-aw-hgP"/>
-                                <include reference="mte-yZ-Bpi"/>
-                                <include reference="tdL-5d-4Bj"/>
+                                <include reference="ama-Tk-Lh0"/>
+                                <include reference="ok9-Dt-7sf"/>
+                                <include reference="57J-xI-Iby"/>
+                                <include reference="LD7-9A-p8u"/>
+                                <include reference="VVU-pP-VZq"/>
+                                <include reference="nKZ-sl-Qia"/>
+                                <include reference="5W6-k3-dao"/>
+                                <include reference="6Sl-rh-Uf8"/>
                             </mask>
                         </variation>
                     </view>
@@ -1933,12 +2253,12 @@
                         <outlet property="notificationSwitch" destination="QqC-hU-j6A" id="Ia4-gd-k67"/>
                         <outlet property="permissionPicker" destination="vy1-uy-P9X" id="cNj-Q7-6zh"/>
                         <outlet property="receivers" destination="hUZ-xv-6Sf" id="9La-0k-aXN"/>
-                        <outlet property="shareButton" destination="lgB-wQ-5cT" id="emX-73-gAl"/>
+                        <outlet property="shareTab" destination="xUp-a4-jeN" id="tFv-Xx-Fg4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbe-t2-2y5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="5211"/>
+            <point key="canvasLocation" x="-2214" y="5383"/>
         </scene>
         <!--Calendar Event Create Controller-->
         <scene sceneID="sb1-QP-8fg">
@@ -1960,13 +2280,13 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="ZlI-fa-jYT">
-                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="WFc-wW-ztP">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="WFc-wW-ztP">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="R1n-0W-jIm" kind="show" id="J0c-nH-x6d"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="add-16.png" id="2mi-Bp-3Lo">
+                                        <barButtonItem key="rightBarButtonItem" image="Plus" id="2mi-Bp-3Lo">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="createButtonAction:" destination="nh6-a8-oKP" id="hcO-Gn-xYO"/>
@@ -2082,7 +2402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pF4-8T-nod" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434" y="4255"/>
+            <point key="canvasLocation" x="-2856" y="4559"/>
         </scene>
         <!--Calendar Event Details Controller-->
         <scene sceneID="ZFf-KY-Hlm">
@@ -2104,20 +2424,20 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="kMj-4G-Hbs">
-                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="Say-V9-4UI">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="Say-V9-4UI">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="R1n-0W-jIm" kind="show" id="6uB-k6-2Tt"/>
                                             </connections>
                                         </barButtonItem>
                                         <rightBarButtonItems>
-                                            <barButtonItem image="edit-16.png" id="qe7-xz-7qe">
+                                            <barButtonItem image="Edit" id="qe7-xz-7qe">
                                                 <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <segue destination="pDP-Ue-2WT" kind="show" id="JkN-yi-DV3"/>
                                                 </connections>
                                             </barButtonItem>
-                                            <barButtonItem image="delete-16.png" id="WmU-AJ-1uk">
+                                            <barButtonItem image="Delete" id="WmU-AJ-1uk">
                                                 <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="deleteBtnAction:" destination="OSr-q3-I3D" id="WSl-5K-5Ik"/>
@@ -2192,7 +2512,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pH1-0a-jJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="3355"/>
+            <point key="canvasLocation" x="-2856" y="3035"/>
         </scene>
         <!--Calendar Event Search Controller-->
         <scene sceneID="NeZ-lE-e0f">
@@ -2214,13 +2534,13 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="1gU-YN-bCb">
-                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="aKL-Nh-MmP">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="aKL-Nh-MmP">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="R1n-0W-jIm" kind="show" id="PWN-J1-32n"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="search-16.png" id="hqM-V6-wz6">
+                                        <barButtonItem key="rightBarButtonItem" image="Search" id="hqM-V6-wz6">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="searchBtnAction:" destination="ncR-pa-632" id="Lf6-Js-GKD"/>
@@ -2360,7 +2680,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jay-7D-HFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="4255"/>
+            <point key="canvasLocation" x="-3811.5" y="4559"/>
         </scene>
         <!--Calendar Event Update Controller-->
         <scene sceneID="Mpf-x6-zjx">
@@ -2445,13 +2765,13 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="7AY-0P-uyh">
-                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="La4-Mp-apB">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="La4-Mp-apB">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="OSr-q3-I3D" kind="show" id="H5w-KK-C7Q"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="edit-16.png" id="G0x-si-yVK">
+                                        <barButtonItem key="rightBarButtonItem" image="Checkmark" id="G0x-si-yVK">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="updateButtonAction:" destination="pDP-Ue-2WT" id="cke-at-kXP"/>
@@ -2504,7 +2824,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mx-78-a45" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3376.5" y="3355"/>
+            <point key="canvasLocation" x="-3811.5" y="3035"/>
         </scene>
         <!--Gmail Thread Messages Controller-->
         <scene sceneID="Jyw-FN-5Ge">
@@ -2529,13 +2849,13 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Messages" id="edu-ld-CXl">
-                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="NPf-Nz-knK">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="NPf-Nz-knK">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="LSh-3q-SmP" kind="show" id="BLB-8X-r88"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="delete-16.png" id="8Vf-2D-uOq">
+                                        <barButtonItem key="rightBarButtonItem" image="Delete" id="8Vf-2D-uOq">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="archiveThread:" destination="yvC-eQ-9yx" id="buv-aO-46W"/>
@@ -2591,7 +2911,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zc3-eq-81s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434" y="2338"/>
+            <point key="canvasLocation" x="-1356" y="2294"/>
         </scene>
         <!--Gmail Search Controller-->
         <scene sceneID="FZF-we-YkP">
@@ -2650,13 +2970,13 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Searches" id="lgv-Wf-2mu">
-                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="sy4-4b-CYC">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="sy4-4b-CYC">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="LSh-3q-SmP" kind="show" id="IFn-Fx-eNm"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="add-16.png" id="uhD-6v-qRy">
+                                        <barButtonItem key="rightBarButtonItem" image="Plus" id="uhD-6v-qRy">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="loadMoreBtn:" destination="HjV-BB-EZL" id="MGQ-GS-wXC"/>
@@ -2713,7 +3033,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qlz-jU-vge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-305" y="2338"/>
+            <point key="canvasLocation" x="-1356" y="1562"/>
         </scene>
         <!--Gmail Message Controller-->
         <scene sceneID="0ni-Cf-3E4">
@@ -2749,20 +3069,20 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Read message" id="4nd-sD-pIW">
-                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="DHh-35-4Wr">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="DHh-35-4Wr">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="yvC-eQ-9yx" kind="show" id="MqY-6n-gIb"/>
                                             </connections>
                                         </barButtonItem>
                                         <rightBarButtonItems>
-                                            <barButtonItem image="reply-16.png" id="AFI-sy-iZD">
+                                            <barButtonItem image="Reply" id="AFI-sy-iZD">
                                                 <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <segue destination="d7o-GO-X8Z" kind="show" id="TsO-Y8-vJr"/>
                                                 </connections>
                                             </barButtonItem>
-                                            <barButtonItem image="read-message-16.png" id="Sre-5T-0zV">
+                                            <barButtonItem image="Read" id="Sre-5T-0zV">
                                                 <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="readBtnAction:" destination="PZI-V0-wQg" id="ehr-ot-T0J"/>
@@ -2795,7 +3115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nH-Q9-mLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="2338"/>
+            <point key="canvasLocation" x="-2200.5" y="2294"/>
         </scene>
         <!--Gmail Reply Controller-->
         <scene sceneID="lK8-Ws-aRL">
@@ -2820,13 +3140,13 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Reply" id="sWT-ZS-fK7">
-                                        <barButtonItem key="leftBarButtonItem" image="back-16.png" id="3JC-zP-zZt">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="3JC-zP-zZt">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <segue destination="PZI-V0-wQg" kind="show" id="clp-wN-wb4"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="reply-16.png" id="juQ-pe-UDy">
+                                        <barButtonItem key="rightBarButtonItem" image="Reply" id="juQ-pe-UDy">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="sendBtnAction:" destination="d7o-GO-X8Z" id="WIy-dj-c2A"/>
@@ -2869,7 +3189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxo-8f-uLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3376.5" y="2338"/>
+            <point key="canvasLocation" x="-2995.5" y="2294"/>
         </scene>
         <!--Controller-->
         <scene sceneID="bcs-ys-rVQ">
@@ -2891,7 +3211,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Title" id="jmc-ql-FkN">
-                                        <barButtonItem key="leftBarButtonItem" image="home-16.png" id="MUO-w0-cYc">
+                                        <barButtonItem key="leftBarButtonItem" image="Back" id="MUO-w0-cYc">
                                             <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="homeBtnAction:" destination="Xvh-Hb-zCf" id="2lH-5J-7WF"/>
@@ -3148,25 +3468,29 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Back" width="27" height="20"/>
         <image name="Centralize.png" width="633" height="352"/>
-        <image name="add-16.png" width="16" height="16"/>
-        <image name="alarm-16.png" width="16" height="16"/>
-        <image name="back-16.png" width="16" height="16"/>
-        <image name="delete-16.png" width="16" height="16"/>
-        <image name="edit-16.png" width="16" height="16"/>
-        <image name="edit-user-24.png" width="24" height="24"/>
-        <image name="home-16.png" width="16" height="16"/>
-        <image name="menu-4-16.png" width="16" height="16"/>
-        <image name="power-32.png" width="32" height="32"/>
-        <image name="read-message-16.png" width="16" height="16"/>
-        <image name="reply-16.png" width="16" height="16"/>
+        <image name="Checkmark" width="29" height="29"/>
+        <image name="Delete" width="29" height="29"/>
+        <image name="Download" width="29" height="29"/>
+        <image name="Edit" width="29" height="29"/>
+        <image name="Logout" width="29" height="29"/>
+        <image name="Menu" width="29" height="29"/>
+        <image name="Open" width="29" height="29"/>
+        <image name="Plus" width="29" height="29"/>
+        <image name="Read" width="29" height="29"/>
+        <image name="Reminder" width="29" height="29"/>
+        <image name="Reply" width="29" height="29"/>
+        <image name="Search" width="29" height="29"/>
+        <image name="Share" width="29" height="29"/>
+        <image name="User" width="29" height="29"/>
+        <image name="User Edit" width="29" height="29"/>
         <image name="search-12-16.png" width="16" height="16"/>
-        <image name="search-16.png" width="16" height="16"/>
-        <image name="user-24.png" width="24" height="24"/>
         <image name="warning.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PWN-J1-32n"/>
-        <segue reference="BLB-8X-r88"/>
+        <segue reference="IFn-Fx-eNm"/>
+        <segue reference="zHR-1O-o8Z"/>
     </inferredMetricsTieBreakers>
 </document>

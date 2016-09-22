@@ -10,7 +10,7 @@ import UIKit
 
 let root = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
 
-class DriveFileController: UIViewController {
+class DriveFileController: UIViewController, UITabBarDelegate {
 
     @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var fileName: UILabel!
@@ -29,9 +29,11 @@ class DriveFileController: UIViewController {
     @IBOutlet weak var fileModification: UILabel!
 
     @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet weak var openButton: UIBarButtonItem!
-    @IBOutlet weak var shareButton: UIBarButtonItem!
-    @IBOutlet weak var downloadButton: UIBarButtonItem!
+
+    @IBOutlet weak var tabBar: UITabBar!
+    @IBOutlet weak var downloadTab: UITabBarItem!
+    @IBOutlet weak var openTab: UITabBarItem!
+    @IBOutlet weak var shareTab: UITabBarItem!
 
     let bytesFormatter = NSByteCountFormatter()
     let RFC3339DateFormatter = NSDateFormatter()
@@ -51,78 +53,41 @@ class DriveFileController: UIViewController {
         }
     }
     
-    @IBAction func openButtonPressed(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: current_file.valueForKey("webViewLink") as! String)!)
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        print ("selected : \(item.tag)")
+        if (item.tag == 0) {
+            UIApplication.sharedApplication().openURL(NSURL(string: current_file.valueForKey("webContentLink") as! String)!)
+        } else if (item.tag == 1) {
+            UIApplication.sharedApplication().openURL(NSURL(string: current_file.valueForKey("webViewLink") as! String)!)
+        } else if (item.tag == 2) {
+            NSOperationQueue.mainQueue().addOperationWithBlock(){
+                let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("driveShareFileController")
+                self.presentViewController(nextController, animated: true, completion: nil)
+            }
+        }
     }
-    @IBAction func downloadButtonPressed(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: current_file.valueForKey("webContentLink") as! String)!)
-        
-        //        self.disableUI()
-        //
-        //        let fileManager = NSFileManager.defaultManager()
-        //
-        //        let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
-        //        let session = NSURLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
-        //        let url = NSURL(string: current_file.valueForKey("webContentLink")! as! String)
-        //        let request = NSMutableURLRequest(URL: url!)
-        //        request.HTTPMethod = "GET"
-        //
-        //        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-        //            if (error == nil) {
-        //                let statusCode = (response as! NSHTTPURLResponse).statusCode
-        //                print("Success: \(statusCode)")
-        //
-        //                var writeError:NSError?
-        //
-        //                let file = data?.writeToFile(root + "/\(self.fileName.text!)", atomically: true)
-        //
-        //                print ("Wrote on disk")
-        //
-        //                print ("Opened on disk :")
-        //                // TODO: COMPRENDRE POURQUOI J'AI PAS LE FICHIER MAIS UNE PAGE WEB EN SORTI
-        //                do {
-        //                    let text = try NSString(contentsOfFile: root + "/\(self.fileName.text!)", usedEncoding: nil)
-        //
-        //                    print (text)
-        //                }
-        //                catch {
-        //                    print ("read failed")
-        //                }
-        //                self.enableUI()
-        //            }
-        //            else {
-        //                print("Failure: %@", error!.localizedDescription)
-        //
-        //                let alertController = UIAlertController(title: "Failed to download", message: "Failed to download \(self.fileName.text), please try again later", preferredStyle: UIAlertControllerStyle.Alert)
-        //                
-        //                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-        //                
-        //                self.enableUI()
-        //            }
-        //        })
-        //        task.resume()
-    }
-    
+
     func setStatics() {
         self.navigationBar.title = t.valueForKey("DRIVE_DETAILS")! as? String
         self.fileSizeLabel.text = t.valueForKey("DRIVE_SIZE")! as? String
         self.fileCreationDateLabel.text = t.valueForKey("DRIVE_CREATION")! as? String
         self.fileModificationLabel.text = t.valueForKey("DRIVE_MODIFICATION")! as? String
-        self.openButton.title = t.valueForKey("DRIVE_OPEN_IN_BROWSER")! as? String
-        self.shareButton.title = t.valueForKey("DRIVE_SHARE")! as? String
-        self.downloadButton.title = t.valueForKey("DRIVE_DOWNLOAD")! as? String
+        self.downloadTab.title = t.valueForKey("DRIVE_DOWNLOAD")! as? String
+        self.openTab.title = t.valueForKey("DRIVE_OPEN_IN_BROWSER")! as? String
+        self.shareTab.title = t.valueForKey("DRIVE_SHARE")! as? String
         
         if current_file.valueForKey("webViewLink") as? String == nil {
-            self.openButton.enabled = false
+            self.openTab.enabled = false
         }
         
         if current_file.valueForKey("capabilities")!.valueForKey("canShare") as? Int == 1 {
-            self.shareButton.enabled = true
+            self.shareTab.enabled = true
         } else {
-            self.shareButton.enabled = false
+            self.shareTab.enabled = false
         }
         if current_file.valueForKey("webContentLink") as? String == nil {
-            self.downloadButton.enabled = false
+            self.downloadTab.enabled = false
         }
     }
     func setDynamicsLabel() {

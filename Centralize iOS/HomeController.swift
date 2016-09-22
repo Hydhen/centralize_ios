@@ -91,6 +91,21 @@ class HomeController: UIViewController {
         }
     }
     
+    // TODO: CHANGE STATUS BAR COLOR
+//    override func viewWillAppear(animated: Bool) {
+//        self.navigationController?.navigationBarHidden =  true
+//        
+//        //Status bar style and visibility
+//        UIApplication.sharedApplication().statusBarHidden = false
+//        UIApplication.sharedApplication().statusBarStyle = .LightContent
+//        
+//        //Change status bar color
+//        let statusBar: UIView = UIApplication.sharedApplication().valueForKey("statusBar") as! UIView
+//        if statusBar.respondsToSelector(Selector("setBackgroundColor:")) {
+//            statusBar.backgroundColor = UIColor.redColor()
+//        }
+//    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

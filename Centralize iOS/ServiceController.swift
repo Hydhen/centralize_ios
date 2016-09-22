@@ -20,6 +20,15 @@ class ServiceController: UIViewController, UITableViewDelegate, UITableViewDataS
     var serviceId: NSMutableArray = []
     var serviceIdAPI: NSMutableArray = []
     
+    @IBAction func backButtonPressed(sender: AnyObject) {
+        NSOperationQueue.mainQueue().addOperationWithBlock(){
+            let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("homeController")
+            nextController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+            self.presentViewController(nextController, animated: true, completion: nil)
+        }
+    }
+
     func disableUI() {
         NSOperationQueue.mainQueue().addOperationWithBlock(){
             self.view.endEditing(true)
