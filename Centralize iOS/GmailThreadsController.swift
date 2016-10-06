@@ -77,21 +77,31 @@ class GmailThreadsController: UIViewController, UITableViewDelegate, UITableView
                 
                 let jsonResult:NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                 
-                let nbThreads = (jsonResult.valueForKey("resultSizeEstimate")! as? Int)!
-                
-                if nbThreads > 0 {
-                    self.gmail_threads = (jsonResult.valueForKey("threads")! as? NSMutableArray)!
-                }
-                
-                NSOperationQueue.mainQueue().addOperationWithBlock() {
-                    if nbThreads == 0 {
-                        self.noMsgLbl.hidden = false
-                    } else {
-                        self.tableView.reloadData()
-                        self.tableView.hidden = false
+                if jsonResult.valueForKey("resultSizeEstimate") == nil {
+                    NSOperationQueue.mainQueue().addOperationWithBlock() {
+                        simpleAlert((t.valueForKey("CEN_NOT_REACHABLE")! as? String)!, message: (jsonResult.valueForKey("details")! as? String)!)
+                        let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                        let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("homeController")
+                        self.presentViewController(nextController, animated: true, completion: nil)
+                        self.enableUI()
                     }
-                    self.imageView.hidden = true
-                    self.enableUI()
+                } else {
+                    let nbThreads = (jsonResult.valueForKey("resultSizeEstimate")! as? Int)!
+                    
+                    if nbThreads > 0 {
+                        self.gmail_threads = (jsonResult.valueForKey("threads")! as? NSMutableArray)!
+                    }
+                    
+                    NSOperationQueue.mainQueue().addOperationWithBlock() {
+                        if nbThreads == 0 {
+                            self.noMsgLbl.hidden = false
+                        } else {
+                            self.tableView.reloadData()
+                            self.tableView.hidden = false
+                        }
+                        self.imageView.hidden = true
+                        self.enableUI()
+                    }
                 }
             }
             catch {

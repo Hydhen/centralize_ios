@@ -69,23 +69,30 @@ class DriveController: UIViewController, UITableViewDelegate, UITableViewDataSou
                 
                 let jsonResult:NSDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                 
-                self.files = (jsonResult["files"]! as? NSMutableArray)!
-                print ("--- files")
-                print (self.files)
-                print("files ---")
-
-                let nbFiles = self.files.count
-                
-                NSOperationQueue.mainQueue().addOperationWithBlock() {
-                    if nbFiles == 0 {
-                        self.noFileLabel.hidden = false
-                    } else {
-                        self.tableView.reloadData()
-                        self.tableView.hidden = false
+                if jsonResult.valueForKey("files") == nil {
+                    NSOperationQueue.mainQueue().addOperationWithBlock() {
+                        simpleAlert((t.valueForKey("CEN_NOT_REACHABLE")! as? String)!, message: (jsonResult.valueForKey("details")! as? String)!)
+                        let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                        let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("homeController")
+                        self.presentViewController(nextController, animated: true, completion: nil)
+                        self.enableUI()
                     }
-                    self.imageView.hidden = true
-                    self.currentFolder.hidden = false
-                    self.enableUI()
+                } else {
+                    self.files = (jsonResult["files"]! as? NSMutableArray)!
+
+                    let nbFiles = self.files.count
+                
+                    NSOperationQueue.mainQueue().addOperationWithBlock() {
+                        if nbFiles == 0 {
+                            self.noFileLabel.hidden = false
+                        } else {
+                            self.tableView.reloadData()
+                            self.tableView.hidden = false
+                        }
+                        self.imageView.hidden = true
+                        self.currentFolder.hidden = false
+                        self.enableUI()
+                    }
                 }
             }
             catch {

@@ -34,6 +34,8 @@
 		8FE1DFF01CB3C59D00475FF1 /* ViewProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1DFEF1CB3C59D00475FF1 /* ViewProfileController.swift */; };
 		8FE1DFF21CB4CD9F00475FF1 /* OAuthCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1DFF11CB4CD9F00475FF1 /* OAuthCtrl.swift */; };
 		8FE1E0011CB5123700475FF1 /* I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE1E0001CB5123700475FF1 /* I18n.swift */; };
+		D10011301D9EAD7D0092BCFC /* TwitterMentionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100112F1D9EAD7D0092BCFC /* TwitterMentionsController.swift */; };
+		D10011321D9EB1CD0092BCFC /* MentionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10011311D9EB1CD0092BCFC /* MentionListCell.swift */; };
 		D102831C1D3CCF1D006DA5E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D102831A1D3CCF1D006DA5E7 /* Main.storyboard */; };
 		D103C3291D6E12F900CBA181 /* DriveShareFileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103C3281D6E12F900CBA181 /* DriveShareFileController.swift */; };
 		D103C36C1D7DAF7100CBA181 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D103C35F1D7DAF7100CBA181 /* Icon-App-29x29@1x.png */; };
@@ -148,6 +150,8 @@
 		8FE1DFF11CB4CD9F00475FF1 /* OAuthCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthCtrl.swift; sourceTree = "<group>"; };
 		8FE1DFF41CB4E0C600475FF1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8FE1E0001CB5123700475FF1 /* I18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = I18n.swift; sourceTree = "<group>"; };
+		D100112F1D9EAD7D0092BCFC /* TwitterMentionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterMentionsController.swift; sourceTree = "<group>"; };
+		D10011311D9EB1CD0092BCFC /* MentionListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionListCell.swift; sourceTree = "<group>"; };
 		D102831B1D3CCF1D006DA5E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D103C3281D6E12F900CBA181 /* DriveShareFileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriveShareFileController.swift; sourceTree = "<group>"; };
 		D103C35F1D7DAF7100CBA181 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-App-29x29@1x.png"; path = "../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/90CEDACD-5563-47E8-9497-DD06D5A2F2DD/centralize-200/ios/AppIcon.appiconset/Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
@@ -440,6 +444,8 @@
 				D1E9534F1D8DF01800AB7690 /* TweetListCell.swift */,
 				D1E9534D1D8DB48000AB7690 /* TwitterController.swift */,
 				D1E953511D902A2600AB7690 /* TwitterNewTweetController.swift */,
+				D100112F1D9EAD7D0092BCFC /* TwitterMentionsController.swift */,
+				D10011311D9EB1CD0092BCFC /* MentionListCell.swift */,
 			);
 			name = Twitter;
 			sourceTree = "<group>";
@@ -507,7 +513,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Centralize;
 				TargetAttributes = {
 					8F9D6B221C7463F70024E75F = {
@@ -622,6 +628,7 @@
 				D1CA0B561D411C9B00BE194B /* CustomFAQCell.swift in Sources */,
 				D13924081D5CC70E00682FDF /* CalendarReminderListController.swift in Sources */,
 				8FE1DFDE1CA68CF600475FF1 /* LanguagesController.swift in Sources */,
+				D10011301D9EAD7D0092BCFC /* TwitterMentionsController.swift in Sources */,
 				8FC2C56E1CC11783007C8211 /* GmailThreadMessagesController.swift in Sources */,
 				8FE1DFF21CB4CD9F00475FF1 /* OAuthCtrl.swift in Sources */,
 				8FE1DFB41CA5323300475FF1 /* OutViewController.swift in Sources */,
@@ -641,6 +648,7 @@
 				8FC2C55C1CB67830007C8211 /* MenuController.swift in Sources */,
 				8FE1DFF01CB3C59D00475FF1 /* ViewProfileController.swift in Sources */,
 				D1CD4CAC1D2AEBD500F60ED4 /* CalendarEventListController.swift in Sources */,
+				D10011321D9EB1CD0092BCFC /* MentionListCell.swift in Sources */,
 				D189E3121D3007A4005A06FA /* CalendarEventSearchController.swift in Sources */,
 				8F38897B1CEBA1800098E133 /* Utils.swift in Sources */,
 				8FE1DFAD1CA435DD00475FF1 /* HomeController.swift in Sources */,
@@ -717,6 +725,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -726,8 +735,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -762,6 +773,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -771,8 +783,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -791,6 +805,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

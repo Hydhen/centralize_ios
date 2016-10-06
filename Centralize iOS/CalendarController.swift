@@ -60,19 +60,30 @@ class CalendarController: UIViewController {
                 
                 print (jsonResult)
                 
-                self.calendarsList = (jsonResult.valueForKey("items")! as? NSMutableArray)!
-                
-                let nbCalendars = self.calendarsList.count
-                
-                NSOperationQueue.mainQueue().addOperationWithBlock() {
-                    if nbCalendars == 0 {
-                        self.noCalendarsLbl.hidden = false
-                    } else {
-                        self.tableView.reloadData()
-                        self.tableView.hidden = false
+                if jsonResult.valueForKey("items") == nil {
+                    NSOperationQueue.mainQueue().addOperationWithBlock() {
+                        simpleAlert((t.valueForKey("CEN_NOT_REACHABLE")! as? String)!, message: (jsonResult.valueForKey("details")! as? String)!)
+                        let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                        let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("homeController")
+                        self.presentViewController(nextController, animated: true, completion: nil)
+                        self.enableUI()
                     }
-                    self.imageView.hidden = true
-                    self.enableUI()
+                } else {
+
+                    self.calendarsList = (jsonResult.valueForKey("items")! as? NSMutableArray)!
+                
+                    let nbCalendars = self.calendarsList.count
+                
+                    NSOperationQueue.mainQueue().addOperationWithBlock() {
+                        if nbCalendars == 0 {
+                            self.noCalendarsLbl.hidden = false
+                        } else {
+                            self.tableView.reloadData()
+                            self.tableView.hidden = false
+                        }
+                        self.imageView.hidden = true
+                        self.enableUI()
+                    }
                 }
             }
             catch {
