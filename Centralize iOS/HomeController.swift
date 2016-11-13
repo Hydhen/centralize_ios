@@ -15,6 +15,14 @@ class HomeController: UIViewController {
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
     @IBOutlet weak var imageView: UIImageView!
+
+    func loadMenu() {
+        if self.revealViewController() != nil {
+            menuBtn.target = self.revealViewController()
+            menuBtn.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
     
     func disableUI() {
         NSOperationQueue.mainQueue().addOperationWithBlock(){
@@ -62,7 +70,7 @@ class HomeController: UIViewController {
         let hasUsername = NSUserDefaults.standardUserDefaults().objectForKey("username")
         
         if hasUsername == nil {
-            NSOperationQueue.mainQueue().addOperationWithBlock(){
+            NSOperationQueue.mainQueue().addOperationWithBlock() {
                 self.enableUI()
                 let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
                 let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("loginController")
@@ -71,26 +79,23 @@ class HomeController: UIViewController {
         } else {
 //            let o = OAuthCtrl()
 //            o.refresh_token { (success, title, message, data) -> Void in
-                NSOperationQueue.mainQueue().addOperationWithBlock() {
+//                NSOperationQueue.mainQueue().addOperationWithBlock() {
 //                    if (!success) {
 //                        simpleAlert(title, message: message)
+//                        self.enableUI()
+//                        let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+//                        let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("loginController")
+//                        self.presentViewController(nextController, animated: true, completion: nil)                        
 //                    }
                     self.enableUI()
                     self.imageView.hidden = true
                     self.loadMenu()
-                }
+//                }
 //            }
         }
     }
     
-    func loadMenu() {
-        if self.revealViewController() != nil {
-            menuBtn.target = self.revealViewController()
-            menuBtn.action = #selector(SWRevealViewController.revealToggle(_:))
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-    }
-    
+
     // TODO: CHANGE STATUS BAR COLOR
 //    override func viewWillAppear(animated: Bool) {
 //        self.navigationController?.navigationBarHidden =  true

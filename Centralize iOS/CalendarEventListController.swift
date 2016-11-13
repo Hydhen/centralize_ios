@@ -10,12 +10,16 @@ import UIKit
 
 var current_event: NSDictionary = [:]
 
-class CalendarEventListController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CalendarEventListController: UIViewController, UITabBarDelegate, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var noEventLbl: UILabel!
     @IBOutlet weak var navigationBar: UINavigationItem!
+    @IBOutlet weak var tabBar: UITabBar!
+    @IBOutlet weak var researchTab: UITabBarItem!
+    @IBOutlet weak var reminderTab: UITabBarItem!
+    @IBOutlet weak var newEventTab: UITabBarItem!
 
     let RFC3339DateFormatter = NSDateFormatter()
     let humanReadableDateFormatter = NSDateFormatter()
@@ -31,6 +35,29 @@ class CalendarEventListController: UIViewController, UITableViewDataSource, UITa
         NSOperationQueue.mainQueue().addOperationWithBlock(){
             if UIApplication.sharedApplication().isIgnoringInteractionEvents() {
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()
+            }
+        }
+    }
+    
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        print (item.tag)
+        if (item.tag == 0) {
+            NSOperationQueue.mainQueue().addOperationWithBlock(){
+                let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("calendarEventSearch")
+                self.presentViewController(nextController, animated: true, completion: nil)
+            }
+        } else if (item.tag == 1) {
+            NSOperationQueue.mainQueue().addOperationWithBlock(){
+                let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("calendarReminderList")
+                self.presentViewController(nextController, animated: true, completion: nil)
+            }
+        } else if (item.tag == 2) {
+            NSOperationQueue.mainQueue().addOperationWithBlock(){
+                let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+                let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("calendarEventCreate")
+                self.presentViewController(nextController, animated: true, completion: nil)
             }
         }
     }

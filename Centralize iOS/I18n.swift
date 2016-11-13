@@ -150,6 +150,11 @@ class I18n {
             "DRIVE_RIGHT_COMMENTER": "Commenter",
             "DRIVE_WRONG_EMAIL_TITLE": "Invalid email",
             "DRIVE_WRONG_EMAIL_MESSAGE": "You entered an invalid email, please try again",
+            //----------------------//
+            //  SLACK               //
+            //----------------------//
+            "SLACK_EMPTY_MESSAGE_SHORT": "Message empty",
+            "SLACK_EMPTY_MESSAGE_LONG": "Your message cannot be empty",
         ]
     }
     
@@ -267,6 +272,11 @@ class I18n {
             "DRIVE_RIGHT_COMMENTER": "Commenter",
             "DRIVE_WRONG_EMAIL_TITLE": "Email invalide",
             "DRIVE_WRONG_EMAIL_MESSAGE": "Vous avez rentré une adresse email invalide, veuillez réessayer",
+            //----------------------//
+            //  SLACK               //
+            //----------------------//
+            "SLACK_EMPTY_MESSAGE_SHORT": "Message vide",
+            "SLACK_EMPTY_MESSAGE_LONG": "Votre message ne peut pas être vide",
         ]
     }
 }
