@@ -171,7 +171,13 @@ class SlackDirectMessagesController: UIViewController, UITableViewDataSource, UI
         let message = (self.messages[indexPath.row] as? NSDictionary)!
         
         let cell = self.tableView.dequeueReusableCellWithIdentifier("slackDirectMessageCell", forIndexPath: indexPath) as! SlackMessageCell
-        cell.message.text = message.valueForKey("text") as? String
+
+        var text = message.valueForKey("text") as? String
+        text = replaceUserName(text!)
+        text = replaceChannelName(text!)
+        
+        cell.message.text = text
+
         let userName = getUserNameFromUserObject(message)
         cell.author.text = userName
         return cell

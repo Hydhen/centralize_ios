@@ -41,6 +41,7 @@ class FacebookEventsController: UIViewController, UITableViewDelegate, UITableVi
         self.tableView.hidden = true
         self.noEventLbl.hidden = true
         self.imageView.hidden = false
+        print ("SERVICE:: \(current_service)")
         let session = APIGETSession("/facebook/events/\(current_service)/" + (self.eventType != "" ? "?type=" + self.eventType : ""))
         
         let task = session[0].dataTaskWithRequest(session[1] as! NSURLRequest, completionHandler: {data, response, error -> Void in

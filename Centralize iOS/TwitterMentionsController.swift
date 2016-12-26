@@ -15,7 +15,6 @@ class TwitterMentionsController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
-    
     var tweets : NSMutableArray = []
     
     func disableUI() {

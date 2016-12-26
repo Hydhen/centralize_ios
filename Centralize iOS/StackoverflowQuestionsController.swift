@@ -31,7 +31,10 @@ class StackoverflowQuestionsController: UIViewController, UITableViewDataSource,
         self.noResultLabel.text = "No result found" // TODO
         self.noResultLabel.hidden = true
         
-        if current_stackoverflow_questions.count > 0 {
+        if current_stackoverflow_search != "" && current_stackoverflow_search != self.searchBar.text {
+            self.searchBar.text = current_stackoverflow_search
+            self.search("")
+        } else if current_stackoverflow_questions.count > 0 {
             NSOperationQueue.mainQueue().addOperationWithBlock(){
                 self.results = current_stackoverflow_questions
                 self.tableView.reloadData()

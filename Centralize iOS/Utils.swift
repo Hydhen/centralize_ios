@@ -112,3 +112,35 @@ func simpleAlert(title: String, message: String) {
     alertController.addAction(UIAlertAction(title: t.valueForKey("OK")! as? String, style: .Default, handler: nil))
     alertController.show()
 }
+
+func matchesForRegexInText(regex: String, text: String) -> [String] {
+    do {
+        let regex = try NSRegularExpression(pattern: regex, options: [])
+        let nsString = text as NSString
+        let results = regex.matchesInString(text,
+                                            options: [], range: NSMakeRange(0, nsString.length))
+        return results.map { nsString.substringWithRange($0.range)}
+    } catch let error as NSError {
+        print("invalid regex: \(error.localizedDescription)")
+        return []
+    }
+}
+
+func getHumanReadableDateFromString(date: String) -> String {
+    let RFC3339DateFormatter = NSDateFormatter()
+    let humanReadableDateFormatter = NSDateFormatter()
+    humanReadableDateFormatter.dateStyle = .MediumStyle
+    humanReadableDateFormatter.timeStyle = .NoStyle
+    if currentLanguage == "en" {
+        RFC3339DateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        humanReadableDateFormatter.locale = NSLocale(localeIdentifier: "en_US")
+    } else {
+        RFC3339DateFormatter.locale = NSLocale(localeIdentifier: "fr_FR_POSIX")
+        humanReadableDateFormatter.locale = NSLocale(localeIdentifier: "fr_FR")
+    }
+    RFC3339DateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssxxx"
+    RFC3339DateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
+    let dateObj = RFC3339DateFormatter.dateFromString(date)
+    let humanReadableDate = humanReadableDateFormatter.stringFromDate(dateObj!)
+    return humanReadableDate
+}

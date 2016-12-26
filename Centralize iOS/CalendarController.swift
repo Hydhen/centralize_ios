@@ -122,7 +122,7 @@ class CalendarController: UIViewController {
         current_calendar = (calendar.valueForKey("id")! as? String)!
         NSOperationQueue.mainQueue().addOperationWithBlock(){
             let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-            let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("calendarEventList")
+            let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("calendarTabController")
             self.presentViewController(nextController, animated: true, completion: nil)
         }
         return indexPath

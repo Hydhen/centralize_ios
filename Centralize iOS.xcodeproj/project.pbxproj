@@ -90,15 +90,22 @@
 		D139246C1D64A89900682FDF /* copy-enabled-64.png in Resources */ = {isa = PBXBuildFile; fileRef = D13924631D64A89900682FDF /* copy-enabled-64.png */; };
 		D139246D1D64A89900682FDF /* write-disabled-64.png in Resources */ = {isa = PBXBuildFile; fileRef = D13924641D64A89900682FDF /* write-disabled-64.png */; };
 		D139246E1D64A89900682FDF /* read-disabled-64.png in Resources */ = {isa = PBXBuildFile; fileRef = D13924651D64A89900682FDF /* read-disabled-64.png */; };
+		D165728D1E10392C00F1853C /* RedditAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D165728C1E10392C00F1853C /* RedditAnswerCell.swift */; };
+		D165728F1E1083A300F1853C /* RedditTagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D165728E1E1083A300F1853C /* RedditTagController.swift */; };
 		D17B0CB91DCCC814006C980C /* StackoverflowSiteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17B0CB81DCCC814006C980C /* StackoverflowSiteController.swift */; };
 		D17B0CBB1DCCD7C2006C980C /* StackoverflowQuestionDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17B0CBA1DCCD7C2006C980C /* StackoverflowQuestionDetailsController.swift */; };
 		D17B0CBD1DCCF7E1006C980C /* StackoverflowAnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17B0CBC1DCCF7E1006C980C /* StackoverflowAnswerController.swift */; };
 		D17B0CBF1DCCFC9F006C980C /* StackoverflowAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17B0CBE1DCCFC9F006C980C /* StackoverflowAnswerCell.swift */; };
+		D181E0541E0D5C3F0094FCEF /* RedditQuestionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D181E0531E0D5C3F0094FCEF /* RedditQuestionsController.swift */; };
+		D181E0561E0D60800094FCEF /* RedditQuestionDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D181E0551E0D60800094FCEF /* RedditQuestionDetailsController.swift */; };
+		D181E0581E0D63190094FCEF /* RedditAnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D181E0571E0D63190094FCEF /* RedditAnswerController.swift */; };
 		D189E30E1D2EFB74005A06FA /* CalendarEventUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189E30D1D2EFB74005A06FA /* CalendarEventUpdateController.swift */; };
 		D189E3101D2FC80C005A06FA /* CalendarEventCreateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189E30F1D2FC80C005A06FA /* CalendarEventCreateController.swift */; };
 		D189E3121D3007A4005A06FA /* CalendarEventSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189E3111D3007A4005A06FA /* CalendarEventSearchController.swift */; };
+		D1A2D2F11DFAD140008A8529 /* SlackUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2D2F01DFAD140008A8529 /* SlackUtils.swift */; };
 		D1C3D8BC1DD779CF00741291 /* SlackUserPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3D8BB1DD779CF00741291 /* SlackUserPopUpController.swift */; };
 		D1C3D8BE1DD8B8BA00741291 /* SlackChannelPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3D8BD1DD8B8BA00741291 /* SlackChannelPopUpController.swift */; };
+		D1C3D8C01DD8F4DA00741291 /* FacebookGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3D8BF1DD8F4DA00741291 /* FacebookGroupController.swift */; };
 		D1CA0B541D410B1400BE194B /* FAQController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA0B531D410B1400BE194B /* FAQController.swift */; };
 		D1CA0B561D411C9B00BE194B /* CustomFAQCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA0B551D411C9B00BE194B /* CustomFAQCell.swift */; };
 		D1CD4CAA1D2AE74900F60ED4 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD4CA91D2AE74900F60ED4 /* CalendarController.swift */; };
@@ -110,6 +117,13 @@
 		D1CDB2B91DBCE744009E6C73 /* FacebookEventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDB2B81DBCE744009E6C73 /* FacebookEventsController.swift */; };
 		D1CDB2BB1DBD04EC009E6C73 /* FacebookNewPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDB2BA1DBD04EC009E6C73 /* FacebookNewPostController.swift */; };
 		D1CDB2BD1DBD3210009E6C73 /* FacebookGroupListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CDB2BC1DBD3210009E6C73 /* FacebookGroupListController.swift */; };
+		D1D587391DE86801001EA198 /* GithubCommitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D587381DE86801001EA198 /* GithubCommitController.swift */; };
+		D1D5873B1DE86847001EA198 /* GithubCommitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5873A1DE86847001EA198 /* GithubCommitCell.swift */; };
+		D1D5873D1DE87264001EA198 /* GithubPullRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5873C1DE87264001EA198 /* GithubPullRequestController.swift */; };
+		D1DDA0011DE99DE800A99E6B /* GithubIssueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DDA0001DE99DE800A99E6B /* GithubIssueController.swift */; };
+		D1DDA0031DE9A57900A99E6B /* GithubStatisticController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DDA0021DE9A57900A99E6B /* GithubStatisticController.swift */; };
+		D1DDA0051DE9AD8B00A99E6B /* GithubStatisticCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DDA0041DE9AD8B00A99E6B /* GithubStatisticCell.swift */; };
+		D1E11CF61DDF593C0047ACEE /* GithubRepositoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E11CF51DDF593C0047ACEE /* GithubRepositoryController.swift */; };
 		D1E9534E1D8DB48000AB7690 /* TwitterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9534D1D8DB48000AB7690 /* TwitterController.swift */; };
 		D1E953501D8DF01800AB7690 /* TweetListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9534F1D8DF01800AB7690 /* TweetListCell.swift */; };
 		D1E953521D902A2600AB7690 /* TwitterNewTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E953511D902A2600AB7690 /* TwitterNewTweetController.swift */; };
@@ -226,15 +240,23 @@
 		D13924631D64A89900682FDF /* copy-enabled-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "copy-enabled-64.png"; path = "img/copy-enabled-64.png"; sourceTree = "<group>"; };
 		D13924641D64A89900682FDF /* write-disabled-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "write-disabled-64.png"; path = "img/write-disabled-64.png"; sourceTree = "<group>"; };
 		D13924651D64A89900682FDF /* read-disabled-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "read-disabled-64.png"; path = "img/read-disabled-64.png"; sourceTree = "<group>"; };
+		D165728B1E10222700F1853C /* testZone.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = testZone.playground; sourceTree = "<group>"; };
+		D165728C1E10392C00F1853C /* RedditAnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditAnswerCell.swift; sourceTree = "<group>"; };
+		D165728E1E1083A300F1853C /* RedditTagController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditTagController.swift; sourceTree = "<group>"; };
 		D17B0CB81DCCC814006C980C /* StackoverflowSiteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackoverflowSiteController.swift; sourceTree = "<group>"; };
 		D17B0CBA1DCCD7C2006C980C /* StackoverflowQuestionDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackoverflowQuestionDetailsController.swift; sourceTree = "<group>"; };
 		D17B0CBC1DCCF7E1006C980C /* StackoverflowAnswerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackoverflowAnswerController.swift; sourceTree = "<group>"; };
 		D17B0CBE1DCCFC9F006C980C /* StackoverflowAnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackoverflowAnswerCell.swift; sourceTree = "<group>"; };
+		D181E0531E0D5C3F0094FCEF /* RedditQuestionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditQuestionsController.swift; sourceTree = "<group>"; };
+		D181E0551E0D60800094FCEF /* RedditQuestionDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditQuestionDetailsController.swift; sourceTree = "<group>"; };
+		D181E0571E0D63190094FCEF /* RedditAnswerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditAnswerController.swift; sourceTree = "<group>"; };
 		D189E30D1D2EFB74005A06FA /* CalendarEventUpdateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEventUpdateController.swift; sourceTree = "<group>"; };
 		D189E30F1D2FC80C005A06FA /* CalendarEventCreateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEventCreateController.swift; sourceTree = "<group>"; };
 		D189E3111D3007A4005A06FA /* CalendarEventSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEventSearchController.swift; sourceTree = "<group>"; };
+		D1A2D2F01DFAD140008A8529 /* SlackUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackUtils.swift; sourceTree = "<group>"; };
 		D1C3D8BB1DD779CF00741291 /* SlackUserPopUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackUserPopUpController.swift; sourceTree = "<group>"; };
 		D1C3D8BD1DD8B8BA00741291 /* SlackChannelPopUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackChannelPopUpController.swift; sourceTree = "<group>"; };
+		D1C3D8BF1DD8F4DA00741291 /* FacebookGroupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookGroupController.swift; sourceTree = "<group>"; };
 		D1CA0B531D410B1400BE194B /* FAQController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQController.swift; sourceTree = "<group>"; };
 		D1CA0B551D411C9B00BE194B /* CustomFAQCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFAQCell.swift; sourceTree = "<group>"; };
 		D1CD4CA91D2AE74900F60ED4 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
@@ -246,6 +268,13 @@
 		D1CDB2B81DBCE744009E6C73 /* FacebookEventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookEventsController.swift; sourceTree = "<group>"; };
 		D1CDB2BA1DBD04EC009E6C73 /* FacebookNewPostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookNewPostController.swift; sourceTree = "<group>"; };
 		D1CDB2BC1DBD3210009E6C73 /* FacebookGroupListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookGroupListController.swift; sourceTree = "<group>"; };
+		D1D587381DE86801001EA198 /* GithubCommitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubCommitController.swift; sourceTree = "<group>"; };
+		D1D5873A1DE86847001EA198 /* GithubCommitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubCommitCell.swift; sourceTree = "<group>"; };
+		D1D5873C1DE87264001EA198 /* GithubPullRequestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubPullRequestController.swift; sourceTree = "<group>"; };
+		D1DDA0001DE99DE800A99E6B /* GithubIssueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubIssueController.swift; sourceTree = "<group>"; };
+		D1DDA0021DE9A57900A99E6B /* GithubStatisticController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubStatisticController.swift; sourceTree = "<group>"; };
+		D1DDA0041DE9AD8B00A99E6B /* GithubStatisticCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubStatisticCell.swift; sourceTree = "<group>"; };
+		D1E11CF51DDF593C0047ACEE /* GithubRepositoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRepositoryController.swift; sourceTree = "<group>"; };
 		D1E9534D1D8DB48000AB7690 /* TwitterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterController.swift; sourceTree = "<group>"; };
 		D1E9534F1D8DF01800AB7690 /* TweetListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetListCell.swift; sourceTree = "<group>"; };
 		D1E953511D902A2600AB7690 /* TwitterNewTweetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterNewTweetController.swift; sourceTree = "<group>"; };
@@ -280,6 +309,7 @@
 		8F9D6B1A1C7463F70024E75F = {
 			isa = PBXGroup;
 			children = (
+				D165728B1E10222700F1853C /* testZone.playground */,
 				8F9D6B251C7463F70024E75F /* Centralize iOS */,
 				8F9D6B3D1C7463F70024E75F /* Centralize iOSTests */,
 				8F9D6B481C7463F70024E75F /* Centralize iOSUITests */,
@@ -334,6 +364,8 @@
 				D1CA0B521D410AEC00BE194B /* Centralize */,
 				D13924091D61EDF500682FDF /* Drive */,
 				D1CDB2B71DBCE72A009E6C73 /* Facebook */,
+				D1E11CF41DDF59230047ACEE /* Github */,
+				D181E0521E0D540C0094FCEF /* Reddit */,
 				D1F5449A1DAFCD1900E5724B /* Slack */,
 				D1334F0D1DCB7F8F00081984 /* Stackoverflow */,
 				D1E9534C1D8DB45E00AB7690 /* Twitter */,
@@ -472,6 +504,18 @@
 			name = drive;
 			sourceTree = "<group>";
 		};
+		D181E0521E0D540C0094FCEF /* Reddit */ = {
+			isa = PBXGroup;
+			children = (
+				D181E0531E0D5C3F0094FCEF /* RedditQuestionsController.swift */,
+				D181E0551E0D60800094FCEF /* RedditQuestionDetailsController.swift */,
+				D181E0571E0D63190094FCEF /* RedditAnswerController.swift */,
+				D165728C1E10392C00F1853C /* RedditAnswerCell.swift */,
+				D165728E1E1083A300F1853C /* RedditTagController.swift */,
+			);
+			name = Reddit;
+			sourceTree = "<group>";
+		};
 		D1CA0B521D410AEC00BE194B /* Centralize */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,8 +546,23 @@
 				D1CDB2B81DBCE744009E6C73 /* FacebookEventsController.swift */,
 				D1CDB2BA1DBD04EC009E6C73 /* FacebookNewPostController.swift */,
 				D1CDB2BC1DBD3210009E6C73 /* FacebookGroupListController.swift */,
+				D1C3D8BF1DD8F4DA00741291 /* FacebookGroupController.swift */,
 			);
 			name = Facebook;
+			sourceTree = "<group>";
+		};
+		D1E11CF41DDF59230047ACEE /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				D1E11CF51DDF593C0047ACEE /* GithubRepositoryController.swift */,
+				D1D587381DE86801001EA198 /* GithubCommitController.swift */,
+				D1D5873A1DE86847001EA198 /* GithubCommitCell.swift */,
+				D1D5873C1DE87264001EA198 /* GithubPullRequestController.swift */,
+				D1DDA0001DE99DE800A99E6B /* GithubIssueController.swift */,
+				D1DDA0021DE9A57900A99E6B /* GithubStatisticController.swift */,
+				D1DDA0041DE9AD8B00A99E6B /* GithubStatisticCell.swift */,
+			);
+			name = Github;
 			sourceTree = "<group>";
 		};
 		D1E9534C1D8DB45E00AB7690 /* Twitter */ = {
@@ -530,6 +589,7 @@
 				D1334F0B1DCB675000081984 /* SlackMessageCell.swift */,
 				D1C3D8BB1DD779CF00741291 /* SlackUserPopUpController.swift */,
 				D1C3D8BD1DD8B8BA00741291 /* SlackChannelPopUpController.swift */,
+				D1A2D2F01DFAD140008A8529 /* SlackUtils.swift */,
 			);
 			name = Slack;
 			sourceTree = "<group>";
@@ -722,6 +782,7 @@
 				8FC2C56E1CC11783007C8211 /* GmailThreadMessagesController.swift in Sources */,
 				8FE1DFF21CB4CD9F00475FF1 /* OAuthCtrl.swift in Sources */,
 				D1CDB2B21DBBB39B009E6C73 /* SlackFilesController.swift in Sources */,
+				D165728D1E10392C00F1853C /* RedditAnswerCell.swift in Sources */,
 				D10968B41DBA5FFD00269471 /* SlackChannelMessagesController.swift in Sources */,
 				8FE1DFB41CA5323300475FF1 /* OutViewController.swift in Sources */,
 				D1CDB2B41DBBD580009E6C73 /* SlackListDirectMessagesController.swift in Sources */,
@@ -733,10 +794,12 @@
 				8FC2C5621CBEA3A6007C8211 /* ServiceController.swift in Sources */,
 				8FE1DFDC1CA6664200475FF1 /* SignoutController.swift in Sources */,
 				D1334F111DCB886900081984 /* StackoverflowQuestionsController.swift in Sources */,
+				D181E0581E0D63190094FCEF /* RedditAnswerController.swift in Sources */,
 				D13671951D26BEC80032EDBD /* GmailSearchController.swift in Sources */,
 				D103C3291D6E12F900CBA181 /* DriveShareFileController.swift in Sources */,
 				8FE1DFD61CA6585E00475FF1 /* DBAlertController.swift in Sources */,
 				D1334F0C1DCB675000081984 /* SlackMessageCell.swift in Sources */,
+				D1DDA0051DE9AD8B00A99E6B /* GithubStatisticCell.swift in Sources */,
 				D1CD4CAE1D2AECC800F60ED4 /* CalendarEventDetailsController.swift in Sources */,
 				8F9D6B291C7463F70024E75F /* ViewController.swift in Sources */,
 				8FC2C5701CC122A1007C8211 /* GmailMessageController.swift in Sources */,
@@ -744,26 +807,37 @@
 				8FC2C55C1CB67830007C8211 /* MenuController.swift in Sources */,
 				D1334F151DCCC56500081984 /* StackoverflowTagController.swift in Sources */,
 				8FE1DFF01CB3C59D00475FF1 /* ViewProfileController.swift in Sources */,
+				D1D587391DE86801001EA198 /* GithubCommitController.swift in Sources */,
 				D1334F131DCBADC100081984 /* StackoverflowNotificationController.swift in Sources */,
 				D1CD4CAC1D2AEBD500F60ED4 /* CalendarEventListController.swift in Sources */,
 				D10011321D9EB1CD0092BCFC /* MentionListCell.swift in Sources */,
+				D1D5873D1DE87264001EA198 /* GithubPullRequestController.swift in Sources */,
 				D1C3D8BC1DD779CF00741291 /* SlackUserPopUpController.swift in Sources */,
 				D17B0CB91DCCC814006C980C /* StackoverflowSiteController.swift in Sources */,
+				D181E0561E0D60800094FCEF /* RedditQuestionDetailsController.swift in Sources */,
 				D189E3121D3007A4005A06FA /* CalendarEventSearchController.swift in Sources */,
+				D1D5873B1DE86847001EA198 /* GithubCommitCell.swift in Sources */,
 				D10968B61DBBB18F00269471 /* SlackFilesChannelController.swift in Sources */,
+				D1DDA0011DE99DE800A99E6B /* GithubIssueController.swift in Sources */,
 				8F38897B1CEBA1800098E133 /* Utils.swift in Sources */,
+				D1A2D2F11DFAD140008A8529 /* SlackUtils.swift in Sources */,
 				8FE1DFAD1CA435DD00475FF1 /* HomeController.swift in Sources */,
+				D165728F1E1083A300F1853C /* RedditTagController.swift in Sources */,
 				8F8458161C7720F100946AE1 /* ErrorController.swift in Sources */,
 				8F9D6B271C7463F70024E75F /* AppDelegate.swift in Sources */,
 				D1C3D8BE1DD8B8BA00741291 /* SlackChannelPopUpController.swift in Sources */,
 				D1CD4CAA1D2AE74900F60ED4 /* CalendarController.swift in Sources */,
 				8FE1DFAB1CA4013A00475FF1 /* LoginController.swift in Sources */,
+				D1C3D8C01DD8F4DA00741291 /* FacebookGroupController.swift in Sources */,
 				D13924111D6268CB00682FDF /* DriveFileController.swift in Sources */,
+				D1E11CF61DDF593C0047ACEE /* GithubRepositoryController.swift in Sources */,
 				D189E30E1D2EFB74005A06FA /* CalendarEventUpdateController.swift in Sources */,
 				D1E953501D8DF01800AB7690 /* TweetListCell.swift in Sources */,
+				D181E0541E0D5C3F0094FCEF /* RedditQuestionsController.swift in Sources */,
 				D1ED7B401D2D985900FFAB95 /* EventListCell.swift in Sources */,
 				D1CDB2B91DBCE744009E6C73 /* FacebookEventsController.swift in Sources */,
 				D1E953521D902A2600AB7690 /* TwitterNewTweetController.swift in Sources */,
+				D1DDA0031DE9A57900A99E6B /* GithubStatisticController.swift in Sources */,
 				D139240F1D6228BC00682FDF /* FileListCell.swift in Sources */,
 				D1CDB2BD1DBD3210009E6C73 /* FacebookGroupListController.swift in Sources */,
 				8FC2C55E1CB7D197007C8211 /* EditProfileController.swift in Sources */,

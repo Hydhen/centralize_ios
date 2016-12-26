@@ -8,6 +8,8 @@
 
 import UIKit
 
+var current_facebook_group: NSDictionary = [:]
+
 class FacebookGroupListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var navigationBar: UINavigationItem!
@@ -105,6 +107,16 @@ class FacebookGroupListController: UIViewController, UITableViewDelegate, UITabl
         let cell = self.tableView.dequeueReusableCellWithIdentifier("facebookGroupListCell", forIndexPath: indexPath)
         cell.textLabel!.text = group.valueForKey("name") as? String
         return cell
+    }
+    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        current_facebook_group = self.groups[indexPath.row] as! NSDictionary
+        
+        NSOperationQueue.mainQueue().addOperationWithBlock() {
+            let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("facebookGroup") as! FacebookGroupController
+            self.presentViewController(nextController, animated: true, completion: nil)
+        }
+        return indexPath
     }
 
 }

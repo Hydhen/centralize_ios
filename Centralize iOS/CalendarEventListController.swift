@@ -16,10 +16,10 @@ class CalendarEventListController: UIViewController, UITabBarDelegate, UITableVi
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var noEventLbl: UILabel!
     @IBOutlet weak var navigationBar: UINavigationItem!
-    @IBOutlet weak var tabBar: UITabBar!
-    @IBOutlet weak var researchTab: UITabBarItem!
-    @IBOutlet weak var reminderTab: UITabBarItem!
-    @IBOutlet weak var newEventTab: UITabBarItem!
+//    @IBOutlet weak var tabBar: UITabBar!
+//    @IBOutlet weak var researchTab: UITabBarItem!
+//    @IBOutlet weak var reminderTab: UITabBarItem!
+//    @IBOutlet weak var newEventTab: UITabBarItem!
 
     let RFC3339DateFormatter = NSDateFormatter()
     let humanReadableDateFormatter = NSDateFormatter()

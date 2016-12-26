@@ -112,4 +112,15 @@ class StackoverflowTagController: UIViewController, UITableViewDataSource, UITab
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        let result = self.results[indexPath.row] as? NSDictionary
+        let data = result!["name"]! as? String
+        current_stackoverflow_search = data!
+        let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("stackoverflowService")
+        self.presentViewController(nextController, animated: true, completion: nil)
+        return indexPath
+    }
+
 }

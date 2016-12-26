@@ -40,13 +40,14 @@ class SlackChannelMessagesController: UIViewController, UITableViewDataSource, U
             print ("other")
         }
     }
-
+    
     func disableUI() {
         NSOperationQueue.mainQueue().addOperationWithBlock(){
             self.view.endEditing(true)
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
         }
     }
+    
     func enableUI() {
         NSOperationQueue.mainQueue().addOperationWithBlock(){
             if UIApplication.sharedApplication().isIgnoringInteractionEvents() {
@@ -54,7 +55,7 @@ class SlackChannelMessagesController: UIViewController, UITableViewDataSource, U
             }
         }
     }
-    
+
     func fetchChannelMessages() -> Void {
         self.disableUI()
         self.tableView.hidden = true
@@ -79,7 +80,7 @@ class SlackChannelMessagesController: UIViewController, UITableViewDataSource, U
                 
                 if self.messages.count < 1 {
                     NSOperationQueue.mainQueue().addOperationWithBlock() {
-                        simpleAlert((t.valueForKey("CEN_NOT_REACHABLE")! as? String)!, message: (jsonResult.valueForKey("details")! as? String)!)
+                        simpleAlert((t.valueForKey("CEN_NOT_REACHABLE")! as? String)!, message: (jsonResult.valueForKey("details") as? String)!)
                         let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
                         let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("homeController")
                         self.presentViewController(nextController, animated: true, completion: nil)
@@ -148,30 +149,19 @@ class SlackChannelMessagesController: UIViewController, UITableViewDataSource, U
             }
         }
     }
-    
-    func getUserNameFromUserObject(message: NSDictionary) -> String {
-        let id = message.valueForKey("user")! as! String
-        
-        for u in current_slack_users {
-            let userId = u.valueForKey("id")
-            if userId == nil {
-                return "Unnamed" // TODO
-            } else if userId! as! String == id {
-                return u.valueForKey("name")! as! String
-            }
-        }
-        return "Unnamed" // TODO
-    }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.messages.count
     }
-    
+        
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let message = (self.messages[indexPath.row] as? NSDictionary)!
         
+        var text = replaceUserName((message.valueForKey("text") as? String)!)
+        text = replaceChannelName(text)
         let cell = self.tableView.dequeueReusableCellWithIdentifier("slackMessageCell", forIndexPath: indexPath) as! SlackMessageCell
-        cell.message.text = message.valueForKey("text") as? String
+        cell.message.text = text
+        
         let userName = getUserNameFromUserObject(message)
         cell.author.text = userName
         return cell

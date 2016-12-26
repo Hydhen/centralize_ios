@@ -17,7 +17,7 @@ class SlackUserPopUpController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.cancelButton.titleLabel!.text = "Cancel" // TODO
+        self.cancelButton.setTitle("Cancel", forState: UIControlState.Normal) // TODO
         self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.8)
         self.showAnimate()
     }

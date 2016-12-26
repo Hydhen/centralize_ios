@@ -14,9 +14,9 @@ class TwitterController: UIViewController, UITabBarDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var tabBar: UITabBar!
-    @IBOutlet weak var newTweetTab: UITabBarItem!
-    @IBOutlet weak var mentionsTab: UITabBarItem!
+//    @IBOutlet weak var tabBar: UITabBar!
+//    @IBOutlet weak var newTweetTab: UITabBarItem!
+//    @IBOutlet weak var mentionsTab: UITabBarItem!
     
     var tweets : NSMutableArray = []
     
@@ -34,21 +34,21 @@ class TwitterController: UIViewController, UITabBarDelegate {
         }
     }
 
-    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
-        if (item.tag == 0) {
-            NSOperationQueue.mainQueue().addOperationWithBlock(){
-                let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-                let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("twitterNewTweetController")
-                self.presentViewController(nextController, animated: true, completion: nil)
-            }
-        } else if (item.tag == 1) {
-            NSOperationQueue.mainQueue().addOperationWithBlock(){
-                let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-                let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("twitterMentionsController")
-                self.presentViewController(nextController, animated: true, completion: nil)
-            }
-        }
-    }
+//    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+//        if (item.tag == 0) {
+//            NSOperationQueue.mainQueue().addOperationWithBlock(){
+//                let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+//                let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("twitterNewTweetController")
+//                self.presentViewController(nextController, animated: true, completion: nil)
+//            }
+//        } else if (item.tag == 1) {
+//            NSOperationQueue.mainQueue().addOperationWithBlock(){
+//                let currentStoryboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+//                let nextController = currentStoryboard.instantiateViewControllerWithIdentifier("twitterMentionsController")
+//                self.presentViewController(nextController, animated: true, completion: nil)
+//            }
+//        }
+//    }
     
     @IBAction func loadMore(sender: AnyObject) {
         let idx = self.tweets.count - 1
